@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "DisableLoadASN",
+    "pageId": "Review Inbound Shipments",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t//disable on true\n\tdisableLoadASN: () => {\n\t\tvar i = 0\n\t\tvar currentSum = 0\n\t\tvar inboundQty = 0\n\t\tfor(let i = 0; i < appsmith.store.ASNFormatted.length; i++) {\n\t\t\t\n\t\t\tif (appsmith.store.ASNFormatted[i].inboundQuantity != null) {\n\t\t\t\tif (i > 0) {\n\t\t\t\t\tif (currentSum != inboundQty) {\n\t\t\t\t\t\treturn true\n\t\t\t\t\t}\t\n\t\t\t\t}\n\t\t\t\tcurrentSum = 0\n\t\t\t\tinboundQty = appsmith.store.ASNFormatted[i].inboundQuantity\n\t\t\t} \n\t\t\tcurrentSum = currentSum + appsmith.store.ASNFormatted[i].plannedQuantity\n\t\t}\n\t\tif (currentSum != inboundQty) {\n\t\t\treturn true\n\t\t}\n\t\treturn false\n\t}\n}",
+    "variables": []
+  },
+  "id": "Review Inbound Shipments_DisableLoadASN",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343ce89bc475f3cd15f6"
+}

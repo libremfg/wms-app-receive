@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "CsvToJSON",
+    "pageId": "Upload ASN",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default{\n\n\t\tcsvFileToObject: (csvString) => {\n\t\t\tconst result = []\n\t\t\tvar lines= csvString.split(\"\\r\\n\")\n\t\t\tlet headers = lines[0].split(\",\")\n\t\t\tfor(var i=1;i<lines.length;i++){\n\t\t\t\tvar obj = {};\n\t\t\t\tvar currentline=lines[i].split(\",\");\n\t\t\t\tfor(var j=0;j<headers.length;j++){\n\t\t\t\t\tif(headers[j]===\"quantity\"){\n\t\t\t\t\t\tobj[headers[j]] = parseInt(currentline[j])\n\t\t\t\t\t}else{\n\t\t\t\t\t\tobj[headers[j]] = currentline[j];\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tresult.push(obj);\n\t\t\t}\n\t\t\treturn result\n\t\t}\n}",
+    "variables": []
+  },
+  "id": "Upload ASN_CsvToJSON",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343be89bc475f3cd12e8"
+}

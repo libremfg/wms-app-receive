@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "AssignPlannedQuantity",
+    "pageId": "Review Inbound Shipments",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tassignPlannedQuantity: () => {\n\t\t\n\t\tif (inputAssignPlanned.isValid == false) {\n\t\t\treturn\n\t\t}\n\t\tvar ret = appsmith.store.ASNFormatted\n\t\tret[TableInboundShipments.selectedRowIndex].plannedQuantity = _.toInteger(inputAssignPlanned.text)\n\t\tstoreValue('ASNFormatted', ret)\n\t\tcloseModal(\"modalAssignPlanned\")\n\t\treturn ret\n\t}\n}",
+    "variables": []
+  },
+  "id": "Review Inbound Shipments_AssignPlannedQuantity",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343ce89bc475f3cd15e4"
+}

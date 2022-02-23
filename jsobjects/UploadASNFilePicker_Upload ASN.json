@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "UploadASNFilePicker",
+    "pageId": "Upload ASN",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tpickFileAndRefresh: () => {\n\t\tstoreValue('AsnFile',CsvToJSON.csvFileToObject(BtnASNUpload.files[0].data))\n\t\tAddASNStaging.run()\n\t},\n}",
+    "variables": []
+  },
+  "id": "Upload ASN_UploadASNFilePicker",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343be89bc475f3cd13b4"
+}

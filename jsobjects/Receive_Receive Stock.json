@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Receive",
+    "pageId": "Receive Stock",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tshipmentItemReceiveType: () => {\n\t\tvar items = GetShipmentWithItems.data.data.getShipment.items\n\t\tvar itemKey =_.findKey(items,{'id':selectShipmentItem.selectedOptionValue})\n\t\tvar item = items[itemKey]\n\t\t//return item\n\t\treturn (item.material.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.material.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t},\n\t\n}",
+    "variables": []
+  },
+  "id": "Receive Stock_Receive",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343ce89bc475f3cd13e1"
+}

@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "MutationCompletion",
+    "pageId": "Review Inbound Shipments",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tloadShipments: () => {\n\t\tif (LoadShipments.data.errors != null) {\n\t\t\tshowAlert(LoadShipments.data.errors[0].message)\n\t\t} else {\n\t\t\tResetTableData.emptyTable()\n\t\t}\n\t},\n\n}",
+    "variables": []
+  },
+  "id": "Review Inbound Shipments_MutationCompletion",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_6204ae14552a5f639587732a"
+}

@@ -1,0 +1,21 @@
+{
+  "isPublic": false,
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#D9E7FF",
+  "icon": "pizza",
+  "slug": "receive-stock",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "evaluationVersion": 2,
+  "createdAt": {
+    "seconds": 1637269909,
+    "nanos": 476000000
+  },
+  "deleted": false
+}

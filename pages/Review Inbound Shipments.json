@@ -1,0 +1,721 @@
+{
+  "unpublishedPage": {
+    "name": "Review Inbound Shipments",
+    "slug": "review-inbound-shipments",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1296,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 910,
+          "containerStyle": "none",
+          "snapRows": 88,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 51,
+          "minHeight": 890,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "lblSite",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.e6c93592.svg",
+              "topRow": 3,
+              "bottomRow": 7,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 2,
+              "dynamicBindingPathList": [],
+              "text": "Site",
+              "key": "6k6xvapc4l",
+              "rightColumn": 8,
+              "textAlign": "LEFT",
+              "widgetId": "hx90jc5bdx",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "selectSite",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "topRow": 3,
+              "bottomRow": 7,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "",
+              "selectionType": "SINGLE_SELECT",
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 8,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{JS_SiteList.getUserSiteList().map((row)=> {return {label:row.name, value:row.id}})}}",
+              "isDisabled": false,
+              "key": "0y01k4tj6l",
+              "isRequired": true,
+              "rightColumn": 28,
+              "widgetId": "x4mfkn4ft2",
+              "isVisible": true,
+              "label": "",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "onOptionChange": "{{GetInboundShipmentsAtWarehouse.run(() => FormatTableData.formatData(), () => {})}}"
+            },
+            {
+              "boxShadow": "NONE",
+              "widgetName": "ContainerInboundShipments",
+              "borderColor": "transparent",
+              "isCanvas": true,
+              "displayName": "Container",
+              "iconSVG": "/static/media/icon.1977dca3.svg",
+              "topRow": 8,
+              "bottomRow": 81,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 19.8125,
+              "leftColumn": 2,
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "rightColumn": 475.5,
+                  "detachFromLayout": true,
+                  "displayName": "Canvas",
+                  "widgetId": "my50kbgcqm",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 710,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "version": 1,
+                  "hideCard": true,
+                  "parentId": "5gmlli6xsy",
+                  "minHeight": 400,
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "widgetName": "TableInboundShipments",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "orderNumber",
+                        "materialCode",
+                        "inboundQuantity",
+                        "warehouse",
+                        "min",
+                        "max",
+                        "status",
+                        "sohQty",
+                        "plannedQuantity",
+                        "customColumn1"
+                      ],
+                      "isVisibleDownload": false,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isSortable"
+                        }
+                      ],
+                      "displayName": "Table",
+                      "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                      "topRow": 2,
+                      "bottomRow": 64,
+                      "isSortable": "false",
+                      "parentRowSpace": 10,
+                      "type": "TABLE_WIDGET",
+                      "defaultSelectedRow": "0",
+                      "hideCard": false,
+                      "parentColumnSpace": 17.3330078125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
+                        }
+                      ],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.buttonLabel"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.menuButtonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.menuButtonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.plannedQuantity.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.orderNumber.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.materialCode.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.inboundQuantity.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.warehouse.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.min.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.max.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.status.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.sohQty.computedValue"
+                        }
+                      ],
+                      "leftColumn": 1,
+                      "primaryColumns": {
+                        "customColumn1": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "customColumn1",
+                          "columnType": "iconButton",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Assign Planned Qty",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.customColumn1))}}",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "buttonLabelColor": "#FFFFFF",
+                          "buttonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Selected Value'))}}",
+                          "menuButtonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
+                          "onClick": "{{showModal('modalAssignPlanned')}}"
+                        },
+                        "plannedQuantity": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "plannedQuantity",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Planned Qty",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.plannedQuantity))}}"
+                        },
+                        "orderNumber": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "orderNumber",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Order Number",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.orderNumber))}}"
+                        },
+                        "materialCode": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "materialCode",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Material",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}"
+                        },
+                        "inboundQuantity": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "inboundQuantity",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Inbound Qty",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.inboundQuantity))}}"
+                        },
+                        "warehouse": {
+                          "index": 4,
+                          "width": 150,
+                          "id": "warehouse",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Warehouse",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.warehouse))}}"
+                        },
+                        "min": {
+                          "index": 6,
+                          "width": 150,
+                          "id": "min",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Min",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.min))}}"
+                        },
+                        "max": {
+                          "index": 7,
+                          "width": 150,
+                          "id": "max",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Max",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.max))}}"
+                        },
+                        "status": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "status",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Status",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.status))}}"
+                        },
+                        "sohQty": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "sohQty",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "SOH Qty",
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.sohQty))}}"
+                        }
+                      },
+                      "delimiter": ",",
+                      "key": "3hc8f4t793",
+                      "derivedColumns": {
+                        "customColumn1": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "customColumn1",
+                          "columnType": "iconButton",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "Assign Planned Qty",
+                          "computedValue": "",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "buttonLabelColor": "#FFFFFF",
+                          "buttonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Selected Value'))}}",
+                          "menuButtonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}"
+                        }
+                      },
+                      "rightColumn": 63,
+                      "textSize": "PARAGRAPH",
+                      "widgetId": "puy8pstm0z",
+                      "isVisibleFilters": true,
+                      "tableData": "{{appsmith.store.ASNFormatted}}",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "version": 3,
+                      "totalRecordsCount": 0,
+                      "parentId": "my50kbgcqm",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "Order_Number": 122,
+                        "Inbound_Quantity": 103,
+                        "Warehouse": 112,
+                        "SOH_Qty": 82,
+                        "Min": 67,
+                        "Max": 82,
+                        "Status": 82,
+                        "Planned_Quantity": 101,
+                        "Material_Code": 163,
+                        "plannedQuantity": 110,
+                        "orderNumber": 115,
+                        "inboundQuantity": 103,
+                        "warehouse": 101,
+                        "sOHQty": 84,
+                        "min": 60,
+                        "max": 63,
+                        "sohQty": 78
+                      }
+                    },
+                    {
+                      "widgetName": "BtnReceiveShipment",
+                      "onClick": "{{LoadShipments.run(() => MutationCompletion.loadShipments(), () => {})}}",
+                      "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 65,
+                      "bottomRow": 69,
+                      "parentRowSpace": 10,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 17.3330078125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 53,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
+                      "text": "Load ASN",
+                      "isDisabled": "{{DisableLoadASN.disableLoadASN()}}",
+                      "key": "3lf1x4vz4g",
+                      "rightColumn": 63,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "wdbc24qnrq",
+                      "isVisible": true,
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "my50kbgcqm",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "PRIMARY"
+                    }
+                  ],
+                  "key": "95ojpyooir"
+                }
+              ],
+              "borderWidth": "0",
+              "key": "enym6gfagx",
+              "backgroundColor": "#FFFFFF",
+              "rightColumn": 59,
+              "widgetId": "5gmlli6xsy",
+              "containerStyle": "card",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0"
+            },
+            {
+              "widgetName": "modalAssignPlanned",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e.svg",
+              "topRow": 0,
+              "bottomRow": 0,
+              "parentRowSpace": 1,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "children": [
+                {
+                  "widgetName": "Canvas2",
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "displayName": "Canvas",
+                  "widgetId": "gp0l6nmkp9",
+                  "topRow": 0,
+                  "bottomRow": 130,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "version": 1,
+                  "hideCard": true,
+                  "parentId": "3psd7vutm7",
+                  "shouldScrollContents": false,
+                  "minHeight": 132,
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "widgetName": "Icon1",
+                      "rightColumn": 61,
+                      "onClick": "{{closeModal('modalAssignPlanned')}}",
+                      "color": "#040627",
+                      "iconName": "cross",
+                      "displayName": "Icon",
+                      "iconSVG": "/static/media/icon.31d6cfe0.svg",
+                      "widgetId": "o5n2ys1doa",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "isVisible": true,
+                      "type": "ICON_WIDGET",
+                      "version": 1,
+                      "hideCard": true,
+                      "parentId": "gp0l6nmkp9",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "leftColumn": 50,
+                      "iconSize": 24,
+                      "key": "9u2u1eetpu"
+                    },
+                    {
+                      "widgetName": "Text1",
+                      "rightColumn": 49,
+                      "textAlign": "LEFT",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "widgetId": "idgqjm73nw",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "hideCard": false,
+                      "parentId": "gp0l6nmkp9",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "HEADING1",
+                      "text": "Plan stock",
+                      "key": "rskuxd4ahl"
+                    },
+                    {
+                      "widgetName": "btnConfirmAssignPlannedInput",
+                      "onClick": "{{AssignPlannedQuantity.assignPlannedQuantity()}}",
+                      "buttonColor": "#03B365",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 47,
+                      "dynamicBindingPathList": [],
+                      "text": "Go",
+                      "isDisabled": false,
+                      "key": "gb9a1qtqdv",
+                      "rightColumn": 62,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "jt9tyxws7i",
+                      "buttonStyle": "PRIMARY_BUTTON",
+                      "isVisible": true,
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "gp0l6nmkp9",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "widgetName": "inputAssignPlanned",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "validation"
+                        }
+                      ],
+                      "labelStyle": "",
+                      "inputType": "NUMBER",
+                      "isDisabled": false,
+                      "key": "j62a7a0jod",
+                      "validation": "{{_.toInteger(inputAssignPlanned.text)>=0}}",
+                      "isRequired": false,
+                      "rightColumn": 45,
+                      "widgetId": "h7l9p55tpt",
+                      "isVisible": true,
+                      "label": "",
+                      "allowCurrencyChange": false,
+                      "version": 1,
+                      "parentId": "gp0l6nmkp9",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "iconAlign": "left",
+                      "defaultText": ""
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "o0hb5lxl6a"
+                }
+              ],
+              "key": "qvh4bkl6zs",
+              "height": 132,
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "widgetId": "3psd7vutm7",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "width": 208
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Review Inbound Shipments_GetUserSites",
+              "name": "GetUserSites",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "BtnReceiveShipment",
+          "Canvas1",
+          "Canvas2",
+          "ContainerInboundShipments",
+          "Icon1",
+          "MainContainer",
+          "TableInboundShipments",
+          "Text1",
+          "btnConfirmAssignPlannedInput",
+          "inputAssignPlanned",
+          "lblSite",
+          "modalAssignPlanned",
+          "selectSite"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Review Inbound Shipments",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "6196c1950dfef900f247faaf_61c433cae89bc475f3cbb970"
+}

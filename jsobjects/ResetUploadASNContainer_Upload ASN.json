@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "ResetUploadASNContainer",
+    "pageId": "Upload ASN",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tresetUploadASNContainer: () => {\n\t\tresetWidget(\"ContainerUploadASN\",true)\n\t\tAddASNStaging.clear()\n\t\tshowAlert(\"Upload successful!\")\n\t}\n}",
+    "variables": []
+  },
+  "id": "Upload ASN_ResetUploadASNContainer",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343be89bc475f3cd13b3"
+}

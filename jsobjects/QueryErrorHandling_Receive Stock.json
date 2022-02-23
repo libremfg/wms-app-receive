@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "QueryErrorHandling",
+    "pageId": "Receive Stock",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tReceiveSerialisedErrorHandling: () => {\n\t\tif (ReceiveSerialised.data.errors.length > 0) {\n\t\t\tshowAlert(ReceiveSerialised.data.errors[0].message)\n\t\t}\n\t},\n}",
+    "variables": []
+  },
+  "id": "Receive Stock_QueryErrorHandling",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_620451f6552a5f63958770b6"
+}

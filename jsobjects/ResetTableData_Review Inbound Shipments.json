@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "ResetTableData",
+    "pageId": "Review Inbound Shipments",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\temptyTable: () => {\n\t\tvar emptyTable = []\n\t\tstoreValue('ASNFormatted', emptyTable)\n\t\tGetInboundShipmentsAtWarehouse.data = emptyTable\n\t}\n}",
+    "variables": []
+  },
+  "id": "Review Inbound Shipments_ResetTableData",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343ce89bc475f3cd16e6"
+}

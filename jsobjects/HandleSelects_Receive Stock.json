@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "HandleSelects",
+    "pageId": "Receive Stock",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tsiteChange: (siteId) => {\n\t\tif(!_.isEmpty(siteId)){\n\t\t\tGetSiteWarehouses.run()\n\t\t}\n\t},\n\twarehouseChange: (warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t\tGetWarehouseBins.run()\n\t\t\tGetWarehouseShipmentsInbound.run()\n\t\t\tGetMaterials.run()\n\t\t}\n\t},\n\tshipmentChange: () => {\n\t\tGetShipmentWithItems.run()\n\t},\n\tshipmentItemChange: (shipmentItemId) => {\n\t\tif (!_.isEmpty(shipmentItemId)){\n\t\t\tGetShipmentItemDetail.run()\n\t\t\tstoreValue('receiveTabsDefault',Receive.shipmentItemReceiveType())\n\t\t\t.then(()=> {\n\t\t\t\tresetWidget('receiveTabs',true)\n\t\t\t})\n\t\t\tGetBulkStatus.run()\n\t\t} else {\n\t\t\tGetShipmentItemDetail.run()\n\t\t\tstoreValue('receiveTabsDefault',\"SERIALIZED\")\n\t\t\t.then(()=> {\n\t\t\t\tresetWidget('receiveTabs',true)\n\t\t\t})\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "Receive Stock_HandleSelects",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_61c4343be89bc475f3cd13d5"
+}

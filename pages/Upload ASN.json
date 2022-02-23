@@ -1,0 +1,570 @@
+{
+  "unpublishedPage": {
+    "name": "Upload ASN",
+    "slug": "upload-asn",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 2816,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 910,
+          "containerStyle": "none",
+          "snapRows": 83,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 51,
+          "minHeight": 890,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "tabId": "",
+              "boxShadow": "NONE",
+              "widgetName": "ContainerUploadASN",
+              "borderColor": "transparent",
+              "isCanvas": true,
+              "displayName": "Container",
+              "iconSVG": "/static/media/icon.1977dca3.svg",
+              "topRow": 6,
+              "bottomRow": 80,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 15.169702148437498,
+              "leftColumn": 1,
+              "children": [
+                {
+                  "rightColumn": 970.8609374999999,
+                  "widgetName": "Canvas2",
+                  "detachFromLayout": true,
+                  "widgetId": "yr4ndh7ex5",
+                  "containerStyle": "none",
+                  "bottomRow": 1320,
+                  "topRow": 0,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "version": 1,
+                  "parentId": "l9vncvruyu",
+                  "props": {
+                    "containerStyle": "none",
+                    "canExtend": false,
+                    "detachFromLayout": true,
+                    "children": []
+                  },
+                  "isLoading": false,
+                  "minHeight": 1294.4812499999998,
+                  "renderMode": "CANVAS",
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "widgetName": "TableASNStaging",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "orderNumber",
+                        "materialCode",
+                        "serialNumber",
+                        "quantity",
+                        "isValid",
+                        "errorList"
+                      ],
+                      "isVisibleDownload": true,
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                      "topRow": 5,
+                      "bottomRow": 72,
+                      "isSortable": true,
+                      "parentRowSpace": 10,
+                      "type": "TABLE_WIDGET",
+                      "defaultSelectedRow": "0",
+                      "hideCard": false,
+                      "parentColumnSpace": 15.169702148437498,
+                      "dynamicTriggerPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.orderNumber.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.materialCode.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.serialNumber.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.quantity.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.isValid.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.errorList.computedValue"
+                        }
+                      ],
+                      "leftColumn": 0,
+                      "primaryColumns": {
+                        "orderNumber": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "orderNumber",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "orderNumber",
+                          "computedValue": "{{TableASNStaging.sanitizedTableData.map((currentRow) => ( currentRow.orderNumber))}}"
+                        },
+                        "materialCode": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "materialCode",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "materialCode",
+                          "computedValue": "{{TableASNStaging.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}"
+                        },
+                        "serialNumber": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "serialNumber",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "serialNumber",
+                          "computedValue": "{{TableASNStaging.sanitizedTableData.map((currentRow) => ( currentRow.serialNumber))}}"
+                        },
+                        "quantity": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "quantity",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "quantity",
+                          "computedValue": "{{TableASNStaging.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
+                        },
+                        "isValid": {
+                          "index": 4,
+                          "width": 150,
+                          "id": "isValid",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "isValid",
+                          "computedValue": "{{TableASNStaging.sanitizedTableData.map((currentRow) => ( currentRow.isValid))}}"
+                        },
+                        "errorList": {
+                          "index": 5,
+                          "width": 150,
+                          "id": "errorList",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "errorList",
+                          "computedValue": "{{TableASNStaging.sanitizedTableData.map((currentRow) => ( _.toString(currentRow.errorList)))}}"
+                        }
+                      },
+                      "delimiter": ",",
+                      "key": "61zwpbxxod",
+                      "derivedColumns": {},
+                      "rightColumn": 64,
+                      "textSize": "PARAGRAPH",
+                      "widgetId": "z6m4zipzee",
+                      "isVisibleFilters": true,
+                      "tableData": "{{AddASNStaging.data.data.validateASN}}",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "version": 3,
+                      "totalRecordsCount": 0,
+                      "parentId": "yr4ndh7ex5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "isValid": 80,
+                        "orderNumber": 119,
+                        "materialCode": 173,
+                        "serialNumber": 149,
+                        "quantity": 102
+                      }
+                    },
+                    {
+                      "widgetName": "BtnConfirmASN",
+                      "onClick": "{{ConfirmASNMutation.run(() => MutationCompletions.confirmASNMutation(), () => showAlert())}}",
+                      "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 15.169702148437498,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 20,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "text": "Submit",
+                      "isDisabled": false,
+                      "key": "pj9pl8utgu",
+                      "rightColumn": 39,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "bpy7tgd006",
+                      "isVisible": "{{(!_.includes( _.map(TableASNStaging.tableData,\"isValid\"),false))&&(!_.isEmpty(TableASNStaging.tableData))}}",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "yr4ndh7ex5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "widgetName": "BtnASNUpload",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "displayName": "FilePicker",
+                      "iconSVG": "/static/media/icon.7c5ad9c3.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "allowedFileTypes": [],
+                      "type": "FILE_PICKER_WIDGET_V2",
+                      "hideCard": false,
+                      "parentColumnSpace": 15.169702148437498,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onFilesSelected"
+                        }
+                      ],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "key": "bs7qoinnnn",
+                      "onFilesSelected": "{{UploadASNFilePicker.pickFileAndRefresh()}}",
+                      "isRequired": false,
+                      "rightColumn": 19,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "w59dec2nel",
+                      "defaultSelectedFiles": [],
+                      "isVisible": "{{!_.isEmpty(selectSite.selectedOptionLabel)}}",
+                      "label": "Select Files",
+                      "maxFileSize": 5,
+                      "version": 1,
+                      "fileDataType": "Text",
+                      "parentId": "yr4ndh7ex5",
+                      "selectedFiles": [],
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "files": [],
+                      "maxNumFiles": 1
+                    }
+                  ]
+                }
+              ],
+              "borderWidth": "0",
+              "key": "092rnrd8q1",
+              "backgroundColor": "#FFFFFF",
+              "rightColumn": 55,
+              "widgetId": "l9vncvruyu",
+              "containerStyle": "card",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0"
+            },
+            {
+              "widgetName": "lblSite",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.e6c93592.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [],
+              "text": "Site",
+              "key": "6k6xvapc4l",
+              "rightColumn": 7,
+              "textAlign": "LEFT",
+              "widgetId": "du5fkz1s5u",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "selectSite",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "",
+              "selectionType": "SINGLE_SELECT",
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 7,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{JS_SiteList.getUserSiteList().map((row)=> {return {label:row.name, value:row.id}})}}",
+              "isDisabled": false,
+              "key": "0y01k4tj6l",
+              "isRequired": true,
+              "rightColumn": 27,
+              "widgetId": "8787t0sb9x",
+              "isVisible": true,
+              "label": "",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "onOptionChange": ""
+            },
+            {
+              "widgetName": "ModelUploadSuccess",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e.svg",
+              "topRow": 29,
+              "bottomRow": 53,
+              "parentRowSpace": 10,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "parentColumnSpace": 19.8125,
+              "leftColumn": 19,
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 120,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 122,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "widgetName": "Icon1",
+                      "rightColumn": 62,
+                      "onClick": "{{closeModal('ModelUploadSuccess')}}",
+                      "color": "#040627",
+                      "iconName": "cross",
+                      "displayName": "Icon",
+                      "iconSVG": "/static/media/icon.31d6cfe0.svg",
+                      "widgetId": "i4wujkldsn",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "isVisible": true,
+                      "type": "ICON_WIDGET",
+                      "version": 1,
+                      "hideCard": true,
+                      "parentId": "bxcxfcn03m",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "leftColumn": 54,
+                      "iconSize": 24,
+                      "key": "c3m2qill03"
+                    },
+                    {
+                      "widgetName": "TxtUploadSuccess",
+                      "rightColumn": 62,
+                      "textAlign": "LEFT",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "widgetId": "lbf9buaabj",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "hideCard": false,
+                      "parentId": "bxcxfcn03m",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "HEADING1",
+                      "text": "Upload Successful!",
+                      "key": "3503tbr07r"
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "kvk4s5r0kg",
+                  "rightColumn": 475.5,
+                  "detachFromLayout": true,
+                  "widgetId": "bxcxfcn03m",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "yxgveuxl4a",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "key": "s0ywjunztp",
+              "height": 122,
+              "rightColumn": 43,
+              "detachFromLayout": true,
+              "widgetId": "yxgveuxl4a",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "width": 268
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Upload ASN_GetUserSites",
+              "name": "GetUserSites",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        id\n        name\n      }\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "BtnASNUpload",
+          "BtnConfirmASN",
+          "Canvas1",
+          "Canvas2",
+          "ContainerUploadASN",
+          "Icon1",
+          "MainContainer",
+          "ModelUploadSuccess",
+          "TableASNStaging",
+          "TxtUploadSuccess",
+          "lblSite",
+          "selectSite"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Upload ASN",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "6196c1950dfef900f247faaf_61c433c5e89bc475f3cbb434"
+}

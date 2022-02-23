@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "MutationCompletions",
+    "pageId": "Upload ASN",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tconfirmASNMutation: () => {\n\t\tif (ConfirmASNMutation.data.errors != null) {\n\t\t\tshowAlert(ConfirmASNMutation.data.errors[0].message)\n\t\t} else {\n\t\t\tResetUploadASNContainer.resetUploadASNContainer()\n\t\t}\n\t},\n}",
+    "variables": []
+  },
+  "id": "Upload ASN_MutationCompletions",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_6204a98c552a5f63958772d6"
+}
