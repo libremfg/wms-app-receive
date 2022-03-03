@@ -20,7 +20,7 @@
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 52,
-          "minHeight": 840,
+          "minHeight": 890,
           "parentColumnSpace": 1,
           "dynamicTriggerPathList": [],
           "dynamicBindingPathList": [],
@@ -446,10 +446,15 @@
                           "leftColumn": 0,
                           "children": [
                             {
-                              "resetFormOnClick": true,
+                              "resetFormOnClick": "false",
                               "widgetName": "btnAddSerial",
                               "onClick": "{{ReceiveSerialised.run(() => MutationCompletions.receiveSerialised(), () => {})}}",
                               "buttonColor": "#03B365",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "resetFormOnClick"
+                                }
+                              ],
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
                               "topRow": 33,
