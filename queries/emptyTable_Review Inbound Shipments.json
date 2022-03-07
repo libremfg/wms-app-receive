@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tvar emptyTable = []\n\t\tstoreValue('ASNFormatted', emptyTable)\n\t\tGetInboundShipmentsAtWarehouse.data = emptyTable\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,

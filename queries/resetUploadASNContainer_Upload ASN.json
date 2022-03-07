@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tresetWidget(\"ContainerUploadASN\",true)\n\t\tAddASNStaging.clear()\n\t\tshowAlert(\"Upload successful!\")\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
