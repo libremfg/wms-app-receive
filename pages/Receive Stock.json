@@ -735,6 +735,7 @@
                               "widgetName": "inpBarcode",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
+                              "onSubmit": "{{HandleSelects.submitSerial()}}",
                               "topRow": 21,
                               "bottomRow": 25,
                               "parentRowSpace": 10,
@@ -742,7 +743,11 @@
                               "type": "INPUT_WIDGET",
                               "hideCard": false,
                               "parentColumnSpace": 4.640625,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onSubmit"
+                                }
+                              ],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
