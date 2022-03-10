@@ -21,7 +21,7 @@
       "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($warehouse:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$warehouse}){\n      name\n    }\n    dateTime\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST"
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,7 +33,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n    variables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($warehouse:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$warehouse}){\n      name\n    }\n    dateTime\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

@@ -1475,7 +1475,7 @@
             },
             {
               "widgetName": "selectSite",
-              "isFilterable": true,
+              "isFilterable": false,
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
               "labelText": "",
@@ -1546,7 +1546,7 @@
             },
             {
               "widgetName": "selectWarehouse",
-              "isFilterable": true,
+              "isFilterable": false,
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
               "labelText": "",

@@ -21,7 +21,7 @@
       "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:listInboundDeliveries.selectedItem.id\n\t\t},\n    query: `\nquery GetDelivery($id:ID!){\n  getDelivery(id:$id) {\n    partner{name}\n    transportCompany\n\t\ttransportCompanyDeliveryId\n    dateTime\n    shipments {\n\t\t\tid\n      consignmentNumber\n      transportCompanyShipmentId\n      customerReference\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST"
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,7 +33,7 @@
     "jsonPathKeys": [
       "JSON.stringify({\n    variables: {\n\t\t\tid:listInboundDeliveries.selectedItem.id\n\t\t},\n    query: `\nquery GetDelivery($id:ID!){\n  getDelivery(id:$id) {\n    partner{name}\n    transportCompany\n\t\ttransportCompanyDeliveryId\n    dateTime\n    shipments {\n\t\t\tid\n      consignmentNumber\n      transportCompanyShipmentId\n      customerReference\n    }\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
