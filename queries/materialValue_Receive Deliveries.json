@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (tblShipmentItems.selectedRow.material != null) {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].material.id\n\t\t} \n\t\treturn \"\"\n\t}",
+      "body": "() => {\n\t\tif (tblShipmentItems.selectedRow.material != \"\") {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].material.id\n\t\t} \n\t\treturn \"\"\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (tblShipmentItems.selectedRow.material != null) {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].material.id\n\t\t} \n\t\treturn \"\"\n\t}"
+      "() => {\n\t\tif (tblShipmentItems.selectedRow.material != \"\") {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].material.id\n\t\t} \n\t\treturn \"\"\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -42,5 +42,5 @@
   },
   "id": "Receive Deliveries_materialValue",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62299c06f782567d61f16ce0"
+  "gitSyncId": "6196c1950dfef900f247faaf_6229a5bff782567d61f16e9e"
 }

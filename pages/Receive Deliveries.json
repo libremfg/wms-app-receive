@@ -2338,16 +2338,16 @@
                               "defaultPageSize": 0,
                               "columnOrder": [
                                 "id",
-                                "plannedQuantity",
                                 "material",
-                                "bin"
+                                "bin",
+                                "quantity"
                               ],
                               "isVisibleDownload": false,
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
                               "iconSVG": "/static/media/icon.db8a9cbd.svg",
-                              "topRow": 5,
-                              "bottomRow": 33,
+                              "topRow": 4,
+                              "bottomRow": 32,
                               "isSortable": true,
                               "parentRowSpace": 10,
                               "type": "TABLE_WIDGET",
@@ -2371,10 +2371,10 @@
                                   "key": "primaryColumns.id.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.plannedQuantity.computedValue"
+                                  "key": "primaryColumns.bin.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.bin.computedValue"
+                                  "key": "primaryColumns.quantity.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -2394,7 +2394,7 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "material",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.material.code))}}"
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.material))}}"
                                 },
                                 "id": {
                                   "index": 0,
@@ -2413,23 +2413,6 @@
                                   "label": "id",
                                   "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
                                 },
-                                "plannedQuantity": {
-                                  "index": 1,
-                                  "width": 150,
-                                  "id": "plannedQuantity",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "plannedQuantity",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.plannedQuantity))}}"
-                                },
                                 "bin": {
                                   "index": 3,
                                   "width": 150,
@@ -2446,6 +2429,23 @@
                                   "isDerived": false,
                                   "label": "bin",
                                   "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.bin))}}"
+                                },
+                                "quantity": {
+                                  "index": 3,
+                                  "width": 150,
+                                  "id": "quantity",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textSize": "PARAGRAPH",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "quantity",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
                                 }
                               },
                               "delimiter": ",",
@@ -2456,7 +2456,7 @@
                               "textSize": "PARAGRAPH",
                               "widgetId": "sn9y5o56u2",
                               "isVisibleFilters": false,
-                              "tableData": "{{GetShipmentDetail.data.data.getShipment.items}}",
+                              "tableData": "{{DefaultValues.formatShipmentItemsTable()}}",
                               "isVisible": true,
                               "label": "Data",
                               "searchKey": "",
@@ -3248,7 +3248,11 @@
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 18,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "NUMBER",
                       "isDisabled": false,
@@ -3263,7 +3267,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "iconAlign": "left",
-                      "defaultText": ""
+                      "defaultText": "{{DefaultValues.quantityValue()}}"
                     }
                   ],
                   "isDisabled": false,
