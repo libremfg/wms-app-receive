@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "QueryCompletions",
+    "pageId": "Receive Deliveries",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tOnWarehouseSelect: () => {\n\t\tGetWarehouseBins.run()\n\t\tGetWarehouseMaterials.run()\n\t}\n}",
+    "variables": []
+  },
+  "id": "Receive Deliveries_QueryCompletions",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_62299608f782567d61f1689b"
+}

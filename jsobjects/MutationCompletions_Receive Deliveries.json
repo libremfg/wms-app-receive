@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "MutationCompletions",
+    "pageId": "Receive Deliveries",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\n\tcreateDelivery: () => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetWarehouseDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t},\n\tcreateShipmentExistingOrder: () => {\n\t\tif (CreateShipmentExistingOrder.data.errors != null) {\n\t\t\tshowAlert(CreateShipmentExistingOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tGetDeliveryDetail.run()\n\t\t\tcloseModal(\"modalAddShipment\")\n\t\t}\n\t},\n\tcreateShipmentNewOrder: () => {\n\t\tif (CreateShipmentNewOrder.data.errors != null) {\n\t\t\tshowAlert(CreateShipmentNewOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tGetDeliveryDetail.run()\n\t\t\tcloseModal(\"modalAddShipment\")\n\t\t}\n\t},\n\taddShipmentItem: () => {\n\t\tif (AddShipmentItem.data.errors != null) {\n\t\t\tshowAlert(AddShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t}\n\t},\n\tupdateShipmentItem: () => {\n\t\tif (UpdateShipmentItem.data.errors != null) {\n\t\t\tshowAlert(UpdateShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t\tcloseModal(\"modalEditShipmentItem\")\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "Receive Deliveries_MutationCompletions",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_62297a19f782567d61f166ed"
+}

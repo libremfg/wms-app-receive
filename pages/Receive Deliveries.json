@@ -8,19 +8,19 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1296,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 750,
+          "bottomRow": 880,
           "containerStyle": "none",
           "snapRows": 67,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 52,
-          "minHeight": 680,
+          "minHeight": 890,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
@@ -33,7 +33,7 @@
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 7,
-              "bottomRow": 73,
+              "bottomRow": 81,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -49,7 +49,7 @@
                   "widgetId": "x4wgwwq11a",
                   "containerStyle": "none",
                   "topRow": 0,
-                  "bottomRow": 650,
+                  "bottomRow": 730,
                   "parentRowSpace": 1,
                   "isVisible": true,
                   "type": "CANVAS_WIDGET",
@@ -67,7 +67,7 @@
                       "template": {
                         "txtListDeliveryDate": {
                           "isVisible": true,
-                          "text": "{{listInboundDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Date: 01/01/0000';\n              })();\n            })}}",
+                          "text": "{{listInboundDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Date: ' + moment().local(currentItem.dateTime).format() ;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -127,7 +127,7 @@
                         },
                         "txtListDeliveriesTransport": {
                           "isVisible": true,
-                          "text": "{{listInboundDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Transport Company: AUSPost';\n              })();\n            })}}",
+                          "text": "{{listInboundDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Transport Company: ' + currentItem.transportCompany;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -187,7 +187,7 @@
                         },
                         "txtListDeliveriesPartner": {
                           "isVisible": true,
-                          "text": "{{listInboundDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Partner: Zeller';\n              })();\n            })}}",
+                          "text": "{{listInboundDeliveries.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Partner: ' + currentItem.partner.name;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -247,19 +247,23 @@
                         }
                       },
                       "widgetName": "listInboundDeliveries",
-                      "listData": "[\n  {\n    \"id\": \"001\",\n    \"name\": \"Blue\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"002\",\n    \"name\": \"Green\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"003\",\n    \"name\": \"Red\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  }\n]",
+                      "listData": "{{GetWarehouseDeliveries.data.data.queryDelivery}}",
                       "isCanvas": true,
                       "displayName": "List",
                       "iconSVG": "/static/media/icon.9925ee17.svg",
                       "topRow": 5,
-                      "bottomRow": 56,
+                      "bottomRow": 66,
                       "parentRowSpace": 10,
                       "type": "LIST_WIDGET",
                       "hideCard": false,
                       "gridGap": 0,
                       "animateLoading": true,
                       "parentColumnSpace": 5.853515625,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onListItemClick"
+                        }
+                      ],
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -270,6 +274,9 @@
                         },
                         {
                           "key": "template.txtListDeliveriesPartner.text"
+                        },
+                        {
+                          "key": "listData"
                         }
                       ],
                       "gridType": "vertical",
@@ -342,12 +349,16 @@
                                       "parentColumnSpace": 4.26190185546875,
                                       "dynamicTriggerPathList": [],
                                       "leftColumn": 0,
-                                      "dynamicBindingPathList": [],
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "Date: 01/01/0000",
+                                      "text": "Date: {{moment().local(currentItem.dateTime).format() }}",
                                       "key": "m88w9vhe99",
-                                      "rightColumn": 50,
+                                      "rightColumn": 63,
                                       "textAlign": "LEFT",
                                       "widgetId": "5339oqwg90",
                                       "logBlackList": {
@@ -404,10 +415,14 @@
                                       "parentColumnSpace": 4.26190185546875,
                                       "dynamicTriggerPathList": [],
                                       "leftColumn": 0,
-                                      "dynamicBindingPathList": [],
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "Transport Company: AUSPost",
+                                      "text": "Transport Company: {{currentItem.transportCompany}}",
                                       "key": "m88w9vhe99",
                                       "rightColumn": 50,
                                       "textAlign": "LEFT",
@@ -466,10 +481,14 @@
                                       "parentColumnSpace": 4.26190185546875,
                                       "dynamicTriggerPathList": [],
                                       "leftColumn": 0,
-                                      "dynamicBindingPathList": [],
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "Partner: Zeller",
+                                      "text": "Partner: {{currentItem.partner.name}}",
                                       "key": "m88w9vhe99",
                                       "rightColumn": 51,
                                       "textAlign": "LEFT",
@@ -554,11 +573,12 @@
                       "key": "ies6xglwzt",
                       "backgroundColor": "transparent",
                       "rightColumn": 61,
+                      "onListItemClick": "{{GetDeliveryDetail.run()}}",
                       "itemBackgroundColor": "#FFFFFF",
                       "widgetId": "hgoyv242yq",
                       "isVisible": true,
                       "parentId": "x4wgwwq11a",
-                      "serverSidePaginationEnabled": true,
+                      "serverSidePaginationEnabled": false,
                       "renderMode": "CANVAS",
                       "isLoading": false
                     },
@@ -568,8 +588,8 @@
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 59,
-                      "bottomRow": 63,
+                      "topRow": 67,
+                      "bottomRow": 71,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -580,12 +600,12 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 31,
+                      "leftColumn": 33,
                       "dynamicBindingPathList": [],
                       "text": "Create Delivery",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
-                      "rightColumn": 59,
+                      "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "6gxcc27u0p",
                       "isVisible": true,
@@ -653,7 +673,7 @@
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 7,
-              "bottomRow": 73,
+              "bottomRow": 81,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -669,7 +689,7 @@
                   "widgetId": "iap1om67s2",
                   "containerStyle": "none",
                   "topRow": 0,
-                  "bottomRow": 640,
+                  "bottomRow": 720,
                   "parentRowSpace": 1,
                   "isVisible": true,
                   "type": "CANVAS_WIDGET",
@@ -736,10 +756,14 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Date: 01/01/0000",
+                              "text": "Date: {{moment().local(GetDeliveryDetail.data.data.getDelivery.dateTime).format()}}",
                               "key": "m88w9vhe99",
                               "rightColumn": 28,
                               "textAlign": "LEFT",
@@ -767,10 +791,14 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Transport Company: AUSPost",
+                              "text": "Transport Company: {{GetDeliveryDetail.data.data.getDelivery.transportCompany}}",
                               "key": "m88w9vhe99",
                               "rightColumn": 28,
                               "textAlign": "LEFT",
@@ -798,10 +826,14 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 28,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Delivery Reference: 000-000-000",
+                              "text": "Delivery Reference: {{GetDeliveryDetail.data.data.getDelivery.transportCompanyDeliveryId}}",
                               "key": "m88w9vhe99",
                               "rightColumn": 59,
                               "textAlign": "LEFT",
@@ -829,10 +861,14 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 28,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Shipped From: Zeller",
+                              "text": "Shipped From: {{GetDeliveryDetail.data.data.getDelivery.partner.name}}",
                               "key": "m88w9vhe99",
                               "rightColumn": 56,
                               "textAlign": "LEFT",
@@ -901,8 +937,8 @@
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 58,
-                      "bottomRow": 62,
+                      "topRow": 66,
+                      "bottomRow": 70,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -934,7 +970,7 @@
                       "template": {
                         "txtListShipmentReference": {
                           "isVisible": true,
-                          "text": "{{listShipments.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipment Reference: 000-000-000';\n              })();\n            })}}",
+                          "text": "{{listShipments.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Shipment Reference: ' + currentItem.customerReference;\n              })();\n            })}}",
                           "fontSize": "PARAGRAPH",
                           "fontStyle": "BOLD",
                           "textAlign": "LEFT",
@@ -992,8 +1028,68 @@
                             "parentId": true
                           }
                         },
-                        "txtSelectedDeliveryConsignmentCopy": {
-                          "widgetName": "txtSelectedDeliveryConsignmentCopy",
+                        "txtListShipmentTransportId": {
+                          "isVisible": true,
+                          "text": "{{listShipments.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Transport Id: ' + currentItem.transportCompanyShipmentId;\n              })();\n            })}}",
+                          "fontSize": "PARAGRAPH",
+                          "fontStyle": "BOLD",
+                          "textAlign": "LEFT",
+                          "textColor": "#231F20",
+                          "truncateButtonColor": "#FFC13D",
+                          "widgetName": "txtListShipmentTransportId",
+                          "shouldScroll": false,
+                          "shouldTruncate": false,
+                          "version": 1,
+                          "animateLoading": true,
+                          "type": "TEXT_WIDGET",
+                          "hideCard": false,
+                          "displayName": "Text",
+                          "key": "1jz7pjlox2",
+                          "iconSVG": "/static/media/icon.97c59b52.svg",
+                          "widgetId": "h6dsj4glnp",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "parentColumnSpace": 9.88677978515625,
+                          "parentRowSpace": 10,
+                          "leftColumn": 28,
+                          "rightColumn": 44,
+                          "topRow": 0,
+                          "bottomRow": 4,
+                          "parentId": "tvbd5zqdk6",
+                          "logBlackList": {
+                            "isVisible": true,
+                            "text": true,
+                            "fontSize": true,
+                            "fontStyle": true,
+                            "textAlign": true,
+                            "textColor": true,
+                            "truncateButtonColor": true,
+                            "widgetName": true,
+                            "shouldScroll": true,
+                            "shouldTruncate": true,
+                            "version": true,
+                            "animateLoading": true,
+                            "type": true,
+                            "hideCard": true,
+                            "displayName": true,
+                            "key": true,
+                            "iconSVG": true,
+                            "isCanvas": true,
+                            "minHeight": true,
+                            "widgetId": true,
+                            "renderMode": true,
+                            "isLoading": true,
+                            "parentColumnSpace": true,
+                            "parentRowSpace": true,
+                            "leftColumn": true,
+                            "rightColumn": true,
+                            "topRow": true,
+                            "bottomRow": true,
+                            "parentId": true
+                          }
+                        },
+                        "txtListDeliveryConsignment": {
+                          "widgetName": "txtListDeliveryConsignment",
                           "displayName": "Text",
                           "iconSVG": "/static/media/icon.97c59b52.svg",
                           "topRow": 5,
@@ -1008,7 +1104,7 @@
                           "dynamicBindingPathList": [],
                           "shouldTruncate": false,
                           "truncateButtonColor": "#FFC13D",
-                          "text": "Consignment Number: 000-000-000",
+                          "text": "{{listShipments.listData.map((currentItem, currentIndex) => {\n              return (function(){\n                return  'Consignment Number: ' + currentItem.consignmentNumber;\n              })();\n            })}}",
                           "key": "m88w9vhe99",
                           "rightColumn": 59,
                           "textAlign": "LEFT",
@@ -1025,28 +1121,12 @@
                         }
                       },
                       "widgetName": "listShipments",
-                      "listData": [
-                        {
-                          "id": "001",
-                          "name": "Blue",
-                          "img": "https://assets.appsmith.com/widgets/default.png"
-                        },
-                        {
-                          "id": "002",
-                          "name": "Green",
-                          "img": "https://assets.appsmith.com/widgets/default.png"
-                        },
-                        {
-                          "id": "003",
-                          "name": "Red",
-                          "img": "https://assets.appsmith.com/widgets/default.png"
-                        }
-                      ],
+                      "listData": "{{GetDeliveryDetail.data.data.getDelivery.shipments}}",
                       "isCanvas": true,
                       "displayName": "List",
                       "iconSVG": "/static/media/icon.9925ee17.svg",
                       "topRow": 19,
-                      "bottomRow": 57,
+                      "bottomRow": 62,
                       "parentRowSpace": 10,
                       "type": "LIST_WIDGET",
                       "hideCard": false,
@@ -1062,6 +1142,15 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "template.txtListShipmentReference.text"
+                        },
+                        {
+                          "key": "listData"
+                        },
+                        {
+                          "key": "template.txtListDeliveryConsignment.text"
+                        },
+                        {
+                          "key": "template.txtListShipmentTransportId.text"
                         }
                       ],
                       "gridType": "vertical",
@@ -1085,7 +1174,7 @@
                           "children": [
                             {
                               "boxShadow": "NONE",
-                              "widgetName": "Container3",
+                              "widgetName": "ctnListShipments",
                               "borderColor": "transparent",
                               "disallowCopy": true,
                               "isCanvas": true,
@@ -1122,7 +1211,7 @@
                                   "leftColumn": 0,
                                   "children": [
                                     {
-                                      "widgetName": "txtSelectedDeliveryConsignmentCopy",
+                                      "widgetName": "txtListDeliveryConsignment",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
                                       "topRow": 4,
@@ -1134,10 +1223,14 @@
                                       "parentColumnSpace": 10.01177978515625,
                                       "dynamicTriggerPathList": [],
                                       "leftColumn": 0,
-                                      "dynamicBindingPathList": [],
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "Consignment Number: 000-000-000",
+                                      "text": "Consignment Number: {{currentItem.consignmentNumber}}",
                                       "key": "m88w9vhe99",
                                       "rightColumn": 31,
                                       "textAlign": "LEFT",
@@ -1165,14 +1258,84 @@
                                       "parentColumnSpace": 9.88677978515625,
                                       "dynamicTriggerPathList": [],
                                       "leftColumn": 0,
-                                      "dynamicBindingPathList": [],
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "#FFC13D",
-                                      "text": "Shipment Reference: 000-000-000",
+                                      "text": "Shipment Reference: {{currentItem.customerReference}}",
                                       "key": "m88w9vhe99",
-                                      "rightColumn": 30,
+                                      "rightColumn": 31,
                                       "textAlign": "LEFT",
                                       "widgetId": "cvopk6q8pz",
+                                      "logBlackList": {
+                                        "isVisible": true,
+                                        "text": true,
+                                        "fontSize": true,
+                                        "fontStyle": true,
+                                        "textAlign": true,
+                                        "textColor": true,
+                                        "truncateButtonColor": true,
+                                        "widgetName": true,
+                                        "shouldScroll": true,
+                                        "shouldTruncate": true,
+                                        "version": true,
+                                        "animateLoading": true,
+                                        "type": true,
+                                        "hideCard": true,
+                                        "displayName": true,
+                                        "key": true,
+                                        "iconSVG": true,
+                                        "isCanvas": true,
+                                        "minHeight": true,
+                                        "widgetId": true,
+                                        "renderMode": true,
+                                        "isLoading": true,
+                                        "parentColumnSpace": true,
+                                        "parentRowSpace": true,
+                                        "leftColumn": true,
+                                        "rightColumn": true,
+                                        "topRow": true,
+                                        "bottomRow": true,
+                                        "parentId": true
+                                      },
+                                      "isVisible": true,
+                                      "fontStyle": "BOLD",
+                                      "textColor": "#231F20",
+                                      "shouldScroll": false,
+                                      "version": 1,
+                                      "parentId": "tvbd5zqdk6",
+                                      "renderMode": "CANVAS",
+                                      "isLoading": false,
+                                      "fontSize": "PARAGRAPH"
+                                    },
+                                    {
+                                      "widgetName": "txtListShipmentTransportId",
+                                      "displayName": "Text",
+                                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                                      "topRow": 0,
+                                      "bottomRow": 4,
+                                      "parentRowSpace": 10,
+                                      "type": "TEXT_WIDGET",
+                                      "hideCard": false,
+                                      "animateLoading": true,
+                                      "parentColumnSpace": 9.88677978515625,
+                                      "dynamicTriggerPathList": [],
+                                      "leftColumn": 31,
+                                      "dynamicBindingPathList": [
+                                        {
+                                          "key": "text"
+                                        }
+                                      ],
+                                      "shouldTruncate": false,
+                                      "truncateButtonColor": "#FFC13D",
+                                      "text": "Transport Id: {{currentItem.transportCompanyShipmentId}}",
+                                      "key": "1jz7pjlox2",
+                                      "rightColumn": 64,
+                                      "textAlign": "LEFT",
+                                      "widgetId": "h6dsj4glnp",
                                       "logBlackList": {
                                         "isVisible": true,
                                         "text": true,
@@ -1246,13 +1409,14 @@
                         }
                       ],
                       "privateWidgets": {
-                        "txtSelectedDeliveryConsignmentCopy": true,
-                        "txtListShipmentReference": true
+                        "txtListDeliveryConsignment": true,
+                        "txtListShipmentReference": true,
+                        "txtListShipmentTransportId": true
                       },
                       "key": "ies6xglwzt",
                       "backgroundColor": "transparent",
                       "rightColumn": 62,
-                      "onListItemClick": "{{showModal('modalEditShipment')}}",
+                      "onListItemClick": "{{GetShipmentDetail.run(() => showModal('modalEditShipment'), () => {})}}",
                       "itemBackgroundColor": "#FFFFFF",
                       "widgetId": "en1vq2zf0f",
                       "isVisible": true,
@@ -1321,26 +1485,21 @@
               "type": "SELECT_WIDGET",
               "serverSideFiltering": false,
               "hideCard": false,
-              "defaultOptionValue": "GREEN",
+              "defaultOptionValue": "",
               "animateLoading": true,
               "parentColumnSpace": 17.9375,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 5,
-              "dynamicBindingPathList": [],
-              "options": [
+              "dynamicTriggerPathList": [
                 {
-                  "label": "Blue",
-                  "value": "BLUE"
-                },
-                {
-                  "label": "Green",
-                  "value": "GREEN"
-                },
-                {
-                  "label": "Red",
-                  "value": "RED"
+                  "key": "onOptionChange"
                 }
               ],
+              "leftColumn": 5,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{JS_SiteList.getUserSiteList()}}",
               "placeholderText": "Select option",
               "isDisabled": false,
               "key": "kmqprp5o3g",
@@ -1351,7 +1510,8 @@
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "onOptionChange": "{{GetSiteWarehouses.run()}}"
             },
             {
               "widgetName": "txtWarehouseTitle",
@@ -1396,26 +1556,21 @@
               "type": "SELECT_WIDGET",
               "serverSideFiltering": false,
               "hideCard": false,
-              "defaultOptionValue": "GREEN",
+              "defaultOptionValue": "",
               "animateLoading": true,
               "parentColumnSpace": 17.9375,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 30,
-              "dynamicBindingPathList": [],
-              "options": [
+              "dynamicTriggerPathList": [
                 {
-                  "label": "Blue",
-                  "value": "BLUE"
-                },
-                {
-                  "label": "Green",
-                  "value": "GREEN"
-                },
-                {
-                  "label": "Red",
-                  "value": "RED"
+                  "key": "onOptionChange"
                 }
               ],
+              "leftColumn": 30,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{GetSiteWarehouses.data.data.getEquipment.children}}",
               "placeholderText": "Select option",
               "isDisabled": false,
               "key": "kmqprp5o3g",
@@ -1426,7 +1581,8 @@
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "onOptionChange": "{{GetWarehouseDeliveries.run(() => QueryCompletions.OnWarehouseSelect(), () => {})}}"
             },
             {
               "widgetName": "modalAddShipment",
@@ -1494,8 +1650,8 @@
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 27,
-                      "bottomRow": 31,
+                      "topRow": 34,
+                      "bottomRow": 38,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -1518,17 +1674,33 @@
                     },
                     {
                       "widgetName": "btnConfirmAddShipment",
+                      "onClick": "{{AddShipment.checkOrder()}}",
                       "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 27,
-                      "bottomRow": 31,
+                      "topRow": 34,
+                      "bottomRow": 38,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 48,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
                       "text": "Confirm",
-                      "isDisabled": false,
+                      "isDisabled": "{{checkEnterOrder.isChecked&&checkSelectOrder.isChecked}}",
                       "key": "peiahpe8cs",
                       "rightColumn": 60,
                       "isDefaultClickDisabled": true,
@@ -1545,11 +1717,7 @@
                     },
                     {
                       "widgetName": "checkEnterOrder",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onCheckChange"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Checkbox",
                       "iconSVG": "/static/media/icon.aaab032b.svg",
                       "topRow": 8,
@@ -1567,7 +1735,7 @@
                       ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
-                      "onCheckChange": "{{checkSelectOrder.isChecked}}",
+                      "onCheckChange": "",
                       "isDisabled": false,
                       "key": "1gv5837m1t",
                       "isRequired": false,
@@ -1623,26 +1791,17 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 14.375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 27,
-                      "dynamicBindingPathList": [],
-                      "options": [
+                      "dynamicBindingPathList": [
                         {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
+                          "key": "options"
                         }
                       ],
+                      "options": "{{GetSiteWarehouses.data.data.getEquipment.orders}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
@@ -1657,11 +1816,7 @@
                     },
                     {
                       "widgetName": "checkSelectOrder",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onCheckChange"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Checkbox",
                       "iconSVG": "/static/media/icon.aaab032b.svg",
                       "topRow": 14,
@@ -1679,7 +1834,7 @@
                       ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [],
-                      "onCheckChange": "{{checkEnterOrder.isChecked}}",
+                      "onCheckChange": "",
                       "isDisabled": false,
                       "key": "1gv5837m1t",
                       "isRequired": false,
@@ -1745,6 +1900,128 @@
                       "isRequired": false,
                       "rightColumn": 60,
                       "widgetId": "gotoas2itq",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 2,
+                      "parentId": "7886ypgte8",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "iconAlign": "left",
+                      "defaultText": ""
+                    },
+                    {
+                      "widgetName": "txtAddShipmentReference",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 24,
+                      "bottomRow": 28,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 7.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Shipment Reference:",
+                      "key": "1jz7pjlox2",
+                      "rightColumn": 27,
+                      "textAlign": "LEFT",
+                      "widgetId": "3fq1ltv2oh",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "textColor": "#231F20",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "7886ypgte8",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH"
+                    },
+                    {
+                      "widgetName": "txtAddShipmentDeliveryId",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 28,
+                      "bottomRow": 32,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 7.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Shipment Transport \nCompany Reference:",
+                      "key": "1jz7pjlox2",
+                      "rightColumn": 27,
+                      "textAlign": "LEFT",
+                      "widgetId": "xogn9dpnjs",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "textColor": "#231F20",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "7886ypgte8",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH"
+                    },
+                    {
+                      "widgetName": "inputAddShipmentReference",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 24,
+                      "bottomRow": 28,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 7.8125,
+                      "resetOnSubmit": true,
+                      "leftColumn": 27,
+                      "labelStyle": "",
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "key": "zwilwd35ex",
+                      "isRequired": false,
+                      "rightColumn": 60,
+                      "widgetId": "tuzau2hazu",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 2,
+                      "parentId": "7886ypgte8",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "iconAlign": "left",
+                      "defaultText": ""
+                    },
+                    {
+                      "widgetName": "inputAddShipmentDeliveryRef",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 28,
+                      "bottomRow": 32,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 7.8125,
+                      "resetOnSubmit": true,
+                      "leftColumn": 27,
+                      "labelStyle": "",
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "key": "zwilwd35ex",
+                      "isRequired": false,
+                      "rightColumn": 60,
+                      "widgetId": "oouhiqyym9",
                       "isVisible": true,
                       "label": "",
                       "version": 2,
@@ -1893,10 +2170,14 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Order Number: 000-000-000",
+                      "text": "Order Number: {{GetShipmentDetail.data.data.getShipment.order.customerOrderNumber}}",
                       "key": "m88w9vhe99",
                       "rightColumn": 40,
                       "textAlign": "LEFT",
@@ -1924,10 +2205,14 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Consignment Number: 000-000-000",
+                      "text": "Consignment Number: {{GetShipmentDetail.data.data.getShipment.consignmentNumber}}",
                       "key": "m88w9vhe99",
                       "rightColumn": 40,
                       "textAlign": "LEFT",
@@ -2013,6 +2298,7 @@
                             },
                             {
                               "widgetName": "btnAddShipmentItem",
+                              "onClick": "{{AddShipmentItem.run(() => MutationCompletions.addShipmentItem(), () => {})}}",
                               "buttonColor": "#03B365",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
@@ -2023,7 +2309,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 9.296875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 57,
                               "dynamicBindingPathList": [],
                               "text": "",
@@ -2047,10 +2337,10 @@
                               "widgetName": "tblShipmentItems",
                               "defaultPageSize": 0,
                               "columnOrder": [
+                                "id",
+                                "plannedQuantity",
                                 "material",
-                                "containerType",
-                                "binLocation",
-                                "quantity"
+                                "bin"
                               ],
                               "isVisibleDownload": false,
                               "dynamicPropertyPathList": [],
@@ -2075,13 +2365,16 @@
                                   "key": "primaryColumns.material.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.containerType.computedValue"
+                                  "key": "tableData"
                                 },
                                 {
-                                  "key": "primaryColumns.binLocation.computedValue"
+                                  "key": "primaryColumns.id.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.quantity.computedValue"
+                                  "key": "primaryColumns.plannedQuantity.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.bin.computedValue"
                                 }
                               ],
                               "leftColumn": 0,
@@ -2103,10 +2396,10 @@
                                   "label": "material",
                                   "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.material))}}"
                                 },
-                                "containerType": {
-                                  "index": 3,
+                                "id": {
+                                  "index": 0,
                                   "width": 150,
-                                  "id": "containerType",
+                                  "id": "id",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
@@ -2117,13 +2410,13 @@
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "containerType",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.containerType))}}"
+                                  "label": "id",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
                                 },
-                                "binLocation": {
-                                  "index": 3,
+                                "plannedQuantity": {
+                                  "index": 1,
                                   "width": 150,
-                                  "id": "binLocation",
+                                  "id": "plannedQuantity",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
@@ -2134,13 +2427,13 @@
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "binLocation",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.binLocation))}}"
+                                  "label": "plannedQuantity",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.plannedQuantity))}}"
                                 },
-                                "quantity": {
+                                "bin": {
                                   "index": 3,
                                   "width": 150,
-                                  "id": "quantity",
+                                  "id": "bin",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
@@ -2151,8 +2444,8 @@
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "quantity",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
+                                  "label": "bin",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.bin))}}"
                                 }
                               },
                               "delimiter": ",",
@@ -2163,7 +2456,7 @@
                               "textSize": "PARAGRAPH",
                               "widgetId": "sn9y5o56u2",
                               "isVisibleFilters": false,
-                              "tableData": "[\n  {\n    \"material\": \"cable\",\n    \"containerType\": \"box\",\n    \"binLocation\": \"A100\",\n    \"quantity\": \"5\"\n  },\n  {\n    \"material\": \"cable\",\n    \"containerType\": \"box\",\n    \"binLocation\": \"A100\",\n    \"quantity\": \"5\"\n  },\n  {\n    \"material\": \"cable\",\n    \"containerType\": \"box\",\n    \"binLocation\": \"A100\",\n    \"quantity\": \"5\"\n  }\n]",
+                              "tableData": "{{GetShipmentDetail.data.data.getShipment.items}}",
                               "isVisible": true,
                               "label": "Data",
                               "searchKey": "",
@@ -2317,6 +2610,7 @@
                     },
                     {
                       "widgetName": "btnConfirmCreateDelivery",
+                      "onClick": "{{CreateDelivery.run(() => MutationCompletions.createDelivery(), () => {})}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -2325,7 +2619,13 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 49,
+                      "dynamicBindingPathList": [],
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
@@ -2466,7 +2766,7 @@
                       "dynamicTriggerPathList": [],
                       "leftColumn": 23,
                       "dynamicBindingPathList": [],
-                      "options": "[\n  {\n    \"label\": \"AUSPost\",\n    \"value\": \"AUSPost\"\n  },\n  {\n    \"label\": \"Manual\",\n    \"value\": \"Manual\"\n  }\n]",
+                      "options": "[\n  {\n    \"label\": \"AUSPost\",\n    \"value\": \"AUSPOST\"\n  },\n  {\n    \"label\": \"Manual\",\n    \"value\": \"MANUAL\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
@@ -2527,21 +2827,12 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 23,
-                      "dynamicBindingPathList": [],
-                      "options": [
+                      "dynamicBindingPathList": [
                         {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
+                          "key": "options"
                         }
                       ],
+                      "options": "{{GetCustomers.data.data.queryPartner}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
@@ -2553,6 +2844,73 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false
+                    },
+                    {
+                      "widgetName": "txtCreateDeliveryReference",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 19,
+                      "bottomRow": 23,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Shipping Reference",
+                      "key": "1jz7pjlox2",
+                      "rightColumn": 23,
+                      "textAlign": "LEFT",
+                      "widgetId": "389uljyyt9",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "3dryc1pbwj",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH"
+                    },
+                    {
+                      "widgetName": "inputCreateDeliveryReference",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 19,
+                      "bottomRow": 23,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 23,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
+                      "labelStyle": "",
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "key": "zwilwd35ex",
+                      "isRequired": false,
+                      "rightColumn": 55,
+                      "widgetId": "mv0gzo7fws",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 2,
+                      "parentId": "3dryc1pbwj",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "iconAlign": "left",
+                      "defaultText": "{{\"\"}}"
                     }
                   ],
                   "isDisabled": false,
@@ -2674,7 +3032,7 @@
                     },
                     {
                       "widgetName": "btnConfirmEditShipmentItem",
-                      "onClick": "{{showModal('modalEditShipment')}}",
+                      "onClick": "{{UpdateShipmentItem.run()}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -2711,33 +3069,30 @@
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "",
+                      "labelText": "{{DefaultValues.materialLabel()}}",
                       "topRow": 6,
                       "bottomRow": 10,
                       "parentRowSpace": 10,
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{DefaultValues.materialValue()}}",
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 18,
-                      "dynamicBindingPathList": [],
-                      "options": [
+                      "dynamicBindingPathList": [
                         {
-                          "label": "Blue",
-                          "value": "BLUE"
+                          "key": "options"
                         },
                         {
-                          "label": "Green",
-                          "value": "GREEN"
+                          "key": "labelText"
                         },
                         {
-                          "label": "Red",
-                          "value": "RED"
+                          "key": "defaultOptionValue"
                         }
                       ],
+                      "options": "{{GetWarehouseMaterials.data.data.queryMaterialDefinition}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
@@ -2817,33 +3172,30 @@
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "",
+                      "labelText": "{{DefaultValues.binLabel()}}",
                       "topRow": 10,
                       "bottomRow": 14,
                       "parentRowSpace": 10,
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "",
+                      "defaultOptionValue": "{{DefaultValues.binValue()}}",
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 18,
-                      "dynamicBindingPathList": [],
-                      "options": [
+                      "dynamicBindingPathList": [
                         {
-                          "label": "Blue",
-                          "value": "BLUE"
+                          "key": "options"
                         },
                         {
-                          "label": "Green",
-                          "value": "GREEN"
+                          "key": "defaultOptionValue"
                         },
                         {
-                          "label": "Red",
-                          "value": "RED"
+                          "key": "labelText"
                         }
                       ],
+                      "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
@@ -2954,7 +3306,6 @@
           "Canvas8",
           "Canvas9",
           "Container2",
-          "Container3",
           "MainContainer",
           "btnAddShipment",
           "btnAddShipmentItem",
@@ -2969,12 +3320,16 @@
           "checkEnterOrder",
           "checkSelectOrder",
           "ctnInboundDeliveries",
+          "ctnListShipments",
           "ctnSelectedDelivery",
           "ctnSelectedDeliveryDetail",
           "ctnShipmentItems",
           "datePickCreateDelivery",
           "inpConsignmentNumber",
           "inpOrderNumber",
+          "inputAddShipmentDeliveryRef",
+          "inputAddShipmentReference",
+          "inputCreateDeliveryReference",
           "inputShipmentItemQuantity",
           "listInboundDeliveries",
           "listShipments",
@@ -2990,10 +3345,13 @@
           "selectSite",
           "selectWarehouse",
           "tblShipmentItems",
+          "txtAddShipmentDeliveryId",
+          "txtAddShipmentReference",
           "txtAddShipmentTitle",
           "txtConsignmentInput",
           "txtCreateDeliveryInputDate",
           "txtCreateDeliveryPartner",
+          "txtCreateDeliveryReference",
           "txtCreateDeliveryTitle",
           "txtCreateDeliveryTransport",
           "txtEditShipmentConsignmentNumb",
@@ -3006,9 +3364,10 @@
           "txtInboundDeliveriesTitle",
           "txtListDeliveriesPartner",
           "txtListDeliveriesTransport",
+          "txtListDeliveryConsignment",
           "txtListDeliveryDate",
           "txtListShipmentReference",
-          "txtSelectedDeliveryConsignmentCopy",
+          "txtListShipmentTransportId",
           "txtSelectedDeliveryDate",
           "txtSelectedDeliveryReference",
           "txtSelectedDeliveryShippedFrom",
@@ -3018,7 +3377,7 @@
           "txtSiteTitle",
           "txtWarehouseTitle"
         ],
-        "validOnPageLoadActions": true,
+        "validOnPageLoadActions": false,
         "id": "Receive Deliveries",
         "deleted": false,
         "policies": [],
