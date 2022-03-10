@@ -264,7 +264,7 @@
                           "key": "onListItemClick"
                         }
                       ],
-                      "leftColumn": 1,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "template.txtListDeliveryDate.text"
@@ -572,7 +572,7 @@
                       },
                       "key": "ies6xglwzt",
                       "backgroundColor": "transparent",
-                      "rightColumn": 61,
+                      "rightColumn": 60,
                       "onListItemClick": "{{GetDeliveryDetail.run()}}",
                       "itemBackgroundColor": "#FFFFFF",
                       "widgetId": "hgoyv242yq",
@@ -2394,7 +2394,7 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "material",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.material))}}"
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.material.code))}}"
                                 },
                                 "id": {
                                   "index": 0,
@@ -3032,7 +3032,7 @@
                     },
                     {
                       "widgetName": "btnConfirmEditShipmentItem",
-                      "onClick": "{{UpdateShipmentItem.run()}}",
+                      "onClick": "{{UpdateShipmentItem.run(() => MutationCompletions.updateShipmentItem(), () => {})}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -3069,7 +3069,7 @@
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "{{DefaultValues.materialLabel()}}",
+                      "labelText": "",
                       "topRow": 6,
                       "bottomRow": 10,
                       "parentRowSpace": 10,
@@ -3084,9 +3084,6 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
-                        },
-                        {
-                          "key": "labelText"
                         },
                         {
                           "key": "defaultOptionValue"
@@ -3172,7 +3169,7 @@
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "{{DefaultValues.binLabel()}}",
+                      "labelText": "",
                       "topRow": 10,
                       "bottomRow": 14,
                       "parentRowSpace": 10,
@@ -3190,9 +3187,6 @@
                         },
                         {
                           "key": "defaultOptionValue"
-                        },
-                        {
-                          "key": "labelText"
                         }
                       ],
                       "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",

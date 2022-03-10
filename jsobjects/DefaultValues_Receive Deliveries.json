@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmaterialValue: () => {\n\t\tif (tblShipmentItems.selectedRow.material != null) {\n\t\t\treturn tblShipmentItems.selectedRow.material.id\n\t\t} \n\t\treturn \"\"\n\t},\n\tmaterialLabel: () => {\n\t\tif (tblShipmentItems.selectedRow.material != null) {\n\t\t\treturn tblShipmentItems.selectedRow.material.code\n\t\t} \n\t\treturn \"\"\n\t},\n\tbinValue: () => {\n\t\tif (tblShipmentItems.selectedRow.bin != null) {\n\t\t\treturn tblShipmentItems.selectedRow.bin.id\n\t\t} \n\t\treturn \"\"\n\t},\n\tbinLabel: () => {\n\t\tif (tblShipmentItems.selectedRow.bin != null) {\n\t\t\treturn tblShipmentItems.selectedRow.bin.code\n\t\t} \n\t\treturn \"\"\n\t},\n}",
+    "body": "export default {\n\tmaterialValue: () => {\n\t\tif (tblShipmentItems.selectedRow.material != null) {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].material.id\n\t\t} \n\t\treturn \"\"\n\t},\n\tmaterialLabel: () => {\n\t\tif (tblShipmentItems.selectedRow.material != null) {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].material.code\n\t\t} \n\t\treturn \"\"\n\t},\n\tbinValue: () => {\n\t\tif (tblShipmentItems.selectedRow.bin != null) {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].bin.id\n\t\t} \n\t\treturn \"\"\n\t},\n\tbinLabel: () => {\n\t\tif (tblShipmentItems.selectedRow.bin != null) {\n\t\t\treturn GetShipmentDetail.data.data.getShipment.items[tblShipmentItems.selectedRowIndex].bin.name\n\t\t} \n\t\treturn \"\"\n\t},\n}",
     "variables": []
   },
   "id": "Receive Deliveries_DefaultValues",
