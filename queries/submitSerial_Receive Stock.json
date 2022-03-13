@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => { \n\t\tif (!btnAddSerial.isDisabled){\n\t\t\tReceiveSerialised.run()\n\t\t}\n\t}",
+      "body": "() => { \n\t\tif (!btnAddSerial.isDisabled){\n\t\t\tReceiveSerialised.run()\n\t\t\tMutationCompletions.receiveSerialised()\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => { \n\t\tif (!btnAddSerial.isDisabled){\n\t\t\tReceiveSerialised.run()\n\t\t}\n\t}"
+      "() => { \n\t\tif (!btnAddSerial.isDisabled){\n\t\t\tReceiveSerialised.run()\n\t\t\tMutationCompletions.receiveSerialised()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
