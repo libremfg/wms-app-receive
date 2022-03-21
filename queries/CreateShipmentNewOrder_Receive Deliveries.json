@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "headers": [],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n  input: [\n  \t{\n\t\t\tdateTimeCreatedUTC: moment(),\n      customerReference: inputAddShipmentReference.text,\n      warehouse: {id: selectWarehouse.selectedOptionValue},\n      transportCompanyShipmentId: inputAddShipmentDeliveryRef.text,\n      consignmentNumber: inpConsignmentNumber.text,\n      type: \"INBOUND\",\n\t\t\tdelivered: {\"id\": listInboundDeliveries.selectedItem.id},\n      order: {\n        customerOrderNumber: inpOrderNumber.text,\n        orderType: \"PURCHASE_ORDER\",\n        createdDateTime: moment(),\n        status: \"CREATED\"\n      }\n  \t}\n  ]\n},\n    query: `\nmutation AddShipmentNewOrder($input:[AddShipmentInput!]!) {\n  addShipment(input:$input) {\n    shipment {\n      id\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n  input: [\n  \t{\n\t\t\tdateTimeCreatedUTC: moment(),\n      customerReference: inputAddShipmentReference.text,\n      warehouse: {id: selectAddShipmentWarehouse.selectedOptionValue},\n      transportCompanyShipmentId: inputAddShipmentDeliveryRef.text,\n      consignmentNumber: inpConsignmentNumber.text,\n      type: \"INBOUND\",\n\t\t\tdelivered: {\"id\": listInboundDeliveries.selectedItem.id},\n      order: {\n        customerOrderNumber: inpOrderNumber.text,\n        orderType: \"PURCHASE_ORDER\",\n        createdDateTime: moment(),\n        status: \"CREATED\"\n      }\n  \t}\n  ]\n},\n    query: `\nmutation AddShipmentNewOrder($input:[AddShipmentInput!]!) {\n  addShipment(input:$input) {\n    shipment {\n      id\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST"
     },
     "executeOnLoad": false,
@@ -31,7 +31,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n  input: [\n  \t{\n\t\t\tdateTimeCreatedUTC: moment(),\n      customerReference: inputAddShipmentReference.text,\n      warehouse: {id: selectWarehouse.selectedOptionValue},\n      transportCompanyShipmentId: inputAddShipmentDeliveryRef.text,\n      consignmentNumber: inpConsignmentNumber.text,\n      type: \"INBOUND\",\n\t\t\tdelivered: {\"id\": listInboundDeliveries.selectedItem.id},\n      order: {\n        customerOrderNumber: inpOrderNumber.text,\n        orderType: \"PURCHASE_ORDER\",\n        createdDateTime: moment(),\n        status: \"CREATED\"\n      }\n  \t}\n  ]\n},\n    query: `\nmutation AddShipmentNewOrder($input:[AddShipmentInput!]!) {\n  addShipment(input:$input) {\n    shipment {\n      id\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n  input: [\n  \t{\n\t\t\tdateTimeCreatedUTC: moment(),\n      customerReference: inputAddShipmentReference.text,\n      warehouse: {id: selectAddShipmentWarehouse.selectedOptionValue},\n      transportCompanyShipmentId: inputAddShipmentDeliveryRef.text,\n      consignmentNumber: inpConsignmentNumber.text,\n      type: \"INBOUND\",\n\t\t\tdelivered: {\"id\": listInboundDeliveries.selectedItem.id},\n      order: {\n        customerOrderNumber: inpOrderNumber.text,\n        orderType: \"PURCHASE_ORDER\",\n        createdDateTime: moment(),\n        status: \"CREATED\"\n      }\n  \t}\n  ]\n},\n    query: `\nmutation AddShipmentNewOrder($input:[AddShipmentInput!]!) {\n  addShipment(input:$input) {\n    shipment {\n      id\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

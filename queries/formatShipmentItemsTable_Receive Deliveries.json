@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tvar ret = []\n\t\tfor (let i = 0; i < GetShipmentDetail.data.data.getShipment.items.length; i ++) {\n\t\t\tlet item = GetShipmentDetail.data.data.getShipment.items[i]\n\t\t\tlet line = {\"id\": item.id}\n\t\t\tif (item.material != null) {\n\t\t\t\tline.material = item.material.code\n\t\t\t} else {\n\t\t\t\tline.material = \"\"\n\t\t\t}\n\t\t\tif (item.bin != null) {\n\t\t\t\tline.bin = item.bin.name\n\t\t\t} else {\n\t\t\t\tline.bin = \"\"\n\t\t\t}\n\t\t\tif (item.plannedQuantity != null) {\n\t\t\t\tline.quantity = item.plannedQuantity\n\t\t\t} else {\n\t\t\t\tline.quantity = 0\n\t\t\t}\n\t\t\tret.push(line)\n\t\t}\n\t\treturn ret\n\t}",
+      "body": "() => {\n\t\tvar ret = []\n\t\tfor (let i = 0; i < GetShipmentDetail.data.data.getShipment.items.length; i ++) {\n\t\t\tlet item = GetShipmentDetail.data.data.getShipment.items[i]\n\t\t\tlet line = {\"id\": item.id}\n\t\t\tif (item.material != null) {\n\t\t\t\tline.material = item.material.code\n\t\t\t} else {\n\t\t\t\tline.material = \"\"\n\t\t\t}\n\t\t\tif (item.bin != null) {\n\t\t\t\tline.bin = item.bin.name\n\t\t\t} else {\n\t\t\t\tline.bin = \"\"\n\t\t\t}\n\t\t\tif (item.plannedQuantity != null) {\n\t\t\t\tline.quantity = item.plannedQuantity\n\t\t\t} else {\n\t\t\t\tline.quantity = 0\n\t\t\t}\n\t\t\tif (item.trackingDetailsArticleId != null) {\n\t\t\t\tline.trackingId = item.trackingDetailsArticleId\n\t\t\t} else {\n\t\t\t\tline.trackingId = \"\"\n\t\t\t}\n\t\t\tret.push(line)\n\t\t}\n\t\treturn ret\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tvar ret = []\n\t\tfor (let i = 0; i < GetShipmentDetail.data.data.getShipment.items.length; i ++) {\n\t\t\tlet item = GetShipmentDetail.data.data.getShipment.items[i]\n\t\t\tlet line = {\"id\": item.id}\n\t\t\tif (item.material != null) {\n\t\t\t\tline.material = item.material.code\n\t\t\t} else {\n\t\t\t\tline.material = \"\"\n\t\t\t}\n\t\t\tif (item.bin != null) {\n\t\t\t\tline.bin = item.bin.name\n\t\t\t} else {\n\t\t\t\tline.bin = \"\"\n\t\t\t}\n\t\t\tif (item.plannedQuantity != null) {\n\t\t\t\tline.quantity = item.plannedQuantity\n\t\t\t} else {\n\t\t\t\tline.quantity = 0\n\t\t\t}\n\t\t\tret.push(line)\n\t\t}\n\t\treturn ret\n\t}"
+      "() => {\n\t\tvar ret = []\n\t\tfor (let i = 0; i < GetShipmentDetail.data.data.getShipment.items.length; i ++) {\n\t\t\tlet item = GetShipmentDetail.data.data.getShipment.items[i]\n\t\t\tlet line = {\"id\": item.id}\n\t\t\tif (item.material != null) {\n\t\t\t\tline.material = item.material.code\n\t\t\t} else {\n\t\t\t\tline.material = \"\"\n\t\t\t}\n\t\t\tif (item.bin != null) {\n\t\t\t\tline.bin = item.bin.name\n\t\t\t} else {\n\t\t\t\tline.bin = \"\"\n\t\t\t}\n\t\t\tif (item.plannedQuantity != null) {\n\t\t\t\tline.quantity = item.plannedQuantity\n\t\t\t} else {\n\t\t\t\tline.quantity = 0\n\t\t\t}\n\t\t\tif (item.trackingDetailsArticleId != null) {\n\t\t\t\tline.trackingId = item.trackingDetailsArticleId\n\t\t\t} else {\n\t\t\t\tline.trackingId = \"\"\n\t\t\t}\n\t\t\tret.push(line)\n\t\t}\n\t\treturn ret\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

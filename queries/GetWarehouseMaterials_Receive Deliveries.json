@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "headers": [],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetWarehouseMaterials($id:[ID!]!) {\n  queryMaterialDefinition @cascade{\n    value:id\n    label:code\n    inventoryHandlingPolicy {\n      rules {\n        warehouse(filter:{id:$id}) {\n          id\n        }\n      }\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:listShipments.selectedItem.warehouse.id\n\t\t},\n    query: `\nquery GetWarehouseMaterials($id:[ID!]!) {\n  queryMaterialDefinition @cascade{\n    value:id\n    label:code\n    inventoryHandlingPolicy {\n      rules {\n        warehouse(filter:{id:$id}) {\n          id\n        }\n      }\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST"
     },
     "executeOnLoad": false,
@@ -31,7 +31,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetWarehouseMaterials($id:[ID!]!) {\n  queryMaterialDefinition @cascade{\n    value:id\n    label:code\n    inventoryHandlingPolicy {\n      rules {\n        warehouse(filter:{id:$id}) {\n          id\n        }\n      }\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:listShipments.selectedItem.warehouse.id\n\t\t},\n    query: `\nquery GetWarehouseMaterials($id:[ID!]!) {\n  queryMaterialDefinition @cascade{\n    value:id\n    label:code\n    inventoryHandlingPolicy {\n      rules {\n        warehouse(filter:{id:$id}) {\n          id\n        }\n      }\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

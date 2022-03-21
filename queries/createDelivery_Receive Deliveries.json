@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetWarehouseDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetWarehouseDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}"
+      "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

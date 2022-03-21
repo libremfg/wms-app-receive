@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetWarehouseDeliveries",
+    "name": "GetSiteDeliveries",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "headers": [],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($warehouse:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$warehouse}){\n      name\n    }\n    dateTime\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tsite:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($site:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$site}){\n      name\n    }\n    dateTimeCreated\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST"
     },
     "executeOnLoad": false,
@@ -31,14 +31,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\twarehouse:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($warehouse:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$warehouse}){\n      name\n    }\n    dateTime\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tsite:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($site:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$site}){\n      name\n    }\n    dateTimeCreated\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_GetWarehouseDeliveries",
+  "id": "Receive Deliveries_GetSiteDeliveries",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62296978f782567d61f1663e"
 }

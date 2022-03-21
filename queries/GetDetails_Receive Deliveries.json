@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "checkOrder",
-    "fullyQualifiedName": "AddShipment.checkOrder",
+    "name": "GetDetails",
+    "fullyQualifiedName": "GetShipmentWarehouseDetail.GetDetails",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Receive Deliveries",
-    "collectionId": "Receive Deliveries_AddShipment",
+    "collectionId": "Receive Deliveries_GetShipmentWarehouseDetail",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\tCreateShipmentNewOrder.run()\n\t\t\tMutationCompletions.createShipmentExistingOrder()\n\t\t} else {\n\t\t\tCreateShipmentExistingOrder.run()\n\t\t\tMutationCompletions.createShipmentNewOrder()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tGetWarehouseBins.run()\n\t\tGetWarehouseMaterials.run()\n\t\tshowModal(\"modalEditShipmentItem\")\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\tCreateShipmentNewOrder.run()\n\t\t\tMutationCompletions.createShipmentExistingOrder()\n\t\t} else {\n\t\t\tCreateShipmentExistingOrder.run()\n\t\t\tMutationCompletions.createShipmentNewOrder()\n\t\t}\n\t}"
+      "() => {\n\t\tGetWarehouseBins.run()\n\t\tGetWarehouseMaterials.run()\n\t\tshowModal(\"modalEditShipmentItem\")\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_checkOrder",
+  "id": "Receive Deliveries_GetDetails",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62298408f782567d61f16744"
+  "gitSyncId": "6196c1950dfef900f247faaf_623814784d9aea1b062ae191"
 }
