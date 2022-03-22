@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "AddShipmentItem",
+    "name": "AddShipmentItemNewShip",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -50,7 +50,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_AddShipmentItem",
+  "id": "Receive Stock_AddShipmentItemNewShip",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43430e89bc475f3ccea51"
 }

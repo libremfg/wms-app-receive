@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\taddInboundShipmentHeader: () => {\n\t\tAddInboundShipment.run()\n\t\t\t.then(()=> {\n\t\t\tGetWarehouseShipmentsInbound.run()\n\t\t\t\t.then(()=> {\n\t\t\t\tstoreValue(\"selectedShipment\",AddInboundShipment.data.data.addShipment.shipment[0])\t\t\n\t\t\t\tstoreValue(\"addInShipTabsDefault\",\"Shipment_Items\")\n\t\t\t})\n\t\t})\n\t\t\t.catch((e)=> {\n\t\t\tshowAlert(e.message)\n\t\t})\t\n\t},\n\taddItemToShipment: () => {\n\t\tAddShipmentItem.run()\n\t\t.then(()=> {\n\t\t\tGetShipmentWithItems.run()\n\t\t})\n\t\t.then(()=> {\n\t\t\tshowAlert(\"Item Added Successfully\")\n\t\t})\n\t\t.catch((e)=> {\n\t\t\tshowAlert(e.message)\n\t\t})\n\t}\n}",
+    "body": "export default {\n\taddInboundShipmentHeader: () => {\n\t\tAddInboundShipment.run()\n\t\t\t.then(()=> {\n\t\t\tGetWarehouseShipmentsInbound.run()\n\t\t\t\t.then(()=> {\n\t\t\t\tstoreValue(\"selectedShipment\",AddInboundShipment.data.data.addShipment.shipment[0])\t\t\n\t\t\t\tstoreValue(\"addInShipTabsDefault\",\"Shipment_Items\")\n\t\t\t})\n\t\t})\n\t\t\t.catch((e)=> {\n\t\t\tshowAlert(e.message)\n\t\t})\t\n\t},\n\taddItemToShipment: () => {\n\t\tAddShipmentItemNewShip.run()\n\t\t.then(()=> {\n\t\t\tGetShipmentWithItems.run()\n\t\t})\n\t\t.then(()=> {\n\t\t\tshowAlert(\"Item Added Successfully\")\n\t\t})\n\t\t.catch((e)=> {\n\t\t\tshowAlert(e.message)\n\t\t})\n\t}\n}",
     "variables": []
   },
   "id": "Receive Stock_CreateInboundShipment",
