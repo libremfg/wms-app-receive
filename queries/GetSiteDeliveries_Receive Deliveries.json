@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "headers": [],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tsite:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($site:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$site}){\n      name\n    }\n    dateTimeCreated\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tsite:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($site:[ID!]!){\n  queryDelivery(filter:{status:{eq:CREATED},type:{eq:INBOUND}}) @cascade {\n    id\n\t\tlocation(filter:{id:$site}){\n      name\n    }\n    dateTimeCreated\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST"
     },
     "executeOnLoad": false,
@@ -31,7 +31,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tsite:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($site:[ID!]!){\n  queryDelivery @cascade {\n    id\n\t\tlocation(filter:{id:$site}){\n      name\n    }\n    dateTimeCreated\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tsite:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery QueryDelivery($site:[ID!]!){\n  queryDelivery(filter:{status:{eq:CREATED},type:{eq:INBOUND}}) @cascade {\n    id\n\t\tlocation(filter:{id:$site}){\n      name\n    }\n    dateTimeCreated\n    transportCompany\n    partner {\n      name\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

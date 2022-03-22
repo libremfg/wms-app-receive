@@ -77,7 +77,15 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Deliveries_ReceiveDelivery": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Deliveries_createShipmentExistingOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_receiveDelivery": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

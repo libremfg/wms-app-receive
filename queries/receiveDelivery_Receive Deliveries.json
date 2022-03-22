@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "createDelivery",
-    "fullyQualifiedName": "MutationCompletions.createDelivery",
+    "name": "receiveDelivery",
+    "fullyQualifiedName": "MutationCompletions.receiveDelivery",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (ReceiveDelivery.data.errors != null) {\n\t\t\tshowAlert(ReceiveDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalConfirmReceiveDelivery\")\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}"
+      "() => {\n\t\tif (ReceiveDelivery.data.errors != null) {\n\t\t\tshowAlert(ReceiveDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalConfirmReceiveDelivery\")\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_createDelivery",
+  "id": "Receive Deliveries_receiveDelivery",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62297a2ff782567d61f166f1"
+  "gitSyncId": "6196c1950dfef900f247faaf_62391c504d9aea1b062af316"
 }
