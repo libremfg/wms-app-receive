@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:inpBarcodeScan.text\n\t\t},\n    query: `\nquery($code:String!){\n  getCarrier(code:$code){\n    code\n    status{code}\n    storageLocation{label}\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{equipmentLevel:{eq:Warehouse},not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -43,7 +43,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:inpBarcodeScan.text\n\t\t},\n    query: `\nquery($code:String!){\n  getCarrier(code:$code){\n    code\n    status{code}\n    storageLocation{label}\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{equipmentLevel:{eq:Warehouse},not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
