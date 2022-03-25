@@ -325,6 +325,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Put Away_MoveCarrierToBin": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_formatTable": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false

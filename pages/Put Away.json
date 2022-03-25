@@ -324,7 +324,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{appsmith.store.getWarehouseByNameResult}}",
+                              "text": "Name: {{appsmith.store.getWarehouseByNameResult}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -352,10 +352,14 @@
                               "parentColumnSpace": 4.056640625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Label",
+                              "text": "ID: {{appsmith.store.getWarehouseByNameResultId}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -478,7 +482,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{appsmith.store.getCarrierByCodeResult}}",
+                              "text": "Code: {{appsmith.store.getCarrierByCodeResult}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -506,10 +510,14 @@
                               "parentColumnSpace": 4.056640625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Label",
+                              "text": "ID:{{appsmith.store.getCarrierByCodeResultId}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -544,13 +552,9 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
-                      "onClick": "{{showAlert()}}",
+                      "onClick": "{{MoveCarrierToBin.run(() => showAlert('yes','success'), () => {})}}",
                       "buttonColor": "#03B365",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 37,

@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tsublotCode:inpBarcodeScan.text\n\t\t},\n    query: `\nquery( $sublotCode:String!){\n  getCarrier(code:$sublotCode){\n    code\n    status{code}\n    storageLocation{label}\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tsublotCode:inpBarcodeScan.text\n\t\t},\n    query: `\nquery( $sublotCode:String!){\n  getCarrier(code:$sublotCode){\n\t\t\tid\n    code\n    status{code}\n    storageLocation{label}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -43,7 +43,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tsublotCode:inpBarcodeScan.text\n\t\t},\n    query: `\nquery( $sublotCode:String!){\n  getCarrier(code:$sublotCode){\n    code\n    status{code}\n    storageLocation{label}\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tsublotCode:inpBarcodeScan.text\n\t\t},\n    query: `\nquery( $sublotCode:String!){\n  getCarrier(code:$sublotCode){\n\t\t\tid\n    code\n    status{code}\n    storageLocation{label}\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
