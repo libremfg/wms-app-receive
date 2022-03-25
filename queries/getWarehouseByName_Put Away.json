@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "getSubLotByCode",
+    "name": "getWarehouseByName",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -16,7 +16,6 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/graphql",
       "headers": [
         {
           "key": "content-type",
@@ -25,13 +24,16 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tsublotCode:inpBarcodeScan.text\n\t\t},\n    query: `\nquery( $sublotCode:String!){\n  getStockOnHand(filter:{materialSubLot:{code:$sublotCode},groupBy:{subLot:true, material:true, carrier:true, storageLocation:true}}){\n    materialSubLot{code}\n    material{code}\n    carrier{code}\n    storageLocation{name}\n    quantity\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tname:inpBarcodeScan.text\n\t\t},\n    query: `\nquery($name:String){\n\tqueryEquipment(filter:{and:[{equipmentLevel:{eq:StorageZone}},{name:{eq:$name}}]}){\n    name\n    id\n  }\n}\n\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
-      ]
+      ],
+      "formData": {
+        "apiContentType": "none"
+      }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -43,14 +45,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tsublotCode:inpBarcodeScan.text\n\t\t},\n    query: `\nquery( $sublotCode:String!){\n  getStockOnHand(filter:{materialSubLot:{code:$sublotCode},groupBy:{subLot:true, material:true, carrier:true, storageLocation:true}}){\n    materialSubLot{code}\n    material{code}\n    carrier{code}\n    storageLocation{name}\n    quantity\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tname:inpBarcodeScan.text\n\t\t},\n    query: `\nquery($name:String){\n\tqueryEquipment(filter:{and:[{equipmentLevel:{eq:StorageZone}},{name:{eq:$name}}]}){\n    name\n    id\n  }\n}\n\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Put Away_getSubLotByCode",
+  "id": "Put Away_getWarehouseByName",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62395bab4d9aea1b062af5cb"
+  "gitSyncId": "623b99d24d9aea1b062b1ed0_623d27114d9aea1b062b3769"
 }

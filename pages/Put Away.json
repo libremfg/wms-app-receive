@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 943,
+          "rightColumn": 800,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -20,7 +20,7 @@
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 53,
-          "minHeight": 810,
+          "minHeight": 1260,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
@@ -28,6 +28,11 @@
             {
               "widgetName": "selectWarehouse",
               "isFilterable": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
               "labelText": "",
@@ -63,7 +68,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "onOptionChange": "{{HandleSelects.warehouseChange()}}"
+              "onOptionChange": "{{HandleSelects.warehouseChange(selectWarehouse.selectedOptionValue)}}"
             },
             {
               "widgetName": "Table1",
@@ -312,10 +317,14 @@
                               "parentColumnSpace": 4.056640625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 17,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Label",
+                              "text": "{{appsmith.store.getWarehouseByNameResult}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -462,10 +471,14 @@
                               "parentColumnSpace": 4.056640625,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 17,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Label",
+                              "text": "{{appsmith.store.getCarrierByCodeResult}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -531,7 +544,13 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
+                      "onClick": "{{showAlert()}}",
                       "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 37,
@@ -539,7 +558,13 @@
                       "type": "FORM_BUTTON_WIDGET",
                       "hideCard": true,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 46,
+                      "dynamicBindingPathList": [],
                       "text": "Submit",
                       "key": "fhnuek0jbj",
                       "rightColumn": 64,
@@ -704,7 +729,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{getSubLotByCode.data.data.getStockOnHand}}",
+                              "text": "{{appsmith.store.getSubLotByCode}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -814,6 +839,11 @@
             {
               "widgetName": "selectSite",
               "isFilterable": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
               "labelText": "",
@@ -849,7 +879,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "onOptionChange": "{{HandleSelects.siteChange()}}"
+              "onOptionChange": "{{HandleSelects.siteChange(selectSite.selectedOptionValue)}}"
             }
           ]
         },
@@ -874,16 +904,6 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n    variables: {\n\t\t\tname:appsmith.user.email\n\t\t},\n    query: `\nquery($name:String!){\n  getUser(username:$name){\n    name\n\t\tid\n    hasRole@cascade{\n      role{\n        name\n        hasGrantedRights(filter:{name:{eq:isAdmin}}){\n          name\n        }\n      }\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        value:id\n        label:name\n      }\n    }\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Put Away_getSubLotByCode",
-              "name": "getSubLotByCode",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\tsublotCode:inpBarcodeScan.text\n\t\t},\n    query: `\nquery( $sublotCode:String!){\n  getStockOnHand(filter:{materialSubLot:{code:$sublotCode},groupBy:{subLot:true, material:true, carrier:true, storageLocation:true}}){\n    materialSubLot{code}\n    material{code}\n    carrier{code}\n    storageLocation{name}\n    quantity\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }

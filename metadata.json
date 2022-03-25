@@ -401,6 +401,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Put Away_getWarehouseByName": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_ReceiveSerialised": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
