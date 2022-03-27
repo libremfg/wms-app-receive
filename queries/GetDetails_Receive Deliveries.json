@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_GetDetails",
+  "id": "Receive Deliveries_GetShipmentWarehouseDetail.GetDetails",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_623814784d9aea1b062ae191"
 }

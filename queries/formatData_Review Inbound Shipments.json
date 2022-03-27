@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_formatData",
+  "id": "Review Inbound Shipments_FormatTableData.formatData",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43432e89bc475f3ccf0ff"
 }
