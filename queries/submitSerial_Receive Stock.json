@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_HandleSelects.submitSerial",
+  "id": "Receive Stock_submitSerial",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_6226b6ecb49d5451b1cd09c5"
 }

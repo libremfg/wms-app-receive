@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_DefaultValues.trackingValue",
+  "id": "Receive Deliveries_trackingValue",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62381c7b4d9aea1b062ae1e5"
 }

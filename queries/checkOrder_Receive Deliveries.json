@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_AddShipment.checkOrder",
+  "id": "Receive Deliveries_checkOrder",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62298408f782567d61f16744"
 }

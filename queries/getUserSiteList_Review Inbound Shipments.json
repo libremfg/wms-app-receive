@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_JS_SiteList.getUserSiteList",
+  "id": "Review Inbound Shipments_getUserSiteList",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43431e89bc475f3ccecce"
 }

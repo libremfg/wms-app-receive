@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_QueryCompletions.OnWarehouseSelect",
+  "id": "Receive Deliveries_OnWarehouseSelect",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62299608f782567d61f16897"
 }

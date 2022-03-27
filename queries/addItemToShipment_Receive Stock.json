@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tAddShipmentItemNewShip.run()\n\t\t.then(()=> {\n\t\t\tGetShipmentWithItems.run()\n\t\t})\n\t\t.then(()=> {\n\t\t\tshowAlert(\"Item Added Successfully\")\n\t\t})\n\t\t.catch((e)=> {\n\t\t\tshowAlert(e.message)\n\t\t})\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_CreateInboundShipment.addItemToShipment",
+  "id": "Receive Stock_addItemToShipment",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43430e89bc475f3ccea48"
 }

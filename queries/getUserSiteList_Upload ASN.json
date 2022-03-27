@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Upload ASN_JS_SiteList.getUserSiteList",
+  "id": "Upload ASN_getUserSiteList",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c4342ee89bc475f3cce18a"
 }

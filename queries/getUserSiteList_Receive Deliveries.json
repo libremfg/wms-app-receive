@@ -39,7 +39,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_JS_SiteList.getUserSiteList",
+  "id": "Receive Deliveries_getUserSiteList",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62296925f782567d61f1663a"
 }
