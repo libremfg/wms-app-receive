@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_undoTransaction",
+  "id": "Receive Stock_MutationCompletions.undoTransaction",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62045fc2552a5f6395877100"
 }

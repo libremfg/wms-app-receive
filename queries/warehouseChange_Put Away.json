@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getUserSiteList",
-    "fullyQualifiedName": "JS_SiteList.getUserSiteList",
+    "name": "warehouseChange",
+    "fullyQualifiedName": "HandleSelects.warehouseChange",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,14 +13,18 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Upload ASN",
-    "collectionId": "Upload ASN_JS_SiteList",
+    "pageId": "Put Away",
+    "collectionId": "Put Away_HandleSelects",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tconst flattened = []\n\t\tGetUserSites.data.data.getUser.hasRole.map((userRole) => {\n\t\t\tuserRole.responsibilities.map((site) => {\n\t\t\t\tflattened.push(site)\n\t\t\t})\n\t\t})\n\t\treturn flattened\n\t\t}",
-      "jsArguments": [],
+      "body": "(warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t}\n\t}",
+      "jsArguments": [
+        {
+          "name": "warehouseId"
+        }
+      ],
       "isAsync": false
     },
     "executeOnLoad": false,
@@ -34,14 +38,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tconst flattened = []\n\t\tGetUserSites.data.data.getUser.hasRole.map((userRole) => {\n\t\t\tuserRole.responsibilities.map((site) => {\n\t\t\t\tflattened.push(site)\n\t\t\t})\n\t\t})\n\t\treturn flattened\n\t\t}"
+      "(warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Upload ASN_JS_SiteList.getUserSiteList",
+  "id": "Put Away_HandleSelects.warehouseChange",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c4342ee89bc475f3cce18a"
+  "gitSyncId": "6196c1950dfef900f247faaf_623961554d9aea1b062af695"
 }

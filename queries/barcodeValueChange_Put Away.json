@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "warehouseChange",
-    "fullyQualifiedName": "HandleSelects.warehouseChange",
+    "name": "barcodeValueChange",
+    "fullyQualifiedName": "HandleSelects.barcodeValueChange",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,22 +13,21 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Receive Stock",
-    "collectionId": "Receive Stock_HandleSelects",
+    "pageId": "Put Away",
+    "collectionId": "Put Away_HandleSelects",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "(warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t\tGetWarehouseBins.run()\n\t\t\tGetWarehouseShipmentsInbound.run()\n\t\t\tGetMaterials.run()\n\t\t}\n\t}",
+      "body": "(barcode) => {\n\t\tif(!_.isEmpty(barcode)){\n\t\t\tgetSubLotByCode.run(()=>{\n\t\t\t\tif(!_.isEmpty(getSubLotByCode.data.data.getStockOnHand)){\n\t\t\t\t\tgetCarrierByCode.run()\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t}",
       "jsArguments": [
         {
-          "name": "warehouseId"
+          "name": "barcode"
         }
       ],
       "isAsync": false
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -38,14 +37,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t\tGetWarehouseBins.run()\n\t\t\tGetWarehouseShipmentsInbound.run()\n\t\t\tGetMaterials.run()\n\t\t}\n\t}"
+      "(barcode) => {\n\t\tif(!_.isEmpty(barcode)){\n\t\t\tgetSubLotByCode.run(()=>{\n\t\t\t\tif(!_.isEmpty(getSubLotByCode.data.data.getStockOnHand)){\n\t\t\t\t\tgetCarrierByCode.run()\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_HandleSelects.warehouseChange",
+  "id": "Put Away_HandleSelects.barcodeValueChange",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c43430e89bc475f3ccea47"
+  "gitSyncId": "6196c1950dfef900f247faaf_623963314d9aea1b062af6b2"
 }

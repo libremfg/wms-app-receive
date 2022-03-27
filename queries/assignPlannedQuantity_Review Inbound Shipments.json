@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_assignPlannedQuantity",
+  "id": "Review Inbound Shipments_AssignPlannedQuantity.assignPlannedQuantity",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43434e89bc475f3ccf8f3"
 }
