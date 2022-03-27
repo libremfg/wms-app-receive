@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t},\n    query: `\nquery{\n  queryCarrier{\n    code\n    status{code}\n\t\tstorageLocation{label}\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery ($warehouseId:ID!){\n  queryCarrier @cascade {\n    code\n    status{code}\n    storageLocation{\n      label\n      name\n      id\n      warehouse:parent(filter:{id:[$warehouseId]}){\n        label\n        name\n        id\n      }\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -43,7 +43,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t},\n    query: `\nquery{\n  queryCarrier{\n    code\n    status{code}\n\t\tstorageLocation{label}\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery ($warehouseId:ID!){\n  queryCarrier @cascade {\n    code\n    status{code}\n    storageLocation{\n      label\n      name\n      id\n      warehouse:parent(filter:{id:[$warehouseId]}){\n        label\n        name\n        id\n      }\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n  \"input\": [\n    {\n      \"carrier\": {\n        \"id\": appsmith.store.getCarrierByCodeResultId\n      },\n      \"user\": {\n\t\t\t\t\t\"id\":GetUserSites.data.data.getUser.id,\n        \"username\": appsmith.user.email\n      },\n      \"storageLocation\": {\n        \"id\": appsmith.store.getWarehouseByNameResultId,\n        \"name\": appsmith.store.getWarehouseByNameResult\n      },\n    }\n  ]\n},\n    query: `\nmutation moveCarrierToBin($input:[InventoryTransactionInput!]!){\nmoveCarrierToBin(input:$input){\ncarrier{\ncode\n}\nstorageLocation{\nname\n}\n}\n} `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n  \"input\": [\n    {\n      \"carrier\": {\n        \"id\": appsmith.store.getCarrierByCodeResult.id\n      },\n      \"user\": {\n\t\t\t\t\t\"id\":GetUserSites.data.data.getUser.id,\n        \"username\": appsmith.user.email\n      },\n      \"storageLocation\": {\n        \"id\": appsmith.store.getWarehouseByNameResult.id,\n        \"name\": appsmith.store.getWarehouseByNameResult.name\n      },\n    }\n  ]\n},\n    query: `\nmutation moveCarrierToBin($input:[InventoryTransactionInput!]!){\nmoveCarrierToBin(input:$input){\ncarrier{\ncode\n}\nstorageLocation{\nname\n}\n}\n} `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -45,7 +45,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n  \"input\": [\n    {\n      \"carrier\": {\n        \"id\": appsmith.store.getCarrierByCodeResultId\n      },\n      \"user\": {\n\t\t\t\t\t\"id\":GetUserSites.data.data.getUser.id,\n        \"username\": appsmith.user.email\n      },\n      \"storageLocation\": {\n        \"id\": appsmith.store.getWarehouseByNameResultId,\n        \"name\": appsmith.store.getWarehouseByNameResult\n      },\n    }\n  ]\n},\n    query: `\nmutation moveCarrierToBin($input:[InventoryTransactionInput!]!){\nmoveCarrierToBin(input:$input){\ncarrier{\ncode\n}\nstorageLocation{\nname\n}\n}\n} `\n})"
+      "JSON.stringify({\n    variables: {\n  \"input\": [\n    {\n      \"carrier\": {\n        \"id\": appsmith.store.getCarrierByCodeResult.id\n      },\n      \"user\": {\n\t\t\t\t\t\"id\":GetUserSites.data.data.getUser.id,\n        \"username\": appsmith.user.email\n      },\n      \"storageLocation\": {\n        \"id\": appsmith.store.getWarehouseByNameResult.id,\n        \"name\": appsmith.store.getWarehouseByNameResult.name\n      },\n    }\n  ]\n},\n    query: `\nmutation moveCarrierToBin($input:[InventoryTransactionInput!]!){\nmoveCarrierToBin(input:$input){\ncarrier{\ncode\n}\nstorageLocation{\nname\n}\n}\n} `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

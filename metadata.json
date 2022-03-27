@@ -77,6 +77,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Put Away_HandleSelects.clearValues": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Upload ASN_ResetUploadASNContainer.resetUploadASNContainer": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false

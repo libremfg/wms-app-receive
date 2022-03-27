@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "warehouseChange",
-    "fullyQualifiedName": "HandleSelects.warehouseChange",
+    "name": "clearValues",
+    "fullyQualifiedName": "HandleSelects.clearValues",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,16 +19,11 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "(warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t\tqueryCarriers.run()\n\t\t}\n\t}",
-      "jsArguments": [
-        {
-          "name": "warehouseId"
-        }
-      ],
-      "isAsync": false
+      "body": "() => {\n\t\tstoreValue(\"getWarehouseByNameResult\",undefined)\n\t\tstoreValue(\"getCarrierByCodeResult\",undefined)\n\t\tstoreValue(\"getSubLotByCode\",undefined)\n\t\tinpBarcodeScan.text = undefined\n\t}",
+      "jsArguments": [],
+      "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -38,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(warehouseId) => {\n\t\tif(!_.isEmpty(warehouseId)){\n\t\t\tqueryCarriers.run()\n\t\t}\n\t}"
+      "() => {\n\t\tstoreValue(\"getWarehouseByNameResult\",undefined)\n\t\tstoreValue(\"getCarrierByCodeResult\",undefined)\n\t\tstoreValue(\"getSubLotByCode\",undefined)\n\t\tinpBarcodeScan.text = undefined\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Put Away_HandleSelects.warehouseChange",
+  "id": "Put Away_HandleSelects.clearValues",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_623961554d9aea1b062af695"
+  "gitSyncId": "623b99d24d9aea1b062b1ed0_623ff2dfc99df23699318817"
 }
