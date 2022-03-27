@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Upload ASN",
-    "collectionId": "Upload ASN_JS_SiteList",
+    "pageId": "Put Away",
+    "collectionId": "Put Away_JS_SiteList",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Upload ASN_JS_SiteList.getUserSiteList",
+  "id": "Put Away_JS_SiteList.getUserSiteList",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c4342ee89bc475f3cce18a"
+  "gitSyncId": "6196c1950dfef900f247faaf_623960e94d9aea1b062af688"
 }

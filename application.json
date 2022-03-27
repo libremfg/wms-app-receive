@@ -7,10 +7,10 @@
   "icon": "pizza",
   "slug": "receive-stock",
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "publishedAppLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "evaluationVersion": 2,
   "createdAt": {
