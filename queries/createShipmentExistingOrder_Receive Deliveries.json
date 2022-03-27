@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_MutationCompletions.createShipmentExistingOrder",
+  "id": "Receive Deliveries_createShipmentExistingOrder",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_6229846ff782567d61f1674c"
 }

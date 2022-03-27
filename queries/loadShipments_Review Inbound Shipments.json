@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_MutationCompletion.loadShipments",
+  "id": "Review Inbound Shipments_loadShipments",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_6204ae38552a5f6395877330"
 }

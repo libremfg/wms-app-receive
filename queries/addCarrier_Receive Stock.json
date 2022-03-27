@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_MutationCompletions.addCarrier",
+  "id": "Receive Stock_addCarrier",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_6204a3d6552a5f6395877287"
 }

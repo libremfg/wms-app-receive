@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_MutationCompletions.receiveSerialised",
+  "id": "Receive Stock_receiveSerialised",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62045390552a5f63958770d5"
 }
