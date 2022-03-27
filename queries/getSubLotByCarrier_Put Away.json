@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "queryCarriers",
+    "name": "getSubLotByCarrier",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery ($warehouseId:ID!){\n  queryCarrier @cascade {\n\t  id\n    code\n    status{code}\n    storageLocation{\n      label\n      name\n      id\n      warehouse:parent(filter:{id:[$warehouseId]}){\n        label\n        name\n        id\n      }\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tcarrierId:tblCarriers.selectedRow.id\n\t\t},\n    query: `\nquery( $carrierId:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrierId},groupBy:{subLot:true, material:true, carrier:true, storageLocation:true}}){\n    materialSubLot{code}\n    material{code}\n    carrier{code}\n    storageLocation{name}\n    quantity\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -43,14 +43,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery ($warehouseId:ID!){\n  queryCarrier @cascade {\n\t  id\n    code\n    status{code}\n    storageLocation{\n      label\n      name\n      id\n      warehouse:parent(filter:{id:[$warehouseId]}){\n        label\n        name\n        id\n      }\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tcarrierId:tblCarriers.selectedRow.id\n\t\t},\n    query: `\nquery( $carrierId:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrierId},groupBy:{subLot:true, material:true, carrier:true, storageLocation:true}}){\n    materialSubLot{code}\n    material{code}\n    carrier{code}\n    storageLocation{name}\n    quantity\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Put Away_queryCarriers",
+  "id": "Put Away_getSubLotByCarrier",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_623956b04d9aea1b062af5ad"
+  "gitSyncId": "623b99d24d9aea1b062b1ed0_623fff38c99df2369931882f"
 }

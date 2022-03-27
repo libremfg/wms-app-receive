@@ -69,6 +69,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Put Away_getSubLotByCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_GetShipmentWithItems": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true

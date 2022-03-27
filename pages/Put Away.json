@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 800,
+          "rightColumn": 1160,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -71,9 +71,10 @@
               "onOptionChange": "{{HandleSelects.warehouseChange(selectWarehouse.selectedOptionValue)}}"
             },
             {
-              "widgetName": "Table1",
+              "widgetName": "tblCarriers",
               "defaultPageSize": 0,
               "columnOrder": [
+                "id",
                 "code",
                 "status",
                 "storageLocation"
@@ -83,7 +84,7 @@
               "displayName": "Table",
               "iconSVG": "/static/media/icon.db8a9cbd.svg",
               "topRow": 6,
-              "bottomRow": 67,
+              "bottomRow": 72,
               "isSortable": true,
               "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
@@ -91,7 +92,11 @@
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 12.484375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
               "dynamicBindingPathList": [
                 {
                   "key": "primaryColumns.status.computedValue"
@@ -104,9 +109,12 @@
                 },
                 {
                   "key": "primaryColumns.storageLocation.computedValue"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
                 }
               ],
-              "leftColumn": 29,
+              "leftColumn": 24,
               "primaryColumns": {
                 "status": {
                   "index": 2,
@@ -122,7 +130,7 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "status",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status.code))}}",
+                  "computedValue": "{{tblCarriers.sanitizedTableData.map((currentRow) => ( currentRow.status.code))}}",
                   "buttonColor": "#03B365",
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF"
@@ -142,7 +150,7 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "code",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.code))}}"
+                  "computedValue": "{{tblCarriers.sanitizedTableData.map((currentRow) => ( currentRow.code))}}"
                 },
                 "storageLocation": {
                   "index": 2,
@@ -159,13 +167,31 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "storageLocation",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.storageLocation.name))}}"
+                  "computedValue": "{{tblCarriers.sanitizedTableData.map((currentRow) => ( currentRow.storageLocation.name))}}"
+                },
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{tblCarriers.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
                 }
               },
               "delimiter": ",",
+              "onRowSelected": "{{getSubLotByCarrier.run()}}",
               "key": "bgfsyi8r17",
               "derivedColumns": {},
-              "rightColumn": 63,
+              "rightColumn": 43,
               "textSize": "PARAGRAPH",
               "widgetId": "sxjpht2jre",
               "isVisibleFilters": true,
@@ -186,8 +212,9 @@
               "columnSizeMap": {
                 "task": 245,
                 "step": 62,
-                "status": 128,
-                "code": 113
+                "status": 107,
+                "code": 67,
+                "id": 75
               }
             },
             {
@@ -769,7 +796,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{appsmith.store.getSubLotByCode}}",
+                              "text": "{{appsmith.store.getSubLotByCode.materialSubLot.code}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -804,7 +831,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{appsmith.store.putaway.sublot.status}}",
+                              "text": "{{appsmith.store.getSubLotByCode.storageLocation.name}}",
                               "key": "y9kglaok2z",
                               "rightColumn": 64,
                               "textAlign": "RIGHT",
@@ -990,6 +1017,167 @@
               "isLoading": false,
               "disabledWhenInvalid": false,
               "buttonVariant": "SECONDARY"
+            },
+            {
+              "widgetName": "Table2",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "materialSubLot",
+                "material",
+                "carrier",
+                "storageLocation",
+                "quantity"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 6,
+              "bottomRow": 72,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 17.9375,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.materialSubLot.computedValue"
+                },
+                {
+                  "key": "primaryColumns.material.computedValue"
+                },
+                {
+                  "key": "primaryColumns.carrier.computedValue"
+                },
+                {
+                  "key": "primaryColumns.storageLocation.computedValue"
+                },
+                {
+                  "key": "primaryColumns.quantity.computedValue"
+                }
+              ],
+              "leftColumn": 43,
+              "primaryColumns": {
+                "materialSubLot": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "materialSubLot",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "materialSubLot",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.materialSubLot.code))}}"
+                },
+                "material": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "material",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "material",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.material.code))}}"
+                },
+                "carrier": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "carrier",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "carrier",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.carrier))}}"
+                },
+                "storageLocation": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "storageLocation",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "storageLocation",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.storageLocation))}}"
+                },
+                "quantity": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "quantity",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "quantity",
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "av0jgimug4",
+              "derivedColumns": {},
+              "rightColumn": 64,
+              "textSize": "PARAGRAPH",
+              "widgetId": "ys3lof39a6",
+              "isVisibleFilters": true,
+              "tableData": "{{getSubLotByCarrier.data.data.getStockOnHand}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "material": 184,
+                "materialSubLot": 179
+              }
             }
           ]
         },
@@ -1006,12 +1194,22 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Put Away_getSubLotByCarrier",
+              "name": "getSubLotByCarrier",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables: {\n\t\t\tcarrierId:tblCarriers.selectedRow.id\n\t\t},\n    query: `\nquery( $carrierId:ID!){\n  getStockOnHand(filter:{carrier:{id:$carrierId},groupBy:{subLot:true, material:true, carrier:true, storageLocation:true}}){\n    materialSubLot{code}\n    material{code}\n    carrier{code}\n    storageLocation{name}\n    quantity\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Put Away_queryCarriers",
               "name": "queryCarriers",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables: {\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery ($warehouseId:ID!){\n  queryCarrier @cascade {\n    code\n    status{code}\n    storageLocation{\n      label\n      name\n      id\n      warehouse:parent(filter:{id:[$warehouseId]}){\n        label\n        name\n        id\n      }\n    }\n  }\n}\n    `\n})"
+                "JSON.stringify({\n    variables: {\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery ($warehouseId:ID!){\n  queryCarrier @cascade {\n\t  id\n    code\n    status{code}\n    storageLocation{\n      label\n      name\n      id\n      warehouse:parent(filter:{id:[$warehouseId]}){\n        label\n        name\n        id\n      }\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -1043,7 +1241,7 @@
           "FormButton2",
           "IconButton1",
           "MainContainer",
-          "Table1",
+          "Table2",
           "Text1",
           "Text1Copy",
           "Text1CopyCopy",
@@ -1056,7 +1254,8 @@
           "Text3CopyCopy1",
           "inpBarcodeScan",
           "selectSite",
-          "selectWarehouse"
+          "selectWarehouse",
+          "tblCarriers"
         ],
         "validOnPageLoadActions": true,
         "id": "Put Away",
