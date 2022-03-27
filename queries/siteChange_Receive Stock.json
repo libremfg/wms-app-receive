@@ -45,7 +45,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_siteChange",
+  "id": "Receive Stock_HandleSelects.siteChange",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43430e89bc475f3ccea46"
 }

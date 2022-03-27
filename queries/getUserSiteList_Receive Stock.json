@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_getUserSiteList",
+  "id": "Receive Stock_JS_SiteList.getUserSiteList",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c4342ee89bc475f3cce113"
 }

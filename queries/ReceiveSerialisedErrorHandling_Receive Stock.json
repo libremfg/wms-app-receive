@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_ReceiveSerialisedErrorHandling",
+  "id": "Receive Stock_QueryErrorHandling.ReceiveSerialisedErrorHandling",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_620451f6552a5f63958770b4"
 }

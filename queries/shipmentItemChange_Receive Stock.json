@@ -45,7 +45,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_shipmentItemChange",
+  "id": "Receive Stock_HandleSelects.shipmentItemChange",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43430e89bc475f3ccead2"
 }

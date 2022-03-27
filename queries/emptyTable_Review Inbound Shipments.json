@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_emptyTable",
+  "id": "Review Inbound Shipments_ResetTableData.emptyTable",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43437e89bc475f3cd025f"
 }

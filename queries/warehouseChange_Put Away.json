@@ -45,7 +45,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Put Away_warehouseChange",
+  "id": "Put Away_HandleSelects.warehouseChange",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_623961554d9aea1b062af695"
 }

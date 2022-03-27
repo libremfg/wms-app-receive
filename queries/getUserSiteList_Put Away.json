@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Put Away_getUserSiteList",
+  "id": "Put Away_JS_SiteList.getUserSiteList",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_623960e94d9aea1b062af688"
 }
