@@ -1184,7 +1184,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Put Away_GetUserSites",
               "name": "GetUserSites",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -1194,7 +1193,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Put Away_getSubLotByCarrier",
               "name": "getSubLotByCarrier",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -1204,7 +1202,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Put Away_queryCarriers",
               "name": "queryCarriers",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -1216,7 +1213,6 @@
           ],
           [
             {
-              "id": "Put Away_GetSiteWarehouses",
               "name": "GetSiteWarehouses",
               "confirmBeforeExecute": false,
               "pluginType": "API",
