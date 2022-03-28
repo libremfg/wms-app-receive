@@ -8,7 +8,6 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-
           "rightColumn": 1506,
           "snapColumns": 64,
           "detachFromLayout": true,
