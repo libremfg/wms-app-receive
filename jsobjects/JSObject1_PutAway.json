@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "PutAway",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tHandleUserSites: () => {\n\t\tif(queryUserSites.data.data.getUser.hasRole.length > 0){\n\t\t\treturn queryUserSites.data.data.getUser.hasRole[0].responsibilities\n\t\t}else{\n\t\t\treturn null\n\t\t}\n\t},\n\tHandleMoveCarrierToBinAvailability: () => {\n\t\tif(appsmith.store.queryCarrierID == \"\" || appsmith.store.queryBinId == \"\"){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t},\n\tClearValueAfterMoveCarrierToBin: () => {\n\t\tstoreValue(\"queryCarrierID\",\"\")\n\t\tstoreValue(\"queryCarrierCode\",\"\")\n\t\tstoreValue(\"queryBinId\",\"\")\n\t\tstoreValue(\"queryBinName\",\"\")\n\t},\n\tHandleBarCodeInput: async () => {\n\t\tif(!_.isEmpty(barcodeInput.text)){\n\t\t\tqueryMaterialSublot.run(()=>{\n\t\t\t\tif(queryMaterialSublot.data.data.getMaterialSubLot == null){\n\t\t\t\t\tqueryBin.run(()=>{\n\t\t\t\t\t\tif (queryBin.data.data.queryEquipment.length == 0){\n\t\t\t\t\t\t\tqueryCarrier.run(()=>{\n\t\t\t\t\t\t\t\tif (queryCarrier.data.data.getCarrier == null){\n\t\t\t\t\t\t\t\t\tshowAlert(\"Barcode cannot be found.\",\"error\")\n\t\t\t\t\t\t\t\t}else{\n\t\t\t\t\t\t\t\t\tstoreValue(\"queryCarrierID\",queryCarrier.data.data.getCarrier.id)\n\t\t\t\t\t\t\t\t\tstoreValue(\"queryCarrierCode\",queryCarrier.data.data.getCarrier.code)\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t})\n\t\t\t\t\t\t}else{\n\t\t\t\t\t\t\tstoreValue(\"queryBinId\",queryBin.data.data.queryEquipment[0].id)\n\t\t\t\t\t\t\tstoreValue(\"queryBinName\",queryBin.data.data.queryEquipment[0].name)\n\t\t\t\t\t\t}\n\t\t\t\t\t})\n\t\t\t\t}else{\n\t\t\t\t\tstoreValue(\"queryMaterialSubLotCode\",queryMaterialSublot.data.data.getMaterialSubLot.code)\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "PutAway_JSObject1",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_62413ee2c99df23699319541"
+}

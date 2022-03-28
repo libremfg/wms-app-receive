@@ -5,10 +5,6 @@
   "publishedDefaultPageName": "Receive Stock",
   "unpublishedDefaultPageName": "Receive Stock",
   "invisibleActionFields": {
-    "Review Inbound Shipments_JS_SiteList.getUserSiteList": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Review Inbound Shipments_AssignPlannedQuantity.assignPlannedQuantity": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -17,31 +13,11 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Deliveries_UpdateShipmentItem": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Deliveries_GetSiteDeliveries": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "Receive Stock_MutationCompletions.addShipmentItemExistingShip": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Stock_CompleteShipment": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Upload ASN_ConfirmASNMutation": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_GetDeliveryDetail": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
-    "Receive Deliveries_GetShipmentDetail": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -49,15 +25,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_CreateInboundShipment.addItemToShipment": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Stock_MutationCompletions.completeShipment": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_GetWarehouseMaterials": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -69,15 +37,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_TransactionTable.formatTable": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_MutationCompletions.createShipmentExistingOrder": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_GetShipmentWarehouseDetail.GetDetails": {
+    "PutAway_queryMaterialSublot": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -93,39 +53,11 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_CreateInboundShipment.addInboundShipmentHeader": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Review Inbound Shipments_DisableLoadASN.disableLoadASN": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Receive Deliveries_JS_SiteList.getUserSiteList": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_DefaultValues.formatShipmentItemsTable": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_GetCustomers": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Upload ASN_AddASNStaging": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
-    "Receive Stock_MutationCompletions.receiveTrackedByCarrier": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_DefaultValues.quantityValue": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_MutationCompletions.createDelivery": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -137,19 +69,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_Receive.shipmentItemReceiveType": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Deliveries_GetWarehouseBins": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Upload ASN_GetWarehouse": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Review Inbound Shipments_ResetTableData.emptyTable": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -157,15 +77,7 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "Upload ASN_MutationCompletions.confirmASNMutation": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_GetSerialCarriersStatus": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
-    "Receive Deliveries_GetSiteActiveInboundOrders": {
+    "PutAway_JSObject1.HandleMoveCarrierToBinAvailability": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -173,23 +85,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_GetBulkStatus": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_DefaultValues.materialValue": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_GetSiteWarehouses": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
-    "Receive Stock_HandleSelects.warehouseChange": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_GetUserSites": {
+    "PutAway_JSObject1.ClearValueAfterMoveCarrierToBin": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -201,14 +97,6 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_HandleSelects.shipmentChange": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_AddCarrier": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Stock_MutationCompletions.addCarrier": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -216,10 +104,6 @@
     "Receive Deliveries_AddShipment.checkOrder": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_GetSiteWarehouses": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
     },
     "Receive Deliveries_DefaultValues.binValue": {
       "unpublishedUserSetOnLoad": false,
@@ -233,19 +117,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Review Inbound Shipments_FormatTableData.formatData": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_ReceiveTrackedByCarrier": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Deliveries_QueryCompletions.OnWarehouseSelect": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_MutationCompletions.updateShipmentItem": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -253,19 +125,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Review Inbound Shipments_GetUserSites": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_MutationCompletions.undoTransaction": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Stock_MutationCompletions.receiveSerialised": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_MutationCompletions.AddCarrierreceiveSerialised": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -277,11 +137,7 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_AddInboundShipment": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_AddShipmentItemNewShip": {
+    "PutAway_queryUserSites": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -293,19 +149,7 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "Receive Stock_GetSerialCarriers": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
-    "Receive Stock_UndoTransaction": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Stock_ReceiveUntracked": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_CreateShipmentNewOrder": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -333,6 +177,218 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "PutAway_JSObject1.HandleUserSites": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetShipmentTransactions": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Receive Deliveries_MutationCompletions.createShipmentNewOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review Inbound Shipments_MutationCompletion.loadShipments": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetCarrierCarriers": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "PutAway_queryWarehouse": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetCarrierCarriersStatus": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "PutAway_JSObject1.HandleBarCodeInput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review Inbound Shipments_JS_SiteList.getUserSiteList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_UpdateShipmentItem": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_MutationCompletions.addShipmentItemExistingShip": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Upload ASN_ConfirmASNMutation": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_GetDeliveryDetail": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Receive Deliveries_GetShipmentDetail": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_CreateInboundShipment.addItemToShipment": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_GetWarehouseMaterials": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_TransactionTable.formatTable": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_MutationCompletions.createShipmentExistingOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_GetShipmentWarehouseDetail.GetDetails": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_CreateInboundShipment.addInboundShipmentHeader": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_DefaultValues.formatShipmentItemsTable": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetCustomers": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Upload ASN_AddASNStaging": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Receive Stock_MutationCompletions.receiveTrackedByCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_DefaultValues.quantityValue": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_MutationCompletions.createDelivery": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_Receive.shipmentItemReceiveType": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Upload ASN_GetWarehouse": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review Inbound Shipments_ResetTableData.emptyTable": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "PutAway_queryCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Upload ASN_MutationCompletions.confirmASNMutation": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetSerialCarriersStatus": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Receive Deliveries_GetSiteActiveInboundOrders": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetBulkStatus": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_DefaultValues.materialValue": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetSiteWarehouses": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Receive Stock_HandleSelects.warehouseChange": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_GetUserSites": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_HandleSelects.shipmentChange": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_AddCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_GetSiteWarehouses": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Review Inbound Shipments_FormatTableData.formatData": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_ReceiveTrackedByCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "PutAway_queryBin": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_MutationCompletions.updateShipmentItem": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review Inbound Shipments_GetUserSites": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_MutationCompletions.undoTransaction": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_MutationCompletions.AddCarrierreceiveSerialised": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_AddInboundShipment": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_AddShipmentItemNewShip": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetSerialCarriers": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Receive Stock_UndoTransaction": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_CreateShipmentNewOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Deliveries_CreateShipmentExistingOrder": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -345,25 +401,13 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_GetShipmentTransactions": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
     "Upload ASN_UploadASNFilePicker.pickFileAndRefresh": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_MutationCompletions.createShipmentNewOrder": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Receive Deliveries_GetCustomers": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
-    },
-    "Review Inbound Shipments_MutationCompletion.loadShipments": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
     },
     "Put Away_getWarehouseByName": {
       "unpublishedUserSetOnLoad": false,
@@ -380,14 +424,6 @@
     "Receive Stock_MutationCompletions.receiveUntracked": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
-    },
-    "Receive Stock_GetCarrierCarriers": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
-    "Receive Stock_GetCarrierCarriersStatus": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
     }
   },
   "editModeTheme": {
