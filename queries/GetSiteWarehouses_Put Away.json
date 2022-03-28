@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ReceiveDelivery",
+    "name": "GetSiteWarehouses",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -12,10 +12,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Receive Deliveries",
+    "pageId": "Put Away",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
+      "path": "/graphql",
       "headers": [
         {
           "key": "content-type",
@@ -23,7 +24,8 @@
         }
       ],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: listInboundDeliveries.selectedItem.id},\n\t\t\t\tset: {\n\t\t\t\t\tstatus:\"RECEIVED\",dateTimeReceived:moment()\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateDelivery($input:UpdateDeliveryInput!) {\n  updateDelivery(input:$input){\n    numUids\n  }\n}\n    `\n})\n}}",
+      "queryParameters": [],
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{equipmentLevel:{eq:Warehouse},not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -31,7 +33,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -41,14 +43,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: listInboundDeliveries.selectedItem.id},\n\t\t\t\tset: {\n\t\t\t\t\tstatus:\"RECEIVED\",dateTimeReceived:moment()\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateDelivery($input:UpdateDeliveryInput!) {\n  updateDelivery(input:$input){\n    numUids\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{equipmentLevel:{eq:Warehouse},not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_ReceiveDelivery",
+  "id": "Put Away_GetSiteWarehouses",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62391a174d9aea1b062af314"
+  "gitSyncId": "6196c1950dfef900f247faaf_623960914d9aea1b062af684"
 }
