@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "confirmASNMutation",
-    "fullyQualifiedName": "MutationCompletions.confirmASNMutation",
+    "name": "clearValues",
+    "fullyQualifiedName": "HandleSelects.clearValues",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Upload ASN",
-    "collectionId": "Upload ASN_MutationCompletions",
+    "pageId": "Put Away",
+    "collectionId": "Put Away_HandleSelects",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (ConfirmASNMutation.data.errors != null) {\n\t\t\tshowAlert(ConfirmASNMutation.data.errors[0].message)\n\t\t} else {\n\t\t\tResetUploadASNContainer.resetUploadASNContainer()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tstoreValue(\"getWarehouseByNameResult\",undefined)\n\t\tstoreValue(\"getCarrierByCodeResult\",undefined)\n\t\tstoreValue(\"getSubLotByCode\",undefined)\n\t\tinpBarcodeScan.text = undefined\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (ConfirmASNMutation.data.errors != null) {\n\t\t\tshowAlert(ConfirmASNMutation.data.errors[0].message)\n\t\t} else {\n\t\t\tResetUploadASNContainer.resetUploadASNContainer()\n\t\t}\n\t}"
+      "() => {\n\t\tstoreValue(\"getWarehouseByNameResult\",undefined)\n\t\tstoreValue(\"getCarrierByCodeResult\",undefined)\n\t\tstoreValue(\"getSubLotByCode\",undefined)\n\t\tinpBarcodeScan.text = undefined\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Upload ASN_ConfirmASNMutation",
+  "id": "Put Away_HandleSelects.clearValues",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_6204a9b9552a5f63958772db"
+  "gitSyncId": "623b99d24d9aea1b062b1ed0_623ff2dfc99df23699318817"
 }
