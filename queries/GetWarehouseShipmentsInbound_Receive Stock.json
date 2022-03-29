@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n\t\t\towner{name}\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -43,7 +43,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n\t\t\towner{name}\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
