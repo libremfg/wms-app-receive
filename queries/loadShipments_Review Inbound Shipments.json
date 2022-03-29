@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tif (LoadShipments.data.errors != null) {\n\t\t\tshowAlert(LoadShipments.data.errors[0].message)\n\t\t} else {\n\t\t\tResetTableData.emptyTable()\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

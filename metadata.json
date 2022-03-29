@@ -185,6 +185,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Deliveries_GetPartners": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Review Inbound Shipments_MutationCompletion.loadShipments": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
