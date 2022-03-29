@@ -5,10 +5,6 @@
   "publishedDefaultPageName": "Receive Stock",
   "unpublishedDefaultPageName": "Receive Stock",
   "invisibleActionFields": {
-    "Review Inbound Shipments_AssignPlannedQuantity.assignPlannedQuantity": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Receive Stock_HandleSelects.siteChange": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -217,6 +213,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Review Inbound Shipments_GetPartners": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_MutationCompletions.addShipmentItemExistingShip": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -228,6 +228,10 @@
     "Receive Deliveries_GetDeliveryDetail": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "Review Inbound Shipments_AssignTable.assignOwner": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Receive Deliveries_GetShipmentDetail": {
       "unpublishedUserSetOnLoad": false,
@@ -270,6 +274,10 @@
       "publishedUserSetOnLoad": true
     },
     "Receive Stock_MutationCompletions.receiveTrackedByCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "PutAway_MoveCarrierToBin": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -341,6 +349,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "PutAway_JSObject1.ClearAllValue": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Review Inbound Shipments_FormatTableData.formatData": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -369,11 +381,19 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Review Inbound Shipments_AssignTable.assignPlannedQuantity": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_AddInboundShipment": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Receive Stock_AddShipmentItemNewShip": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "PutAway_JSObject1.HandleMoveItemAvailability": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

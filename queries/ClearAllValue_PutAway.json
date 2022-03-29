@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "loadShipments",
-    "fullyQualifiedName": "MutationCompletion.loadShipments",
+    "name": "ClearAllValue",
+    "fullyQualifiedName": "JSObject1.ClearAllValue",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,15 +13,15 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Review Inbound Shipments",
-    "collectionId": "Review Inbound Shipments_MutationCompletion",
+    "pageId": "PutAway",
+    "collectionId": "PutAway_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (LoadShipments.data.errors != null) {\n\t\t\tshowAlert(LoadShipments.data.errors[0].message)\n\t\t} else {\n\t\t\tResetTableData.emptyTable()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tstoreValue(\"queryCarrierID\",\"\")\n\t\tstoreValue(\"queryCarrierCode\",\"\")\n\t\tstoreValue(\"queryBinId\",\"\")\n\t\tstoreValue(\"queryBinName\",\"\")\n\t\tstoreValue(\"queryMaterialSubLotCode\",\"\")\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (LoadShipments.data.errors != null) {\n\t\t\tshowAlert(LoadShipments.data.errors[0].message)\n\t\t} else {\n\t\t\tResetTableData.emptyTable()\n\t\t}\n\t}"
+      "() => {\n\t\tstoreValue(\"queryCarrierID\",\"\")\n\t\tstoreValue(\"queryCarrierCode\",\"\")\n\t\tstoreValue(\"queryBinId\",\"\")\n\t\tstoreValue(\"queryBinName\",\"\")\n\t\tstoreValue(\"queryMaterialSubLotCode\",\"\")\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_MutationCompletion.loadShipments",
+  "id": "PutAway_JSObject1.ClearAllValue",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_6204ae38552a5f6395877330"
+  "gitSyncId": "6196c1950dfef900f247faaf_62425d8cc99df2369931ae08"
 }

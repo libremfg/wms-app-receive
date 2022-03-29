@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "assignPlannedQuantity",
-    "fullyQualifiedName": "AssignPlannedQuantity.assignPlannedQuantity",
+    "fullyQualifiedName": "AssignTable.assignPlannedQuantity",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Review Inbound Shipments",
-    "collectionId": "Review Inbound Shipments_AssignPlannedQuantity",
+    "collectionId": "Review Inbound Shipments_AssignTable",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_AssignPlannedQuantity.assignPlannedQuantity",
+  "id": "Review Inbound Shipments_AssignTable.assignPlannedQuantity",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43434e89bc475f3ccf8f3"
 }

@@ -139,7 +139,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.974609375,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 0,
+                      "dynamicBindingPathList": [],
                       "children": [
                         {
                           "widgetName": "Canvas2Copy1",
@@ -218,7 +220,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{appsmith.store.queryBinName}}",
+                              "text": "Name: {{appsmith.store.queryBinName}}",
                               "key": "daiv0bswbu",
                               "rightColumn": 34,
                               "textAlign": "LEFT",
@@ -239,7 +241,7 @@
                       ],
                       "borderWidth": "0",
                       "key": "sejr0l46p0",
-                      "backgroundColor": "#FFFFFF",
+                      "backgroundColor": "#F6F7F8",
                       "rightColumn": 61,
                       "widgetId": "fsoxab0v07",
                       "containerStyle": "card",
@@ -264,7 +266,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.974609375,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 0,
+                      "dynamicBindingPathList": [],
                       "children": [
                         {
                           "widgetName": "Canvas2Copy",
@@ -308,7 +312,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "{{appsmith.store.queryCarrierCode}}",
+                              "text": "Code: {{appsmith.store.queryCarrierCode}}",
                               "key": "daiv0bswbu",
                               "rightColumn": 16,
                               "textAlign": "LEFT",
@@ -364,7 +368,7 @@
                       ],
                       "borderWidth": "0",
                       "key": "sejr0l46p0",
-                      "backgroundColor": "#FFFFFF",
+                      "backgroundColor": "#F6F7F8",
                       "rightColumn": 61,
                       "widgetId": "i1eo0h3yx1",
                       "containerStyle": "card",
@@ -378,7 +382,7 @@
                     {
                       "boxShadow": "NONE",
                       "widgetName": "Container2",
-                      "borderColor": "transparent",
+                      "borderColor": "",
                       "isCanvas": true,
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -389,7 +393,9 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.974609375,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 0,
+                      "dynamicBindingPathList": [],
                       "children": [
                         {
                           "widgetName": "Canvas2",
@@ -417,8 +423,8 @@
                               "widgetName": "Text4Copy2",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 0,
-                              "bottomRow": 4,
+                              "topRow": 4,
+                              "bottomRow": 8,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -448,8 +454,8 @@
                               "widgetName": "Text4",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 4,
-                              "bottomRow": 8,
+                              "topRow": 0,
+                              "bottomRow": 4,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -485,7 +491,7 @@
                       ],
                       "borderWidth": "0",
                       "key": "sejr0l46p0",
-                      "backgroundColor": "#FFFFFF",
+                      "backgroundColor": "#F6F7F8",
                       "rightColumn": 61,
                       "widgetId": "p6ce3atu3n",
                       "containerStyle": "card",
@@ -633,10 +639,16 @@
                       "isCanvas": false,
                       "dynamicPropertyPathList": [
                         {
-                          "key": "groupButtons.groupButton1.onClick"
+                          "key": "groupButtons.groupButton1.isDisabled"
                         },
                         {
-                          "key": "groupButtons.groupButton1.isDisabled"
+                          "key": "groupButtons.groupButton2.isDisabled"
+                        },
+                        {
+                          "key": "groupButtons.groupButton2.onClick"
+                        },
+                        {
+                          "key": "groupButtons.groupButton1.onClick"
                         }
                       ],
                       "displayName": "Button Group",
@@ -657,7 +669,7 @@
                           "isDisabled": "{{JSObject1.HandleMoveCarrierToBinAvailability()}}",
                           "index": 0,
                           "menuItems": {},
-                          "onClick": "{{JSObject1.ClearValueAfterMoveCarrierToBin()}}"
+                          "onClick": "{{MoveCarrierToBin.run(() => JSObject1.ClearValueAfterMoveCarrierToBin(), () => showAlert('Unable to move carrier to bin','error'))}}"
                         },
                         "groupButton2": {
                           "label": "Move item to carrier",
@@ -668,9 +680,23 @@
                           "placement": "CENTER",
                           "widgetId": "",
                           "isVisible": true,
-                          "isDisabled": false,
+                          "isDisabled": "{{JSObject1.HandleMoveItemAvailability()}}",
                           "index": 1,
-                          "menuItems": {}
+                          "menuItems": {},
+                          "onClick": ""
+                        },
+                        "groupButton1fr8vdswno": {
+                          "id": "groupButton1fr8vdswno",
+                          "label": "Clear",
+                          "menuItems": {},
+                          "buttonType": "SIMPLE",
+                          "buttonColor": "#03B365",
+                          "placement": "CENTER",
+                          "widgetId": "5k3yvokguw",
+                          "isDisabled": false,
+                          "isVisible": true,
+                          "iconName": "trash",
+                          "onClick": "{{JSObject1.ClearAllValue()}}"
                         }
                       },
                       "type": "BUTTON_GROUP_WIDGET",
@@ -680,14 +706,24 @@
                       "dynamicTriggerPathList": [
                         {
                           "key": "groupButtons.groupButton1.onClick"
+                        },
+                        {
+                          "key": "groupButtons.groupButton1fr8vdswno.onClick"
+                        },
+                        {
+                          "key": "groupButtons.groupButton2.onClick"
                         }
                       ],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "groupButtons.groupButton1.isDisabled"
+                        },
+                        {
+                          "key": "groupButtons.groupButton2.isDisabled"
                         }
                       ],
+                      "isDisabled": false,
                       "key": "ti93oreumz",
                       "orientation": "horizontal",
                       "rightColumn": 62,
@@ -731,7 +767,11 @@
               "defaultOptionValue": "",
               "animateLoading": true,
               "parentColumnSpace": 19.8125,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "leftColumn": 3,
               "dynamicBindingPathList": [
                 {
@@ -749,7 +789,8 @@
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "onOptionChange": "{{queryWarehouse.run()}}"
             },
             {
               "widgetName": "Text6",
@@ -847,6 +888,37 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false
+            },
+            {
+              "widgetName": "Text8",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 14,
+              "bottomRow": 18,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 37,
+              "dynamicBindingPathList": [],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "stockonhandbycarrier",
+              "key": "4gchuy6tqf",
+              "rightColumn": 53,
+              "textAlign": "LEFT",
+              "widgetId": "uve35n2ob8",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
             }
           ]
         },
@@ -858,7 +930,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "JSON.stringify({\n    variables:  {\n\t\"input\": appsmith.user.email\n},\n    query: `\nquery($input:String){\n  getUser(username:$input){\n    hasRole{\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        value: id\n        label: name\n        equipmentLevel\n      }\n    }\n  }\n}\n    `\n})"
+                "JSON.stringify({\n    variables:  {\n\t\"input\": appsmith.user.email\n},\n    query: `\nquery($input:String){\n  getUser(username:$input){\n\t\t\tid\n    hasRole{\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        value: id\n        label: name\n        equipmentLevel\n      }\n    }\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -901,6 +973,7 @@
           "Text5",
           "Text6",
           "Text7",
+          "Text8",
           "WarehouseSelect",
           "barcodeInput"
         ],

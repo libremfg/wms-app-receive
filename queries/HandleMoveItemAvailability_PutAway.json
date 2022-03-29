@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "loadShipments",
-    "fullyQualifiedName": "MutationCompletion.loadShipments",
+    "name": "HandleMoveItemAvailability",
+    "fullyQualifiedName": "JSObject1.HandleMoveItemAvailability",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Review Inbound Shipments",
-    "collectionId": "Review Inbound Shipments_MutationCompletion",
+    "pageId": "PutAway",
+    "collectionId": "PutAway_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (LoadShipments.data.errors != null) {\n\t\t\tshowAlert(LoadShipments.data.errors[0].message)\n\t\t} else {\n\t\t\tResetTableData.emptyTable()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif(appsmith.store.queryMaterialSubLotCode == \"\" || appsmith.store.queryCarrierID == \"\"){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (LoadShipments.data.errors != null) {\n\t\t\tshowAlert(LoadShipments.data.errors[0].message)\n\t\t} else {\n\t\t\tResetTableData.emptyTable()\n\t\t}\n\t}"
+      "() => {\n\t\tif(appsmith.store.queryMaterialSubLotCode == \"\" || appsmith.store.queryCarrierID == \"\"){\n\t\t\treturn true\n\t\t}else{\n\t\t\treturn false\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review Inbound Shipments_MutationCompletion.loadShipments",
+  "id": "PutAway_JSObject1.HandleMoveItemAvailability",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_6204ae38552a5f6395877330"
+  "gitSyncId": "6196c1950dfef900f247faaf_62425dd3c99df2369931ae0a"
 }

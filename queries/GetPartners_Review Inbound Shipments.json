@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "queryUserSites",
+    "name": "GetPartners",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -12,7 +12,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "PutAway",
+    "pageId": "Review Inbound Shipments",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -23,17 +23,13 @@
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables:  {\n\t\"input\": appsmith.user.email\n},\n    query: `\nquery($input:String){\n  getUser(username:$input){\n\t\t\tid\n    hasRole{\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        value: id\n        label: name\n        equipmentLevel\n      }\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: null,\n    query: `\nquery {\n  queryPartner {\n    value:id\n    label:name\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
-      ],
-      "formData": {
-        "apiContentType": "none"
-      }
+      ]
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [
@@ -45,14 +41,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables:  {\n\t\"input\": appsmith.user.email\n},\n    query: `\nquery($input:String){\n  getUser(username:$input){\n\t\t\tid\n    hasRole{\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        value: id\n        label: name\n        equipmentLevel\n      }\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: null,\n    query: `\nquery {\n  queryPartner {\n    value:id\n    label:name\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "PutAway_queryUserSites",
+  "id": "Review Inbound Shipments_GetPartners",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62415390c99df23699319778"
+  "gitSyncId": "6196c1950dfef900f247faaf_624292cdc99df2369931afb2"
 }
