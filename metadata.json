@@ -225,6 +225,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "PutAway_JSObject1.HandleMoveCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Upload ASN_ConfirmASNMutation": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -258,6 +262,10 @@
       "publishedUserSetOnLoad": false
     },
     "Receive Deliveries_MutationCompletions.createShipmentExistingOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "PutAway_queryMoveCarrier": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
