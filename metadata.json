@@ -249,6 +249,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Stock_Receive.owner": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_TransactionTable.formatTable": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
