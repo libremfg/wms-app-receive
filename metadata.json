@@ -1,7 +1,7 @@
 {
   "fileFormatVersion": 1,
   "clientSchemaVersion": 1,
-  "serverSchemaVersion": 2,
+  "serverSchemaVersion": 3,
   "publishedDefaultPageName": "Receive Stock",
   "unpublishedDefaultPageName": "Receive Stock",
   "invisibleActionFields": {
@@ -309,6 +309,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "PutAway_getStockOnHandForCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Upload ASN_GetWarehouse": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -464,31 +468,15 @@
   },
   "editModeTheme": {
     "name": "Classic",
+    "displayName": "Classic",
     "isSystemTheme": true,
-    "deleted": false,
-    "policies": [
-      {
-        "permission": "read:themes",
-        "users": [
-          "anonymousUser"
-        ],
-        "groups": []
-      }
-    ]
+    "deleted": false
   },
   "publishedTheme": {
     "name": "Classic",
+    "displayName": "Classic",
     "isSystemTheme": true,
-    "deleted": false,
-    "policies": [
-      {
-        "permission": "read:themes",
-        "users": [
-          "anonymousUser"
-        ],
-        "groups": []
-      }
-    ]
+    "deleted": false
   },
   "publishedLayoutmongoEscapedWidgets": {},
   "unpublishedLayoutmongoEscapedWidgets": {}
