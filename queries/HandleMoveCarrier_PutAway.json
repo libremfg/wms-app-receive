@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n\t\tif(!_.isEmpty(CarrierInput.text)){\n\t\t\tqueryMoveCarrier.run(()=>{\n\t\t\t\tif(queryMoveCarrier.data.data.getCarrier != null){\n\t\t\t\t\tstoreValue(\"queryMoveCarrierCode\",queryMoveCarrier.data.data.getCarrier.code)\n\t\t\t\t\tstoreValue(\"queryMoveCarrierId\",queryMoveCarrier.data.data.getCarrier.id)\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t}",
+      "body": "async () => {\n\t\tif(!_.isEmpty(CarrierInput.text)){\n\t\t\tqueryMoveCarrier.run(()=>{\n\t\t\t\tif(queryMoveCarrier.data.data.getCarrier != null){\n\t\t\t\t\tstoreValue(\"queryMoveCarrierCode\",queryMoveCarrier.data.data.getCarrier.code)\n\t\t\t\t\tstoreValue(\"queryMoveCarrierId\",queryMoveCarrier.data.data.getCarrier.id)\n\t\t\t\t\tgetStockOnHandForCarrier.run()\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n\t\tif(!_.isEmpty(CarrierInput.text)){\n\t\t\tqueryMoveCarrier.run(()=>{\n\t\t\t\tif(queryMoveCarrier.data.data.getCarrier != null){\n\t\t\t\t\tstoreValue(\"queryMoveCarrierCode\",queryMoveCarrier.data.data.getCarrier.code)\n\t\t\t\t\tstoreValue(\"queryMoveCarrierId\",queryMoveCarrier.data.data.getCarrier.id)\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t}"
+      "async () => {\n\t\tif(!_.isEmpty(CarrierInput.text)){\n\t\t\tqueryMoveCarrier.run(()=>{\n\t\t\t\tif(queryMoveCarrier.data.data.getCarrier != null){\n\t\t\t\t\tstoreValue(\"queryMoveCarrierCode\",queryMoveCarrier.data.data.getCarrier.code)\n\t\t\t\t\tstoreValue(\"queryMoveCarrierId\",queryMoveCarrier.data.data.getCarrier.id)\n\t\t\t\t\tgetStockOnHandForCarrier.run()\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\tCreateShipmentNewOrder.run()\n\t\t\tMutationCompletions.createShipmentExistingOrder()\n\t\t} else {\n\t\t\tCreateShipmentExistingOrder.run()\n\t\t\tMutationCompletions.createShipmentNewOrder()\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

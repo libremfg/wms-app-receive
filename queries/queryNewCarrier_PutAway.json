@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "queryMaterialSublot",
+    "name": "queryNewCarrier",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -24,7 +24,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables:  {\n\t\"input\": barcodeInput.text\n},\n    query: `\nquery($input:String){\n  getMaterialSubLot(code:$input){\n\t\t\tid\n    code\n    material{\n      code\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables:  {\n\t\"input\": NewCarrierInput.text\n},\n    query: `\nquery($input:String){\n  getCarrier(code:$input){\n\t\t\tid\n    code\n    storageLocation{\n      name\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -35,7 +35,7 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -45,14 +45,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables:  {\n\t\"input\": barcodeInput.text\n},\n    query: `\nquery($input:String){\n  getMaterialSubLot(code:$input){\n\t\t\tid\n    code\n    material{\n      code\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables:  {\n\t\"input\": NewCarrierInput.text\n},\n    query: `\nquery($input:String){\n  getCarrier(code:$input){\n\t\t\tid\n    code\n    storageLocation{\n      name\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "PutAway_queryMaterialSublot",
+  "id": "PutAway_queryNewCarrier",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62413cb2c99df23699319538"
+  "gitSyncId": "6196c1950dfef900f247faaf_624511c0ae85b361029c14aa"
 }

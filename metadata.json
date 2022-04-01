@@ -13,6 +13,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "PutAway_queryNewCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_CompleteShipment": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -125,6 +129,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "PutAway_JSObject1.HandleNewCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Deliveries_MutationCompletions.receiveDelivery": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -173,6 +181,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "PutAway_JSObject1.FormatGetStockOnHandByCarrier": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "PutAway_JSObject1.HandleUserSites": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -186,6 +198,10 @@
       "publishedUserSetOnLoad": false
     },
     "Receive Deliveries_GetPartners": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "PutAway_moveMaterialSubLotToCarrier": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -274,6 +290,10 @@
       "publishedUserSetOnLoad": false
     },
     "Receive Stock_CreateInboundShipment.addInboundShipmentHeader": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "PutAway_MoveQuantitiesBetweenCarriers": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
