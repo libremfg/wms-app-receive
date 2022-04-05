@@ -14,7 +14,7 @@
     },
     "pageId": "PutAway",
     "actionConfiguration": {
-      "timeoutInMillisecond": 60000,
+      "timeoutInMillisecond": 6000000,
       "paginationType": "NONE",
       "path": "",
       "headers": [
@@ -39,7 +39,9 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
-    "invalids": [],
+    "invalids": [
+      "'Query timeout' field must be an integer between 0 and 60000"
+    ],
     "messages": [],
     "jsonPathKeys": [
       "JSON.stringify({\n    variables:  {\n  \"input\": [\n    {\n      \"carrier\": {\n\t\t\t\t\t\t\"id\": appsmith.store.queryCarrierID,\n        \"code\": appsmith.store.queryCarrierCode\n      },\n      \"storageLocation\": {\n\t\t\t\t\t\t\"id\":appsmith.store.queryBinId,\n        \"name\": appsmith.store.queryBinName\n      },\n      \"user\": {\n\t\t\t\t\t\t\"id\":queryUserSites.data.data.getUser.id,\n        \"username\": appsmith.user.email\n      },\n\t\t\t\n      \n    }\n  ]\n},\n    query: `\nmutation($input:[InventoryTransactionInput!]!){\n  moveCarrierToBin(input:$input){\n    carrier{\n      code\n    }\n    storageLocation{\n      name\n    }\n  }\n}\n    `\n})"

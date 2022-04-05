@@ -16,6 +16,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
+      "path": "",
       "headers": [
         {
           "key": "content-type",
@@ -36,11 +37,7 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
