@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "completeShipment",
-    "fullyQualifiedName": "MutationCompletions.completeShipment",
+    "name": "receiveTrackedByCarrier",
+    "fullyQualifiedName": "MutationCompletions.receiveTrackedByCarrier",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (CompleteShipment.data.errors != null) {\n\t\t\tshowAlert(CompleteShipment.data.errors[0].message)\n\t\t}\n\t\tGetWarehouseShipmentsInbound.run()\n\t}",
+      "body": "() => {\n\t\tif (ReceiveTrackedByCarrier.data.errors != null) {\n\t\t\tshowAlert(ReceiveTrackedByCarrier.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentTransactions.run()\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (CompleteShipment.data.errors != null) {\n\t\t\tshowAlert(CompleteShipment.data.errors[0].message)\n\t\t}\n\t\tGetWarehouseShipmentsInbound.run()\n\t}"
+      "() => {\n\t\tif (ReceiveTrackedByCarrier.data.errors != null) {\n\t\t\tshowAlert(ReceiveTrackedByCarrier.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentTransactions.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_MutationCompletions.completeShipment",
+  "id": "Receive Stock_MutationCompletions.receiveTrackedByCarrier",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62046005552a5f6395877102"
+  "gitSyncId": "6196c1950dfef900f247faaf_6209a9f96b4b1e154a3c0114"
 }

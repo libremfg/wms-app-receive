@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "addShipmentItem",
-    "fullyQualifiedName": "MutationCompletions.addShipmentItem",
+    "name": "createShipmentExistingOrder",
+    "fullyQualifiedName": "MutationCompletions.createShipmentExistingOrder",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (AddShipmentItem.data.errors != null) {\n\t\t\tshowAlert(AddShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (CreateShipmentExistingOrder.data.errors != null) {\n\t\t\tshowAlert(CreateShipmentExistingOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tGetDeliveryDetail.run()\n\t\t\tcloseModal(\"modalAddShipment\")\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (AddShipmentItem.data.errors != null) {\n\t\t\tshowAlert(AddShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t}\n\t}"
+      "() => {\n\t\tif (CreateShipmentExistingOrder.data.errors != null) {\n\t\t\tshowAlert(CreateShipmentExistingOrder.data.errors[0].message)\n\t\t} else {\n\t\t\tGetDeliveryDetail.run()\n\t\t\tcloseModal(\"modalAddShipment\")\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_MutationCompletions.addShipmentItem",
+  "id": "Receive Deliveries_MutationCompletions.createShipmentExistingOrder",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62299062f782567d61f1680e"
+  "gitSyncId": "6196c1950dfef900f247faaf_6229846ff782567d61f1674c"
 }

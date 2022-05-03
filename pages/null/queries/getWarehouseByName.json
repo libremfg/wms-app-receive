@@ -12,7 +12,6 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Put Away",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -52,7 +51,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Put Away_getWarehouseByName",
+  "id": "null_getWarehouseByName",
   "deleted": false,
   "gitSyncId": "623b99d24d9aea1b062b1ed0_623d27114d9aea1b062b3769"
 }

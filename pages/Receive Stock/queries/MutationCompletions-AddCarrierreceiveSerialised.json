@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "receiveSerialised",
-    "fullyQualifiedName": "MutationCompletions.receiveSerialised",
+    "name": "AddCarrierreceiveSerialised",
+    "fullyQualifiedName": "MutationCompletions.AddCarrierreceiveSerialised",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tif (ReceiveSerialised.data.errors != null) {\n\t\t\tshowAlert(ReceiveSerialised.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentTransactions.run()\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_MutationCompletions.receiveSerialised",
+  "id": "Receive Stock_MutationCompletions.AddCarrierreceiveSerialised",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62045390552a5f63958770d5"
+  "gitSyncId": "6196c1950dfef900f247faaf_6209a9e56b4b1e154a3c0112"
 }

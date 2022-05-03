@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "createDelivery",
-    "fullyQualifiedName": "MutationCompletions.createDelivery",
+    "name": "updateShipmentItem",
+    "fullyQualifiedName": "MutationCompletions.updateShipmentItem",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (UpdateShipmentItem.data.errors != null) {\n\t\t\tshowAlert(UpdateShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t\tcloseModal(\"modalEditShipmentItem\")\n\t\t\tshowModal(\"modalEditShipment\")\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (CreateDelivery.data.errors != null) {\n\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t} else {\n\t\t\tGetSiteDeliveries.run()\n\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t}\n\t}"
+      "() => {\n\t\tif (UpdateShipmentItem.data.errors != null) {\n\t\t\tshowAlert(UpdateShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t\tcloseModal(\"modalEditShipmentItem\")\n\t\t\tshowModal(\"modalEditShipment\")\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_MutationCompletions.createDelivery",
+  "id": "Receive Deliveries_MutationCompletions.updateShipmentItem",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62297a2ff782567d61f166f1"
+  "gitSyncId": "6196c1950dfef900f247faaf_622999c9f782567d61f16ae5"
 }

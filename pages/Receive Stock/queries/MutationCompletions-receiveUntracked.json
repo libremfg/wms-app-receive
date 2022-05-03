@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "undoTransaction",
-    "fullyQualifiedName": "MutationCompletions.undoTransaction",
+    "name": "receiveUntracked",
+    "fullyQualifiedName": "MutationCompletions.receiveUntracked",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (UndoTransaction.data.errors != null) {\n\t\t\tshowAlert(UndoTransaction.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentTransactions.run()\n\t\t}\n\t\tcloseModal(\"modalItemLocation\")\n\t}",
+      "body": "() => {\n\t\tif (ReceiveUntracked.data.errors != null) {\n\t\t\tshowAlert(ReceiveUntracked.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentTransactions.run()\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (UndoTransaction.data.errors != null) {\n\t\t\tshowAlert(UndoTransaction.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentTransactions.run()\n\t\t}\n\t\tcloseModal(\"modalItemLocation\")\n\t}"
+      "() => {\n\t\tif (ReceiveUntracked.data.errors != null) {\n\t\t\tshowAlert(ReceiveUntracked.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentTransactions.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_MutationCompletions.undoTransaction",
+  "id": "Receive Stock_MutationCompletions.receiveUntracked",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62045fc2552a5f6395877100"
+  "gitSyncId": "6196c1950dfef900f247faaf_6209aa0f6b4b1e154a3c0116"
 }
