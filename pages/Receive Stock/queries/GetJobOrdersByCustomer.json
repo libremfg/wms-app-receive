@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ConfirmASNMutation",
+    "name": "GetJobOrdersByCustomer",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -13,10 +13,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Upload ASN",
+    "pageId": "Receive Stock",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
+      "path": "/graphql",
       "headers": [
         {
           "key": "content-type",
@@ -25,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:TableASNStaging.tableData,\n\t\t\tinput2:selectSite.selectedOptionValue\n\t\t},\n    query: `\nmutation NotConfirmASN($input:[ConfirmASNInput!]!,$input2:String!){\n  confirmASN(input:$input,siteID:$input2) {\n    site{\n      id\n    } \n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n\t\t\towner{name}\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -46,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput:TableASNStaging.tableData,\n\t\t\tinput2:selectSite.selectedOptionValue\n\t\t},\n    query: `\nmutation NotConfirmASN($input:[ConfirmASNInput!]!,$input2:String!){\n  confirmASN(input:$input,siteID:$input2) {\n    site{\n      id\n    } \n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n\t\t\towner{name}\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Upload ASN_ConfirmASNMutation",
+  "id": "Receive Stock_GetJobOrdersByCustomer",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c43436e89bc475f3ccfee8"
+  "gitSyncId": "6196c1950dfef900f247faaf_628b36f37901344ba8d1b999"
 }

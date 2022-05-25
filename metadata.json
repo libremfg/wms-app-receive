@@ -1,6 +1,20 @@
 {
   "clientSchemaVersion": 1,
   "serverSchemaVersion": 4,
+  "pageOrder": [
+    "Upload ASN",
+    "Review Inbound Shipments",
+    "Receive Stock",
+    "Receive Deliveries",
+    "PutAway"
+  ],
+  "publishedPageOrder": [
+    "Upload ASN",
+    "Review Inbound Shipments",
+    "Receive Stock",
+    "Receive Deliveries",
+    "PutAway"
+  ],
   "publishedDefaultPageName": "Receive Stock",
   "unpublishedDefaultPageName": "Receive Stock",
   "invisibleActionFields": {
@@ -252,6 +266,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Stock_GetJobOrdersByCustomer": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_GetMaterials": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
@@ -484,21 +502,6 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
-  },
-  "publishedTheme": {
-    "name": "Classic",
-    "displayName": "Classic",
-    "isSystemTheme": true,
-    "deleted": false,
-    "policies": [
-      {
-        "permission": "read:themes",
-        "users": [
-          "anonymousUser"
-        ],
-        "groups": []
-      }
-    ]
   },
   "publishedLayoutmongoEscapedWidgets": {},
   "unpublishedLayoutmongoEscapedWidgets": {},
