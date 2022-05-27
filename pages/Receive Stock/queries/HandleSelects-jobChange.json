@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "shipmentChange",
-    "fullyQualifiedName": "HandleSelects.shipmentChange",
+    "name": "jobChange",
+    "fullyQualifiedName": "HandleSelects.jobChange",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tGetShipmentWithItems.run()\n\t}",
+      "body": "() => {\n\t\tGetJobOrderMaterialReqs.run()\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tGetShipmentWithItems.run()\n\t}"
+      "() => {\n\t\tGetJobOrderMaterialReqs.run()\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_HandleSelects.shipmentChange",
+  "id": "Receive Stock_HandleSelects.jobChange",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_61c43430e89bc475f3ccead1"
 }

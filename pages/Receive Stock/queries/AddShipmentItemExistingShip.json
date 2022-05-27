@@ -23,7 +23,7 @@
         }
       ],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:[{\n         \"material\":{\"id\":selectAddShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\"plannedQuantity\":parseInt(inpAddShipmentItemQuantity.text),\n\t\t\t\t\"shipment\":{\"id\":tblShipmentList.selectedRow.id},\n\t\t\t\t\"status\":\"CREATED\"\n     }]\n\t\t},\n    query: `\n     mutation ($input: [AddShipmentItemInput!]!) {\n         addShipmentItem(input: $input) {\n\t\t\t\t \tshipmentItem{\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n         }\n     }\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:[{\n         \"material\":{\"id\":selectAddShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\"plannedQuantity\":parseInt(inpAddShipmentItemQuantity.text),\n\t\t\t\t\"shipment\":{\"id\":tblJobOrderList.selectedRow.id},\n\t\t\t\t\"status\":\"CREATED\"\n     }]\n\t\t},\n    query: `\n     mutation ($input: [AddShipmentItemInput!]!) {\n         addShipmentItem(input: $input) {\n\t\t\t\t \tshipmentItem{\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n         }\n     }\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -41,7 +41,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput:[{\n         \"material\":{\"id\":selectAddShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\"plannedQuantity\":parseInt(inpAddShipmentItemQuantity.text),\n\t\t\t\t\"shipment\":{\"id\":tblShipmentList.selectedRow.id},\n\t\t\t\t\"status\":\"CREATED\"\n     }]\n\t\t},\n    query: `\n     mutation ($input: [AddShipmentItemInput!]!) {\n         addShipmentItem(input: $input) {\n\t\t\t\t \tshipmentItem{\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n         }\n     }\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tinput:[{\n         \"material\":{\"id\":selectAddShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\"plannedQuantity\":parseInt(inpAddShipmentItemQuantity.text),\n\t\t\t\t\"shipment\":{\"id\":tblJobOrderList.selectedRow.id},\n\t\t\t\t\"status\":\"CREATED\"\n     }]\n\t\t},\n    query: `\n     mutation ($input: [AddShipmentItemInput!]!) {\n         addShipmentItem(input: $input) {\n\t\t\t\t \tshipmentItem{\n\t\t\t\t\t\tid\n\t\t\t\t\t}\n         }\n     }\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

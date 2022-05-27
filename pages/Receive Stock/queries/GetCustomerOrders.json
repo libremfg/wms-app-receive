@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetShipmentTransactions",
+    "name": "GetCustomerOrders",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -17,7 +17,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/graphql",
+      "path": "",
       "headers": [
         {
           "key": "content-type",
@@ -26,13 +26,8 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectCustomer.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getPartner(id:$id){\n    id\n\t\tname\n    operationsRequests @cascade(fields:[\"requestState\"]){\n      code\n      requestState(filter:{name:{in:[\"Unscheduled\"]}}){name}\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
-      "pluginSpecifiedTemplates": [
-        {
-          "value": true
-        }
-      ],
       "formData": {
         "apiContentType": "application/json"
       }
@@ -47,14 +42,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:selectCustomer.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getPartner(id:$id){\n    id\n\t\tname\n    operationsRequests @cascade(fields:[\"requestState\"]){\n      code\n      requestState(filter:{name:{in:[\"Unscheduled\"]}}){name}\n    }\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_GetShipmentTransactions",
+  "id": "Receive Stock_GetCustomerOrders",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c4342fe89bc475f3cce4b4"
+  "gitSyncId": "6196c1950dfef900f247faaf_629076137901344ba8d3261d"
 }

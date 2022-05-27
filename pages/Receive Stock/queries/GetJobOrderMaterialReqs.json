@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetShipmentTransactions",
+    "name": "GetJobOrderMaterialReqs",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:tblJobOrderList.selectedRow.id\n\t\t},\n    query: `\nquery($id:ID!){\n  getJobOrder(id:$id){\n    materialRequirements{\n\t\t\tid\n\t\t\tmaterial{\n\t\t\t\tcode,\n\t\t\t\tname,\n\t\t\t\tdescription\n\t\t\t},\n\t\t\tquantity\n\t\t}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid:tblJobOrderList.selectedRow.id\n\t\t},\n    query: `\nquery($id:ID!){\n  getJobOrder(id:$id){\n    materialRequirements{\n\t\t\tid\n\t\t\tmaterial{\n\t\t\t\tcode,\n\t\t\t\tname,\n\t\t\t\tdescription\n\t\t\t},\n\t\t\tquantity\n\t\t}\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_GetShipmentTransactions",
+  "id": "Receive Stock_GetJobOrderMaterialReqs",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c4342fe89bc475f3cce4b4"
+  "gitSyncId": "6196c1950dfef900f247faaf_628f228c7901344ba8d2cc7e"
 }

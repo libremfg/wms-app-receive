@@ -138,6 +138,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Deliveries_GetCustomerOrders": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Deliveries_GetCustomers": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
@@ -230,11 +234,27 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Stock_AddMaterialRequirement": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_AddOperationsRequestReceiving": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_AddSegmentRequirement": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_AddShipmentItemExistingShip": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Receive Stock_AddShipmentItemNewShip": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_CompleteJobOrder": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -262,17 +282,33 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Receive Stock_GetCustomerOrders": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_GetCustomers": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_GetJobOrdersByCustomer": {
+    "Receive Stock_GetJobOrderMaterialReqs": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetJobOrdersToReceive": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Receive Stock_GetMaterials": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "Receive Stock_GetOperationsRequest": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_GetSegmentsReceiveStock": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Receive Stock_GetSerialCarriers": {
       "unpublishedUserSetOnLoad": true,
@@ -322,15 +358,19 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Receive Stock_HandleSelects.customerChange": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_HandleSelects.formatMaterialSelect": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_HandleSelects.shipmentChange": {
+    "Receive Stock_HandleSelects.jobChange": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Stock_HandleSelects.shipmentItemChange": {
+    "Receive Stock_HandleSelects.materialRequirementChange": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -403,6 +443,18 @@
       "publishedUserSetOnLoad": false
     },
     "Receive Stock_ReceiveUntracked": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_ReceivingJob.add": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_ReceivingJob.addMaterialRequirement": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Stock_ReceivingJob.complete": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

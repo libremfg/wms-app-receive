@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetJobOrdersByCustomer",
+    "name": "GetOperationsRequest",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n\t\t\towner{name}\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tcode:inpJobOrderCodeReceiving.text\n\t\t},\n    query: `\nquery($code:String!){\n  getOperationsRequest(code:$code){\n    id\n\t\tcode\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n  getEquipment(id:$id){\n    name\n    shipments(filter:{type:{eq:INBOUND},not:{has:dateTimeReceivedUTC}}){\n      id\n      order{id,customerOrderNumber,status,shipFromPartner{name}}\n      consignmentNumber\n\t\t\towner{name}\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tcode:inpJobOrderCodeReceiving.text\n\t\t},\n    query: `\nquery($code:String!){\n  getOperationsRequest(code:$code){\n    id\n\t\tcode\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_GetJobOrdersByCustomer",
+  "id": "Receive Stock_GetOperationsRequest",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_628b36f37901344ba8d1b999"
+  "gitSyncId": "6196c1950dfef900f247faaf_628e021e7901344ba8d284f4"
 }

@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tshipmentItemReceiveType: () => {\n\t\tvar items = GetShipmentWithItems.data.data.getShipment.items\n\t\tvar itemKey =_.findKey(items,{'id':selectShipmentItem.selectedOptionValue})\n\t\tvar item = items[itemKey]\n\t\t//return item\n\t\treturn (item.material.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.material.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t},\n\towner: () => {\n\t\tif (tblShipmentList.selectedRow.owner != null) {\n\t\t\treturn tblShipmentList.selectedRow.owner.name\n\t\t}\n\t\treturn \"\"\n\t}\n\t\n}",
+    "body": "export default {\n\tshipmentItemReceiveType: async () => {\n\t\tvar items = GetMaterials.data.data.queryMaterialDefinition\n\t\tvar item =_.find(items,{'code':selectMaterialRequirement.selectedOptionValue})\n\t\tconsole.log(item)\n\t\tconsole.log(item.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK')\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t},\n\towner: () => {\n\t\tif (tblJobOrderList.selectedRow.owner != null) {\n\t\t\treturn tblJobOrderList.selectedRow.owner.name\n\t\t}\n\t\treturn \"\"\n\t}\n\t\n}",
     "variables": []
   },
   "id": "Receive Stock_Receive",

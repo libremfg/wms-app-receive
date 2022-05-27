@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (tblShipmentList.selectedRow.owner != null) {\n\t\t\treturn tblShipmentList.selectedRow.owner.name\n\t\t}\n\t\treturn \"\"\n\t}",
+      "body": "() => {\n\t\tif (tblJobOrderList.selectedRow.owner != null) {\n\t\t\treturn tblJobOrderList.selectedRow.owner.name\n\t\t}\n\t\treturn \"\"\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (tblShipmentList.selectedRow.owner != null) {\n\t\t\treturn tblShipmentList.selectedRow.owner.name\n\t\t}\n\t\treturn \"\"\n\t}"
+      "() => {\n\t\tif (tblJobOrderList.selectedRow.owner != null) {\n\t\t\treturn tblJobOrderList.selectedRow.owner.name\n\t\t}\n\t\treturn \"\"\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

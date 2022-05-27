@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tvar items = GetShipmentWithItems.data.data.getShipment.items\n\t\tvar itemKey =_.findKey(items,{'id':selectShipmentItem.selectedOptionValue})\n\t\tvar item = items[itemKey]\n\t\t//return item\n\t\treturn (item.material.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.material.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t}",
+      "body": "async () => {\n\t\tvar items = GetMaterials.data.data.queryMaterialDefinition\n\t\tvar item =_.find(items,{'code':selectMaterialRequirement.selectedOptionValue})\n\t\tconsole.log(item)\n\t\tconsole.log(item.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK')\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tvar items = GetShipmentWithItems.data.data.getShipment.items\n\t\tvar itemKey =_.findKey(items,{'id':selectShipmentItem.selectedOptionValue})\n\t\tvar item = items[itemKey]\n\t\t//return item\n\t\treturn (item.material.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.material.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t}"
+      "async () => {\n\t\tvar items = GetMaterials.data.data.queryMaterialDefinition\n\t\tvar item =_.find(items,{'code':selectMaterialRequirement.selectedOptionValue})\n\t\tconsole.log(item)\n\t\tconsole.log(item.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK')\n\t\t//return item\n\t\treturn (item.inventoryHandlingPolicy.trackBySerialNumber ? 'SERIALISED':item.inventoryHandlingPolicy.trackByCarrier ? 'CARRIER':'BULK');\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

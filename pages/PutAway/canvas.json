@@ -19,13 +19,14 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 57,
+          "version": 58,
           "minHeight": 1260,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
+              "boxShadow": "none",
               "widgetName": "Text1",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -38,11 +39,13 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [],
               "truncateButtonColor": "#FFC13D",
               "text": "Put Away Screen",
               "key": "erdknae0wd",
+              "labelTextSize": "0.875rem",
               "rightColumn": 16,
               "textAlign": "LEFT",
               "widgetId": "m7ziyk1403",
@@ -53,9 +56,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "SiteSelect",
               "isFilterable": true,
               "displayName": "Select",
@@ -79,23 +84,30 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "options": "{{JSObject1.HandleUserSites()}}",
               "placeholderText": "Select option",
               "isDisabled": false,
               "key": "j0280efz18",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 18,
               "widgetId": "2203vrvruq",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "{{queryWarehouse.run()}}"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Text6",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -108,11 +120,13 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [],
               "truncateButtonColor": "#FFC13D",
               "text": "Site:",
               "key": "daiv0bswbu",
+              "labelTextSize": "0.875rem",
               "rightColumn": 3,
               "textAlign": "LEFT",
               "widgetId": "vbf30h0ppc",
@@ -123,9 +137,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Text7",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -138,11 +154,13 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 18,
               "dynamicBindingPathList": [],
               "truncateButtonColor": "#FFC13D",
               "text": "Warehouse: ",
               "key": "daiv0bswbu",
+              "labelTextSize": "0.875rem",
               "rightColumn": 24,
               "textAlign": "LEFT",
               "widgetId": "9cdtyw7q53",
@@ -153,9 +171,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "WarehouseSelect",
               "isFilterable": true,
               "displayName": "Select",
@@ -175,22 +195,29 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "options": "{{queryWarehouse.data.data.getEquipment.children}}",
               "placeholderText": "Select option",
               "isDisabled": false,
               "key": "j0280efz18",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 44,
               "widgetId": "j4aththhnd",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "borderRadius": "0px"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Tabs1",
               "isCanvas": true,
               "displayName": "Tabs",
@@ -205,10 +232,15 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "leftColumn": 0,
-              "dynamicBindingPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                }
+              ],
               "children": [
                 {
                   "tabId": "tab1",
+                  "boxShadow": "none",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -225,10 +257,15 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "Container1",
                       "borderColor": "transparent",
                       "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
                       "topRow": 0,
@@ -241,28 +278,21 @@
                       "leftColumn": 0,
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas1",
-                          "rightColumn": 475.5,
-                          "detachFromLayout": true,
                           "displayName": "Canvas",
-                          "widgetId": "4qituuqg4z",
-                          "containerStyle": "none",
                           "topRow": 0,
                           "bottomRow": 920,
                           "parentRowSpace": 1,
-                          "isVisible": true,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
-                          "version": 1,
                           "hideCard": true,
-                          "parentId": "iycbgqzxdy",
                           "minHeight": 400,
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text3Copy",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -275,11 +305,13 @@
                               "parentColumnSpace": 8.974609375,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "truncateButtonColor": "#FFC13D",
                               "text": "Bin",
                               "key": "daiv0bswbu",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 16,
                               "textAlign": "LEFT",
                               "widgetId": "powebkpkm7",
@@ -290,13 +322,19 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "Container2Copy1",
                               "borderColor": "transparent",
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 53,
@@ -311,28 +349,21 @@
                               "dynamicBindingPathList": [],
                               "children": [
                                 {
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas2Copy1",
-                                  "rightColumn": 215.390625,
-                                  "detachFromLayout": true,
                                   "displayName": "Canvas",
-                                  "widgetId": "unpvulxg2e",
-                                  "containerStyle": "none",
                                   "topRow": 0,
                                   "bottomRow": 390,
                                   "parentRowSpace": 1,
-                                  "isVisible": true,
                                   "type": "CANVAS_WIDGET",
                                   "canExtend": false,
-                                  "version": 1,
                                   "hideCard": true,
-                                  "parentId": "fsoxab0v07",
                                   "minHeight": 400,
-                                  "renderMode": "CANVAS",
-                                  "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text4Copy3",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -345,6 +376,7 @@
                                       "parentColumnSpace": 8.241424560546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -354,6 +386,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "ID: {{appsmith.store.queryBinId}}",
                                       "key": "daiv0bswbu",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 30,
                                       "textAlign": "LEFT",
                                       "widgetId": "36anw5dtu9",
@@ -364,9 +397,11 @@
                                       "parentId": "unpvulxg2e",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text4Copy1",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -379,6 +414,7 @@
                                       "parentColumnSpace": 8.241424560546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -388,6 +424,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Name: {{appsmith.store.queryBinName}}",
                                       "key": "daiv0bswbu",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 34,
                                       "textAlign": "LEFT",
                                       "widgetId": "61hmrj7l14",
@@ -398,14 +435,27 @@
                                       "parentId": "unpvulxg2e",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
-                                  "key": "0ixwcd1s6i"
+                                  "key": "0ixwcd1s6i",
+                                  "labelTextSize": "0.875rem",
+                                  "rightColumn": 215.390625,
+                                  "detachFromLayout": true,
+                                  "widgetId": "unpvulxg2e",
+                                  "containerStyle": "none",
+                                  "isVisible": true,
+                                  "version": 1,
+                                  "parentId": "fsoxab0v07",
+                                  "renderMode": "CANVAS",
+                                  "isLoading": false,
+                                  "borderRadius": "0px"
                                 }
                               ],
                               "borderWidth": "0",
                               "key": "sejr0l46p0",
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "#F6F7F8",
                               "rightColumn": 61,
                               "widgetId": "fsoxab0v07",
@@ -415,13 +465,18 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             },
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "Container2Copy",
                               "borderColor": "transparent",
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 29,
@@ -436,28 +491,21 @@
                               "dynamicBindingPathList": [],
                               "children": [
                                 {
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas2Copy",
-                                  "rightColumn": 215.390625,
-                                  "detachFromLayout": true,
                                   "displayName": "Canvas",
-                                  "widgetId": "51iv2s0l7e",
-                                  "containerStyle": "none",
                                   "topRow": 0,
                                   "bottomRow": 400,
                                   "parentRowSpace": 1,
-                                  "isVisible": true,
                                   "type": "CANVAS_WIDGET",
                                   "canExtend": false,
-                                  "version": 1,
                                   "hideCard": true,
-                                  "parentId": "i1eo0h3yx1",
                                   "minHeight": 400,
-                                  "renderMode": "CANVAS",
-                                  "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text4Copy",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -470,6 +518,7 @@
                                       "parentColumnSpace": 8.241424560546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -479,6 +528,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Code: {{appsmith.store.queryCarrierCode}}",
                                       "key": "daiv0bswbu",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 16,
                                       "textAlign": "LEFT",
                                       "widgetId": "kcygl5ugg1",
@@ -489,9 +539,11 @@
                                       "parentId": "51iv2s0l7e",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text5",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -504,6 +556,7 @@
                                       "parentColumnSpace": 8.241424560546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -513,6 +566,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "ID:{{appsmith.store.queryCarrierID}}",
                                       "key": "daiv0bswbu",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 16,
                                       "textAlign": "LEFT",
                                       "widgetId": "o54j11y6ve",
@@ -523,14 +577,27 @@
                                       "parentId": "51iv2s0l7e",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
-                                  "key": "0ixwcd1s6i"
+                                  "key": "0ixwcd1s6i",
+                                  "labelTextSize": "0.875rem",
+                                  "rightColumn": 215.390625,
+                                  "detachFromLayout": true,
+                                  "widgetId": "51iv2s0l7e",
+                                  "containerStyle": "none",
+                                  "isVisible": true,
+                                  "version": 1,
+                                  "parentId": "i1eo0h3yx1",
+                                  "renderMode": "CANVAS",
+                                  "isLoading": false,
+                                  "borderRadius": "0px"
                                 }
                               ],
                               "borderWidth": "0",
                               "key": "sejr0l46p0",
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "#F6F7F8",
                               "rightColumn": 61,
                               "widgetId": "i1eo0h3yx1",
@@ -540,13 +607,18 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             },
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "Container2",
                               "borderColor": "",
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 8,
@@ -561,28 +633,21 @@
                               "dynamicBindingPathList": [],
                               "children": [
                                 {
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas2",
-                                  "rightColumn": 215.390625,
-                                  "detachFromLayout": true,
                                   "displayName": "Canvas",
-                                  "widgetId": "0340jkmorx",
-                                  "containerStyle": "none",
                                   "topRow": 0,
                                   "bottomRow": 390,
                                   "parentRowSpace": 1,
-                                  "isVisible": true,
                                   "type": "CANVAS_WIDGET",
                                   "canExtend": false,
-                                  "version": 1,
                                   "hideCard": true,
-                                  "parentId": "p6ce3atu3n",
                                   "minHeight": 400,
-                                  "renderMode": "CANVAS",
-                                  "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text4Copy2",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -595,6 +660,7 @@
                                       "parentColumnSpace": 8.241424560546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -604,6 +670,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Material:{{appsmith.store.queryMateriabSubLotmaterialCode}}",
                                       "key": "daiv0bswbu",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 25,
                                       "textAlign": "LEFT",
                                       "widgetId": "hcreq28npj",
@@ -614,9 +681,11 @@
                                       "parentId": "0340jkmorx",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text4",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -629,6 +698,7 @@
                                       "parentColumnSpace": 8.241424560546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -638,6 +708,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Code: {{appsmith.store.queryMaterialSubLotCode}}",
                                       "key": "daiv0bswbu",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 16,
                                       "textAlign": "LEFT",
                                       "widgetId": "qx7miwa2a1",
@@ -648,14 +719,27 @@
                                       "parentId": "0340jkmorx",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
-                                  "key": "0ixwcd1s6i"
+                                  "key": "0ixwcd1s6i",
+                                  "labelTextSize": "0.875rem",
+                                  "rightColumn": 215.390625,
+                                  "detachFromLayout": true,
+                                  "widgetId": "0340jkmorx",
+                                  "containerStyle": "none",
+                                  "isVisible": true,
+                                  "version": 1,
+                                  "parentId": "p6ce3atu3n",
+                                  "renderMode": "CANVAS",
+                                  "isLoading": false,
+                                  "borderRadius": "0px"
                                 }
                               ],
                               "borderWidth": "0",
                               "key": "sejr0l46p0",
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "#F6F7F8",
                               "rightColumn": 61,
                               "widgetId": "p6ce3atu3n",
@@ -665,9 +749,10 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "barcodeInput",
                               "dynamicPropertyPathList": [
                                 {
@@ -692,24 +777,32 @@
                               ],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
                               "labelStyle": "",
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "rngn3mt9x3",
+                              "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 38,
                               "widgetId": "sl3k7ktx9p",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
                               "label": "",
                               "version": 2,
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "iconAlign": "left",
                               "defaultText": ""
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Button1",
                               "onClick": "{{JSObject1.HandleBarCodeInput()}}",
                               "buttonColor": "#03B365",
@@ -737,6 +830,7 @@
                               "text": "Submit",
                               "isDisabled": false,
                               "key": "tyfb7w7xmb",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 56,
                               "isDefaultClickDisabled": true,
                               "widgetId": "z2tmyjlxv5",
@@ -746,10 +840,12 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text2",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -762,11 +858,13 @@
                               "parentColumnSpace": 8.974609375,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "truncateButtonColor": "#FFC13D",
                               "text": "Serial Number",
                               "key": "daiv0bswbu",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 16,
                               "textAlign": "LEFT",
                               "widgetId": "yscvd9o9vo",
@@ -777,9 +875,11 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text3",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -792,11 +892,13 @@
                               "parentColumnSpace": 8.974609375,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "truncateButtonColor": "#FFC13D",
                               "text": "Carrier",
                               "key": "daiv0bswbu",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 16,
                               "textAlign": "LEFT",
                               "widgetId": "1jdskzgpzm",
@@ -807,9 +909,11 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "ButtonGroup1",
                               "isCanvas": false,
                               "dynamicPropertyPathList": [
@@ -893,21 +997,33 @@
                                 },
                                 {
                                   "key": "groupButtons.groupButton2.isDisabled"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "isDisabled": false,
                               "key": "ti93oreumz",
+                              "labelTextSize": "0.875rem",
                               "orientation": "horizontal",
                               "rightColumn": 62,
                               "widgetId": "8g6g0pq6kb",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
                               "version": 1,
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "childStylesheet": {
+                                "button": {
+                                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+                                }
+                              },
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Button6",
                               "onClick": "{{MoveCarrierToBin.run(() => JSObject1.ClearValueAfterMoveCarrierToBin(), () => showAlert('Unable to move carrier to bin','error'))}}",
                               "buttonColor": "#03B365",
@@ -935,6 +1051,7 @@
                               "text": "Move Carrier to Bin",
                               "isDisabled": false,
                               "key": "bkkdeq75ma",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 16,
                               "isDefaultClickDisabled": true,
                               "widgetId": "881ybch1ps",
@@ -944,10 +1061,12 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Button7",
                               "buttonColor": "#03B365",
                               "displayName": "Button",
@@ -963,6 +1082,7 @@
                               "text": "Submit",
                               "isDisabled": false,
                               "key": "bkkdeq75ma",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 35,
                               "isDefaultClickDisabled": true,
                               "widgetId": "slj4i4a98q",
@@ -972,15 +1092,28 @@
                               "parentId": "4qituuqg4z",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             }
                           ],
-                          "key": "0ixwcd1s6i"
+                          "key": "0ixwcd1s6i",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 475.5,
+                          "detachFromLayout": true,
+                          "widgetId": "4qituuqg4z",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "iycbgqzxdy",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "borderWidth": "0",
                       "key": "sejr0l46p0",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "#FFFFFF",
                       "rightColumn": 55,
                       "widgetId": "iycbgqzxdy",
@@ -990,11 +1123,12 @@
                       "parentId": "fqa28fqxfj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0"
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
                   "key": "uohraldff8",
+                  "labelTextSize": "0.875rem",
                   "tabName": "Put away",
                   "rightColumn": 475.5,
                   "detachFromLayout": true,
@@ -1003,10 +1137,12 @@
                   "version": 1,
                   "parentId": "qingb4lv5c",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 },
                 {
                   "tabId": "tab2",
+                  "boxShadow": "none",
                   "widgetName": "Canvas4",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -1023,10 +1159,15 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "Container3",
                       "borderColor": "transparent",
                       "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
                       "topRow": 0,
@@ -1039,28 +1180,21 @@
                       "leftColumn": 0,
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas5",
-                          "rightColumn": 468,
-                          "detachFromLayout": true,
                           "displayName": "Canvas",
-                          "widgetId": "wgyqspy9qj",
-                          "containerStyle": "none",
                           "topRow": 0,
                           "bottomRow": 730,
                           "parentRowSpace": 1,
-                          "isVisible": true,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
-                          "version": 1,
                           "hideCard": true,
-                          "parentId": "w7qo7apbcf",
                           "minHeight": 400,
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "CarrierInput",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
@@ -1074,23 +1208,32 @@
                               "parentColumnSpace": 19.5,
                               "resetOnSubmit": true,
                               "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
                               "labelStyle": "",
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "041el9lbkp",
+                              "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "rightColumn": 20,
                               "widgetId": "3b0z4xw3wf",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
                               "label": "",
                               "version": 2,
                               "parentId": "wgyqspy9qj",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "iconAlign": "left",
                               "defaultText": ""
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Button2",
                               "onClick": "{{JSObject1.HandleMoveCarrier()}}",
                               "buttonColor": "#03B365",
@@ -1113,6 +1256,7 @@
                               "text": "Submit",
                               "isDisabled": false,
                               "key": "o97u90k7yz",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 37,
                               "isDefaultClickDisabled": true,
                               "widgetId": "p7rgtd6ru0",
@@ -1122,14 +1266,20 @@
                               "parentId": "wgyqspy9qj",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             },
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "Container4",
                               "borderColor": "transparent",
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 6,
@@ -1142,28 +1292,21 @@
                               "leftColumn": 0,
                               "children": [
                                 {
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas6",
-                                  "rightColumn": 460.5,
-                                  "detachFromLayout": true,
                                   "displayName": "Canvas",
-                                  "widgetId": "otv8g9f73m",
-                                  "containerStyle": "none",
                                   "topRow": 0,
                                   "bottomRow": 390,
                                   "parentRowSpace": 1,
-                                  "isVisible": true,
                                   "type": "CANVAS_WIDGET",
                                   "canExtend": false,
-                                  "version": 1,
                                   "hideCard": true,
-                                  "parentId": "rjvrh23kmm",
                                   "minHeight": 400,
-                                  "renderMode": "CANVAS",
-                                  "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text8",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1176,6 +1319,7 @@
                                       "parentColumnSpace": 6.8828125,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -1185,6 +1329,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Code: {{appsmith.store.queryMoveCarrierCode}}",
                                       "key": "tz7426mj81",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 37,
                                       "textAlign": "LEFT",
                                       "widgetId": "1psmagjjte",
@@ -1195,9 +1340,11 @@
                                       "parentId": "otv8g9f73m",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "Text9",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1210,6 +1357,7 @@
                                       "parentColumnSpace": 6.8828125,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -1219,6 +1367,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "ID: {{appsmith.store.queryMoveCarrierId}}",
                                       "key": "tz7426mj81",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 37,
                                       "textAlign": "LEFT",
                                       "widgetId": "vp92sgebjd",
@@ -1229,14 +1378,27 @@
                                       "parentId": "otv8g9f73m",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
-                                  "key": "uohraldff8"
+                                  "key": "uohraldff8",
+                                  "labelTextSize": "0.875rem",
+                                  "rightColumn": 460.5,
+                                  "detachFromLayout": true,
+                                  "widgetId": "otv8g9f73m",
+                                  "containerStyle": "none",
+                                  "isVisible": true,
+                                  "version": 1,
+                                  "parentId": "rjvrh23kmm",
+                                  "renderMode": "CANVAS",
+                                  "isLoading": false,
+                                  "borderRadius": "0px"
                                 }
                               ],
                               "borderWidth": "0",
                               "key": "lbormpomrk",
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "#FFFFFF",
                               "rightColumn": 24,
                               "widgetId": "rjvrh23kmm",
@@ -1246,36 +1408,16 @@
                               "parentId": "wgyqspy9qj",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             },
                             {
-                              "widgetName": "GetStockOnHandByCarrierTable",
-                              "defaultPageSize": 0,
-                              "columnOrder": [
-                                "materialCode",
-                                "carrier",
-                                "status",
-                                "storageLocation",
-                                "quantity"
-                              ],
+                              "boxShadow": "none",
                               "isVisibleDownload": true,
-                              "dynamicPropertyPathList": [],
-                              "displayName": "Table",
                               "iconSVG": "/static/media/icon.db8a9cbd.svg",
                               "topRow": 17,
-                              "bottomRow": 71,
                               "isSortable": true,
-                              "parentRowSpace": 10,
                               "type": "TABLE_WIDGET",
-                              "defaultSelectedRow": "0",
-                              "hideCard": false,
                               "animateLoading": true,
-                              "parentColumnSpace": 19.1875,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onRowSelected"
-                                }
-                              ],
                               "dynamicBindingPathList": [
                                 {
                                   "key": "primaryColumns.status.computedValue"
@@ -1294,9 +1436,65 @@
                                 },
                                 {
                                   "key": "primaryColumns.materialCode.computedValue"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "leftColumn": 0,
+                              "delimiter": ",",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisibleFilters": true,
+                              "isVisible": true,
+                              "enableClientSideSearch": true,
+                              "version": 3,
+                              "totalRecordsCount": 0,
+                              "isLoading": false,
+                              "childStylesheet": {
+                                "button": {
+                                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "menuButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "iconButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                }
+                              },
+                              "borderRadius": "0px",
+                              "columnSizeMap": {
+                                "task": 245,
+                                "step": 62,
+                                "status": 204,
+                                "storageLocation": 187
+                              },
+                              "widgetName": "GetStockOnHandByCarrierTable",
+                              "defaultPageSize": 0,
+                              "columnOrder": [
+                                "materialCode",
+                                "carrier",
+                                "status",
+                                "storageLocation",
+                                "quantity"
+                              ],
+                              "dynamicPropertyPathList": [],
+                              "displayName": "Table",
+                              "bottomRow": 71,
+                              "parentRowSpace": 10,
+                              "defaultSelectedRow": "0",
+                              "hideCard": false,
+                              "parentColumnSpace": 19.1875,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onRowSelected"
+                                }
+                              ],
                               "primaryColumns": {
                                 "status": {
                                   "index": 2,
@@ -1305,7 +1503,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1315,7 +1513,9 @@
                                   "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
                                   "buttonColor": "#03B365",
                                   "menuColor": "#03B365",
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "carrier": {
                                   "index": 1,
@@ -1324,7 +1524,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1332,7 +1532,9 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "carrier",
-                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.carrier))}}"
+                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.carrier))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "storageLocation": {
                                   "index": 3,
@@ -1341,7 +1543,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1349,7 +1551,9 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "storageLocation",
-                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.storageLocation))}}"
+                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.storageLocation))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "quantity": {
                                   "index": 4,
@@ -1358,7 +1562,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1366,7 +1570,9 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "quantity",
-                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
+                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 },
                                 "materialCode": {
                                   "index": 0,
@@ -1375,7 +1581,7 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
-                                  "textSize": "PARAGRAPH",
+                                  "textSize": "0.875rem",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -1383,44 +1589,46 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "materialCode",
-                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}"
+                                  "computedValue": "{{GetStockOnHandByCarrierTable.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
                                 }
                               },
-                              "delimiter": ",",
                               "onRowSelected": "{{showModal('Modal1')}}",
                               "key": "zpr3bup303",
                               "derivedColumns": {},
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 60,
-                              "textSize": "PARAGRAPH",
+                              "textSize": "0.875rem",
                               "widgetId": "gt2fazo3t1",
-                              "isVisibleFilters": true,
                               "tableData": "{{JSObject1.FormatGetStockOnHandByCarrier()}}",
-                              "isVisible": true,
                               "label": "Data",
                               "searchKey": "",
-                              "enableClientSideSearch": true,
-                              "version": 3,
-                              "totalRecordsCount": 0,
                               "parentId": "wgyqspy9qj",
                               "renderMode": "CANVAS",
-                              "isLoading": false,
                               "horizontalAlignment": "LEFT",
                               "isVisibleSearch": true,
                               "isVisiblePagination": true,
-                              "verticalAlignment": "CENTER",
-                              "columnSizeMap": {
-                                "task": 245,
-                                "step": 62,
-                                "status": 204,
-                                "storageLocation": 187
-                              }
+                              "verticalAlignment": "CENTER"
                             }
                           ],
-                          "key": "uohraldff8"
+                          "key": "uohraldff8",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 468,
+                          "detachFromLayout": true,
+                          "widgetId": "wgyqspy9qj",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "w7qo7apbcf",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "borderWidth": "0",
                       "key": "lbormpomrk",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "#FFFFFF",
                       "rightColumn": 64,
                       "widgetId": "w7qo7apbcf",
@@ -1430,11 +1638,12 @@
                       "parentId": "idzjd04vvk",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0"
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
                   "key": "uohraldff8",
+                  "labelTextSize": "0.875rem",
                   "tabName": "Move unserialized material",
                   "rightColumn": 475.5,
                   "detachFromLayout": true,
@@ -1443,12 +1652,15 @@
                   "version": 1,
                   "parentId": "qingb4lv5c",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "xwjomk6hs1",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "widgetId": "qingb4lv5c",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "defaultTab": "Tab 1",
               "shouldShowTabs": true,
               "tabsObj": {
@@ -1471,9 +1683,11 @@
               "version": 3,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "borderRadius": "0px"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Modal1",
               "isCanvas": true,
               "displayName": "Modal",
@@ -1489,6 +1703,7 @@
               "leftColumn": 14,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas7",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -1505,7 +1720,7 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "IconButton1",
                       "onClick": "{{closeModal('Modal1')}}",
                       "buttonColor": "#2E3D49",
@@ -1520,6 +1735,7 @@
                       "iconSize": 24,
                       "isDisabled": false,
                       "key": "4l99az8946",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 64,
                       "iconName": "cross",
                       "widgetId": "agak70ilhi",
@@ -1528,11 +1744,17 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "SHARP",
+                      "borderRadius": "0px",
                       "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "NewCarrierSelector",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -1542,11 +1764,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Select New Carrier",
                       "key": "3kwosrc2w6",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "zuyoh2c2ul",
@@ -1557,9 +1781,11 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button3",
                       "onClick": "{{closeModal('Modal1')}}",
                       "buttonColor": "#03B365",
@@ -1574,6 +1800,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "phfmcbdtfd",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 55,
                       "isDefaultClickDisabled": true,
                       "widgetId": "ig1yll50tq",
@@ -1584,10 +1811,12 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button4",
                       "onClick": "{{MoveQuantitiesBetweenCarriers.run()}}",
                       "buttonColor": "#03B365",
@@ -1608,6 +1837,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "phfmcbdtfd",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
                       "isDefaultClickDisabled": true,
                       "widgetId": "24pv5l574v",
@@ -1618,14 +1848,20 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "Container5",
                       "borderColor": "transparent",
                       "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
                       "topRow": 10,
@@ -1640,28 +1876,21 @@
                       "dynamicBindingPathList": [],
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas8",
-                          "rightColumn": 358.5,
-                          "detachFromLayout": true,
                           "displayName": "Canvas",
-                          "widgetId": "d8zx5sh4jm",
-                          "containerStyle": "none",
                           "topRow": 0,
                           "bottomRow": 390,
                           "parentRowSpace": 1,
-                          "isVisible": true,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
-                          "version": 1,
                           "hideCard": true,
-                          "parentId": "j8sx77oxsj",
                           "minHeight": 400,
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text11Copy2",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1674,6 +1903,7 @@
                               "parentColumnSpace": 10.1904296875,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1683,6 +1913,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Quantity: {{GetStockOnHandByCarrierTable.selectedRow.quantity}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "textAlign": "LEFT",
                               "widgetId": "3ahs9pschp",
@@ -1693,9 +1924,11 @@
                               "parentId": "d8zx5sh4jm",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text11Copy1",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1708,6 +1941,7 @@
                               "parentColumnSpace": 10.1904296875,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1717,6 +1951,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Storage Location: {{GetStockOnHandByCarrierTable.selectedRow.storageLocation}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "textAlign": "LEFT",
                               "widgetId": "nh2yt9rsir",
@@ -1727,9 +1962,11 @@
                               "parentId": "d8zx5sh4jm",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text11Copy",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1742,6 +1979,7 @@
                               "parentColumnSpace": 10.1904296875,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1751,6 +1989,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Status: {{GetStockOnHandByCarrierTable.selectedRow.status}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "textAlign": "LEFT",
                               "widgetId": "5ykoq7b6uq",
@@ -1761,9 +2000,11 @@
                               "parentId": "d8zx5sh4jm",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text10",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1776,6 +2017,7 @@
                               "parentColumnSpace": 10.1904296875,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1785,6 +2027,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Material Code: {{GetStockOnHandByCarrierTable.selectedRow.materialCode}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "textAlign": "LEFT",
                               "widgetId": "83cax3xcf9",
@@ -1795,9 +2038,11 @@
                               "parentId": "d8zx5sh4jm",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text11",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1810,6 +2055,7 @@
                               "parentColumnSpace": 10.1904296875,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1819,6 +2065,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Carrier: {{GetStockOnHandByCarrierTable.selectedRow.carrier}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "textAlign": "LEFT",
                               "widgetId": "yu72r5nluf",
@@ -1829,14 +2076,27 @@
                               "parentId": "d8zx5sh4jm",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             }
                           ],
-                          "key": "gtwlif04g4"
+                          "key": "gtwlif04g4",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 358.5,
+                          "detachFromLayout": true,
+                          "widgetId": "d8zx5sh4jm",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "j8sx77oxsj",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "borderWidth": "0",
                       "key": "rz81hl24uu",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "#F6F7F8",
                       "rightColumn": 31,
                       "widgetId": "j8sx77oxsj",
@@ -1846,9 +2106,10 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0"
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text12",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1861,11 +2122,13 @@
                       "parentColumnSpace": 14.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 31,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "New Carrier: ",
                       "key": "3kwosrc2w6",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 38,
                       "textAlign": "LEFT",
                       "widgetId": "ikmtrojm40",
@@ -1876,9 +2139,11 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "NewCarrierInput",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -1892,23 +2157,32 @@
                       "parentColumnSpace": 14.9375,
                       "resetOnSubmit": true,
                       "leftColumn": 38,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "nz1qa6uhek",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 52,
                       "widgetId": "mi1a46e8cn",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "version": 2,
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Button5",
                       "onClick": "{{JSObject1.HandleNewCarrier()}}",
                       "buttonColor": "#03B365",
@@ -1932,6 +2206,7 @@
                       "text": "Search",
                       "isDisabled": false,
                       "key": "phfmcbdtfd",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 60,
                       "isDefaultClickDisabled": true,
                       "widgetId": "bzygkc373f",
@@ -1941,14 +2216,20 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "Container6",
                       "borderColor": "transparent",
                       "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
                       "topRow": 10,
@@ -1963,28 +2244,21 @@
                       "dynamicBindingPathList": [],
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas9",
-                          "rightColumn": 375,
-                          "detachFromLayout": true,
                           "displayName": "Canvas",
-                          "widgetId": "bk36gc2a5m",
-                          "containerStyle": "none",
                           "topRow": 0,
                           "bottomRow": 390,
                           "parentRowSpace": 1,
-                          "isVisible": true,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
-                          "version": 1,
                           "hideCard": true,
-                          "parentId": "melo8s9dj2",
                           "minHeight": 400,
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text13",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1997,6 +2271,7 @@
                               "parentColumnSpace": 7.255859375,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -2006,6 +2281,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "New Carrier Code:{{appsmith.store.queryNewCarrierCode}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 33,
                               "textAlign": "LEFT",
                               "widgetId": "0q8u4dtcaw",
@@ -2016,9 +2292,11 @@
                               "parentId": "bk36gc2a5m",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text14",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2031,6 +2309,7 @@
                               "parentColumnSpace": 7.255859375,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -2040,6 +2319,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "New Carrier ID: {{appsmith.store.queryNewCarrierId}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 33,
                               "textAlign": "LEFT",
                               "widgetId": "h4kv3muq4s",
@@ -2050,9 +2330,11 @@
                               "parentId": "bk36gc2a5m",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "Text15",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2065,6 +2347,7 @@
                               "parentColumnSpace": 7.255859375,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -2074,6 +2357,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Storage Location:{{queryNewCarrier.data.data.getCarrier.storageLocation.name}}",
                               "key": "3kwosrc2w6",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 42,
                               "textAlign": "LEFT",
                               "widgetId": "4gqqby9cgl",
@@ -2084,14 +2368,27 @@
                               "parentId": "bk36gc2a5m",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             }
                           ],
-                          "key": "gtwlif04g4"
+                          "key": "gtwlif04g4",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 375,
+                          "detachFromLayout": true,
+                          "widgetId": "bk36gc2a5m",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "melo8s9dj2",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "borderWidth": "0",
                       "key": "rz81hl24uu",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "#F6F7F8",
                       "rightColumn": 62,
                       "widgetId": "melo8s9dj2",
@@ -2101,9 +2398,10 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0"
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "NewCarrierQuantityInput",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -2117,23 +2415,32 @@
                       "parentColumnSpace": 15.625,
                       "resetOnSubmit": true,
                       "leftColumn": 40,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "nz1qa6uhek",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 54,
                       "widgetId": "carvpsvisc",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "version": 2,
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text16",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2146,11 +2453,13 @@
                       "parentColumnSpace": 15.625,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 31,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Move quantity:",
                       "key": "3kwosrc2w6",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 40,
                       "textAlign": "LEFT",
                       "widgetId": "dz14wc0zux",
@@ -2161,11 +2470,13 @@
                       "parentId": "gei5nnvj09",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     }
                   ],
                   "isDisabled": false,
                   "key": "gtwlif04g4",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 460.5,
                   "detachFromLayout": true,
                   "widgetId": "gei5nnvj09",
@@ -2173,11 +2484,13 @@
                   "version": 1,
                   "parentId": "a090xa7sfk",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "qwwkcgf90u",
               "height": 790,
+              "labelTextSize": "0.875rem",
               "rightColumn": 38,
               "detachFromLayout": true,
               "widgetId": "a090xa7sfk",
@@ -2187,6 +2500,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 1012
             }
           ]

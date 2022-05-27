@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetShipmentTransactions",
+    "name": "GetSegmentsReceiveStock",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    query: `\nquery{\n  getOperationsDefinition(name:\"ReceiveStock\"){\n    name\n    segments{\n      value:id\n      label:name\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    query: `\nquery{\n  getOperationsDefinition(name:\"ReceiveStock\"){\n    name\n    segments{\n      value:id\n      label:name\n    }\n  }\n}\n    `\n})"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_GetShipmentTransactions",
+  "id": "Receive Stock_GetSegmentsReceiveStock",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c4342fe89bc475f3cce4b4"
+  "gitSyncId": "6196c1950dfef900f247faaf_628dff5d7901344ba8d28416"
 }

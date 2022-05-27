@@ -13,23 +13,28 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 880,
+          "bottomRow": 1280,
           "containerStyle": "none",
           "snapRows": 67,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 57,
+          "version": 58,
           "minHeight": 1260,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
-              "boxShadow": "NONE",
+              "boxShadow": "none",
               "widgetName": "ctnInboundDeliveries",
               "borderColor": "transparent",
               "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 7,
@@ -42,24 +47,16 @@
               "leftColumn": 2,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas1",
-                  "rightColumn": 430.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "x4wgwwq11a",
-                  "containerStyle": "none",
                   "topRow": 0,
                   "bottomRow": 730,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "095i8li7hm",
                   "minHeight": 400,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
@@ -246,6 +243,7 @@
                           }
                         }
                       },
+                      "boxShadow": "none",
                       "widgetName": "listInboundDeliveries",
                       "listData": "{{GetSiteDeliveries.data.data.queryDelivery}}",
                       "isCanvas": true,
@@ -277,12 +275,16 @@
                         },
                         {
                           "key": "listData"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "gridType": "vertical",
                       "enhancements": true,
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
@@ -299,11 +301,16 @@
                           "leftColumn": 0,
                           "children": [
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "Container2",
                               "borderColor": "transparent",
                               "disallowCopy": true,
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 0,
@@ -317,6 +324,8 @@
                               "leftColumn": 0,
                               "children": [
                                 {
+                                  "labelTextSize": "0.875rem",
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas3",
                                   "detachFromLayout": true,
                                   "displayName": "Canvas",
@@ -335,8 +344,10 @@
                                   "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
+                                  "borderRadius": "0px",
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtListDeliveryDate",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -349,6 +360,7 @@
                                       "parentColumnSpace": 4.26190185546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -358,6 +370,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Date: {{moment(currentItem.dateTimeCreated).format() }}",
                                       "key": "m88w9vhe99",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 63,
                                       "textAlign": "LEFT",
                                       "widgetId": "5339oqwg90",
@@ -399,9 +412,11 @@
                                       "parentId": "cmc5ysxap3",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtListDeliveriesTransport",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -414,6 +429,7 @@
                                       "parentColumnSpace": 4.26190185546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -423,6 +439,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Transport Company: {{currentItem.transportCompany}}",
                                       "key": "m88w9vhe99",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 50,
                                       "textAlign": "LEFT",
                                       "widgetId": "f2femalyka",
@@ -464,9 +481,11 @@
                                       "parentId": "cmc5ysxap3",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtListDeliveriesPartner",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -479,6 +498,7 @@
                                       "parentColumnSpace": 4.26190185546875,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -488,6 +508,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Partner: {{currentItem.partner.name}}",
                                       "key": "m88w9vhe99",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 51,
                                       "textAlign": "LEFT",
                                       "widgetId": "5gga56ovk3",
@@ -529,7 +550,8 @@
                                       "parentId": "cmc5ysxap3",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
                                   "key": "e73nzfsyw4"
@@ -538,6 +560,7 @@
                               "borderWidth": "0",
                               "key": "cqzihubw41",
                               "disablePropertyPane": true,
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "white",
                               "rightColumn": 64,
                               "widgetId": "6bpf113672",
@@ -547,10 +570,11 @@
                               "parentId": "0tct2evyu0",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             }
                           ],
                           "key": "e73nzfsyw4",
+                          "labelTextSize": "0.875rem",
                           "rightColumn": 140.484375,
                           "detachFromLayout": true,
                           "widgetId": "0tct2evyu0",
@@ -559,7 +583,8 @@
                           "version": 1,
                           "parentId": "hgoyv242yq",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "privateWidgets": {
@@ -568,18 +593,22 @@
                         "txtListDeliveriesPartner": true
                       },
                       "key": "ies6xglwzt",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "transparent",
                       "rightColumn": 60,
                       "onListItemClick": "{{GetDeliveryDetail.run()}}",
                       "itemBackgroundColor": "#FFFFFF",
                       "widgetId": "hgoyv242yq",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "parentId": "x4wgwwq11a",
                       "serverSidePaginationEnabled": false,
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnCreateDelivery",
                       "onClick": "{{showModal('modalCreateDelivery')}}",
                       "buttonColor": "#03B365",
@@ -602,6 +631,7 @@
                       "text": "Create Delivery",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "6gxcc27u0p",
@@ -611,11 +641,18 @@
                       "parentId": "x4wgwwq11a",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtInboundDeliveriesTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 0,
@@ -627,11 +664,13 @@
                       "parentColumnSpace": 5.0126953125,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Inbound Deliveries",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 49,
                       "textAlign": "LEFT",
                       "widgetId": "voc1arpcud",
@@ -642,14 +681,27 @@
                       "parentId": "x4wgwwq11a",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     }
                   ],
-                  "key": "e73nzfsyw4"
+                  "key": "e73nzfsyw4",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 430.5,
+                  "detachFromLayout": true,
+                  "widgetId": "x4wgwwq11a",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "095i8li7hm",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "borderWidth": "0",
               "key": "cqzihubw41",
+              "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 21,
               "widgetId": "095i8li7hm",
@@ -659,13 +711,18 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0"
+              "borderRadius": "0px"
             },
             {
-              "boxShadow": "NONE",
+              "boxShadow": "none",
               "widgetName": "ctnSelectedDelivery",
               "borderColor": "transparent",
               "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 7,
@@ -678,32 +735,29 @@
               "leftColumn": 22,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas4",
-                  "rightColumn": 430.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "iap1om67s2",
-                  "containerStyle": "none",
                   "topRow": 0,
                   "bottomRow": 720,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "onys8dyvv5",
                   "minHeight": 400,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "ctnSelectedDeliveryDetail",
                       "borderColor": "#2E3D49",
                       "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
                       "topRow": 1,
@@ -718,28 +772,21 @@
                       "dynamicBindingPathList": [],
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas5",
-                          "rightColumn": 234.65625,
-                          "detachFromLayout": true,
                           "displayName": "Canvas",
-                          "widgetId": "nws5h3pns4",
-                          "containerStyle": "none",
                           "topRow": 0,
                           "bottomRow": 390,
                           "parentRowSpace": 1,
-                          "isVisible": true,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
-                          "version": 1,
                           "hideCard": true,
-                          "parentId": "k9z909if67",
                           "minHeight": 400,
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "txtSelectedDeliveryDate",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -752,6 +799,7 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -761,6 +809,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Date: {{moment(GetDeliveryDetail.data.data.getDelivery.dateTimeCreated).format()}}",
                               "key": "m88w9vhe99",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 28,
                               "textAlign": "LEFT",
                               "widgetId": "em4jt12uwq",
@@ -771,9 +820,11 @@
                               "parentId": "nws5h3pns4",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "txtSelectedDeliveryTransport",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -786,6 +837,7 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -795,6 +847,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Transport Company: {{GetDeliveryDetail.data.data.getDelivery.transportCompany}}",
                               "key": "m88w9vhe99",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 28,
                               "textAlign": "LEFT",
                               "widgetId": "m8h034lqvu",
@@ -805,9 +858,11 @@
                               "parentId": "nws5h3pns4",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "txtSelectedDeliveryReference",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -820,6 +875,7 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 28,
                               "dynamicBindingPathList": [
                                 {
@@ -829,6 +885,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Delivery Reference: {{GetDeliveryDetail.data.data.getDelivery.transportCompanyDeliveryId}}",
                               "key": "m88w9vhe99",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 59,
                               "textAlign": "LEFT",
                               "widgetId": "80ibq3wns2",
@@ -839,9 +896,11 @@
                               "parentId": "nws5h3pns4",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "txtSelectedDeliveryShippedFrom",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -854,6 +913,7 @@
                               "parentColumnSpace": 10.01177978515625,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 28,
                               "dynamicBindingPathList": [
                                 {
@@ -863,6 +923,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Shipped From: {{GetDeliveryDetail.data.data.getDelivery.partner.name}}",
                               "key": "m88w9vhe99",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 56,
                               "textAlign": "LEFT",
                               "widgetId": "2biskin7uz",
@@ -873,14 +934,27 @@
                               "parentId": "nws5h3pns4",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "PARAGRAPH"
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
                             }
                           ],
-                          "key": "e73nzfsyw4"
+                          "key": "e73nzfsyw4",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 234.65625,
+                          "detachFromLayout": true,
+                          "widgetId": "nws5h3pns4",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "k9z909if67",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "borderWidth": "1",
                       "key": "cqzihubw41",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "#FFFFFF",
                       "rightColumn": 62,
                       "widgetId": "k9z909if67",
@@ -890,10 +964,16 @@
                       "parentId": "iap1om67s2",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "1"
+                      "borderRadius": "1px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtShipments",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 14,
@@ -905,11 +985,13 @@
                       "parentColumnSpace": 10.83203125,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Shipments",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 17,
                       "textAlign": "LEFT",
                       "widgetId": "r92cnk56fh",
@@ -920,9 +1002,11 @@
                       "parentId": "iap1om67s2",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING2"
+                      "borderRadius": "0px",
+                      "fontSize": "1.125rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnAddShipment",
                       "onClick": "{{showModal('modalAddShipment')}}",
                       "buttonColor": "#03B365",
@@ -945,6 +1029,7 @@
                       "text": "Add Shipment",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 45,
                       "isDefaultClickDisabled": true,
                       "widgetId": "t93f4bsmrp",
@@ -954,6 +1039,7 @@
                       "parentId": "iap1om67s2",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
@@ -1171,6 +1257,7 @@
                           }
                         }
                       },
+                      "boxShadow": "none",
                       "widgetName": "listShipments",
                       "listData": "{{GetDeliveryDetail.data.data.getDelivery.shipments}}",
                       "isCanvas": true,
@@ -1205,12 +1292,16 @@
                         },
                         {
                           "key": "template.txtListShipmentWarehouse.text"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "gridType": "vertical",
                       "enhancements": true,
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas6",
                           "displayName": "Canvas",
                           "topRow": 0,
@@ -1227,11 +1318,16 @@
                           "leftColumn": 0,
                           "children": [
                             {
-                              "boxShadow": "NONE",
+                              "boxShadow": "none",
                               "widgetName": "ctnListShipments",
                               "borderColor": "transparent",
                               "disallowCopy": true,
                               "isCanvas": true,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
                               "displayName": "Container",
                               "iconSVG": "/static/media/icon.1977dca3.svg",
                               "topRow": 0,
@@ -1245,6 +1341,8 @@
                               "leftColumn": 0,
                               "children": [
                                 {
+                                  "labelTextSize": "0.875rem",
+                                  "boxShadow": "none",
                                   "widgetName": "Canvas7",
                                   "detachFromLayout": true,
                                   "displayName": "Canvas",
@@ -1263,8 +1361,10 @@
                                   "isLoading": false,
                                   "parentColumnSpace": 1,
                                   "leftColumn": 0,
+                                  "borderRadius": "0px",
                                   "children": [
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtListDeliveryConsignment",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1277,6 +1377,7 @@
                                       "parentColumnSpace": 10.01177978515625,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -1286,6 +1387,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Consignment Number: {{currentItem.consignmentNumber}}",
                                       "key": "m88w9vhe99",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 31,
                                       "textAlign": "LEFT",
                                       "widgetId": "jp451hdvsn",
@@ -1296,9 +1398,11 @@
                                       "parentId": "tvbd5zqdk6",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtListShipmentReference",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1311,6 +1415,7 @@
                                       "parentColumnSpace": 9.88677978515625,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 0,
                                       "dynamicBindingPathList": [
                                         {
@@ -1320,6 +1425,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Shipment Reference: {{currentItem.customerReference}}",
                                       "key": "m88w9vhe99",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 31,
                                       "textAlign": "LEFT",
                                       "widgetId": "cvopk6q8pz",
@@ -1361,9 +1467,11 @@
                                       "parentId": "tvbd5zqdk6",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtListShipmentTransportId",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1376,6 +1484,7 @@
                                       "parentColumnSpace": 9.88677978515625,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 31,
                                       "dynamicBindingPathList": [
                                         {
@@ -1385,6 +1494,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Transport Id: {{currentItem.transportCompanyShipmentId}}",
                                       "key": "1jz7pjlox2",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 64,
                                       "textAlign": "LEFT",
                                       "widgetId": "h6dsj4glnp",
@@ -1426,9 +1536,11 @@
                                       "parentId": "tvbd5zqdk6",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     },
                                     {
+                                      "boxShadow": "none",
                                       "widgetName": "txtListShipmentWarehouse",
                                       "displayName": "Text",
                                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1441,6 +1553,7 @@
                                       "parentColumnSpace": 10.02081298828125,
                                       "dynamicTriggerPathList": [],
                                       "overflow": "NONE",
+                                      "fontFamily": "System Default",
                                       "leftColumn": 31,
                                       "dynamicBindingPathList": [
                                         {
@@ -1450,6 +1563,7 @@
                                       "truncateButtonColor": "#FFC13D",
                                       "text": "Warehouse: {{currentItem.warehouse.name}}",
                                       "key": "4beqb48zw9",
+                                      "labelTextSize": "0.875rem",
                                       "rightColumn": 64,
                                       "textAlign": "LEFT",
                                       "widgetId": "8lvqq2hhor",
@@ -1491,7 +1605,8 @@
                                       "parentId": "tvbd5zqdk6",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "fontSize": "PARAGRAPH"
+                                      "borderRadius": "0px",
+                                      "fontSize": "0.875rem"
                                     }
                                   ],
                                   "key": "e73nzfsyw4"
@@ -1500,6 +1615,7 @@
                               "borderWidth": "0",
                               "key": "cqzihubw41",
                               "disablePropertyPane": true,
+                              "labelTextSize": "0.875rem",
                               "backgroundColor": "white",
                               "rightColumn": 64,
                               "widgetId": "ay1hbteib4",
@@ -1509,10 +1625,11 @@
                               "parentId": "tr6bj53mn9",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "0"
+                              "borderRadius": "0px"
                             }
                           ],
                           "key": "e73nzfsyw4",
+                          "labelTextSize": "0.875rem",
                           "rightColumn": 259.96875,
                           "detachFromLayout": true,
                           "widgetId": "tr6bj53mn9",
@@ -1521,7 +1638,8 @@
                           "version": 1,
                           "parentId": "en1vq2zf0f",
                           "renderMode": "CANVAS",
-                          "isLoading": false
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "privateWidgets": {
@@ -1531,18 +1649,22 @@
                         "txtListShipmentWarehouse": true
                       },
                       "key": "ies6xglwzt",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "transparent",
                       "rightColumn": 62,
                       "onListItemClick": "{{GetShipmentDetail.run(() => showModal('modalEditShipment'), () => {})}}",
                       "itemBackgroundColor": "#FFFFFF",
                       "widgetId": "en1vq2zf0f",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "parentId": "iap1om67s2",
                       "serverSidePaginationEnabled": false,
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnOpenReceiveDeliveryConfirm",
                       "onClick": "{{showModal('modalConfirmReceiveDelivery')}}",
                       "buttonColor": "#03B365",
@@ -1565,6 +1687,7 @@
                       "text": "Receive Delivery",
                       "isDisabled": false,
                       "key": "y16x6oit9a",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
                       "widgetId": "d4k01cnhjm",
@@ -1574,15 +1697,28 @@
                       "parentId": "iap1om67s2",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     }
                   ],
-                  "key": "e73nzfsyw4"
+                  "key": "e73nzfsyw4",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 430.5,
+                  "detachFromLayout": true,
+                  "widgetId": "iap1om67s2",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "onys8dyvv5",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "borderWidth": "0",
               "key": "cqzihubw41",
+              "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 58,
               "widgetId": "onys8dyvv5",
@@ -1592,9 +1728,10 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0"
+              "borderRadius": "0px"
             },
             {
+              "boxShadow": "none",
               "widgetName": "txtSiteTitle",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -1607,11 +1744,13 @@
               "parentColumnSpace": 17.9375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 2,
               "dynamicBindingPathList": [],
               "truncateButtonColor": "#FFC13D",
               "text": "Site",
               "key": "m88w9vhe99",
+              "labelTextSize": "0.875rem",
               "rightColumn": 7,
               "textAlign": "LEFT",
               "widgetId": "zbniz9wb58",
@@ -1622,9 +1761,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "selectSite",
               "isFilterable": false,
               "displayName": "Select",
@@ -1648,23 +1789,30 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "options": "{{JS_SiteList.getUserSiteList()}}",
               "placeholderText": "Select option",
               "isDisabled": false,
               "key": "kmqprp5o3g",
+              "labelTextSize": "0.875rem",
               "isRequired": false,
               "rightColumn": 27,
               "widgetId": "13zh0d03y8",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "{{GetSiteWarehouses.run(() => GetSiteDeliveries.run(), () => {})}}"
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalAddShipment",
               "isCanvas": true,
               "displayName": "Modal",
@@ -1680,566 +1828,786 @@
               "leftColumn": 60,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas8",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 510,
+                  "bottomRow": 490,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 518,
+                  "minHeight": 498,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
                   "children": [
                     {
-                      "widgetName": "selectAddShipmentOwner",
-                      "isFilterable": false,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "",
-                      "topRow": 36,
-                      "bottomRow": 40,
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "Form1",
+                      "isCanvas": true,
+                      "displayName": "Form",
+                      "iconSVG": "/static/media/icon.ea3e08d1.svg",
+                      "topRow": 0,
+                      "bottomRow": 46,
                       "parentRowSpace": 10,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
+                      "type": "FORM_WIDGET",
                       "hideCard": false,
-                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 7.8125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 27,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
-                          "key": "options"
-                        }
-                      ],
-                      "options": "{{GetPartners.data.data.queryPartner}}",
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "qsiwve12wf",
-                      "isRequired": false,
-                      "rightColumn": 60,
-                      "widgetId": "v3pucttkst",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false
-                    },
-                    {
-                      "widgetName": "txtAddShipmentOwner",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 36,
-                      "bottomRow": 40,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.8125,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Owner",
-                      "key": "1jz7pjlox2",
-                      "rightColumn": 27,
-                      "textAlign": "LEFT",
-                      "widgetId": "4bw652y9tu",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
-                      "widgetName": "txtAddShipmentWarehouse",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 32,
-                      "bottomRow": 36,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.8125,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Warehouse:",
-                      "key": "1jz7pjlox2",
-                      "rightColumn": 27,
-                      "textAlign": "LEFT",
-                      "widgetId": "qt2xrjcnoq",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
-                      "widgetName": "txtAddShipmentTitle",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 1,
-                      "bottomRow": 5,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Add Shipment",
-                      "key": "m88w9vhe99",
-                      "rightColumn": 60,
-                      "textAlign": "LEFT",
-                      "widgetId": "g0b2fg1ydp",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "HEADING1"
-                    },
-                    {
-                      "widgetName": "btnCloseAddShipment",
-                      "onClick": "{{closeModal('modalAddShipment')}}",
-                      "buttonColor": "#03B365",
-                      "displayName": "Button",
-                      "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 43,
-                      "bottomRow": 47,
-                      "type": "BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "leftColumn": 35,
-                      "text": "Close",
-                      "isDisabled": false,
-                      "key": "peiahpe8cs",
-                      "rightColumn": 47,
-                      "isDefaultClickDisabled": true,
-                      "widgetId": "twic9arpzv",
-                      "buttonStyle": "PRIMARY",
-                      "isVisible": true,
-                      "recaptchaType": "V3",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "buttonVariant": "SECONDARY",
-                      "placement": "CENTER"
-                    },
-                    {
-                      "widgetName": "btnConfirmAddShipment",
-                      "onClick": "{{AddShipment.checkOrder()}}",
-                      "buttonColor": "#03B365",
-                      "dynamicPropertyPathList": [
+                          "key": "borderRadius"
+                        },
                         {
-                          "key": "isDisabled"
+                          "key": "boxShadow"
                         }
                       ],
-                      "displayName": "Button",
-                      "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 43,
-                      "bottomRow": 47,
-                      "type": "BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "dynamicTriggerPathList": [
+                      "children": [
                         {
-                          "key": "onClick"
+                          "boxShadow": "none",
+                          "widgetName": "Canvas14",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 410,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [
+                            {
+                              "key": "borderRadius"
+                            },
+                            {
+                              "key": "accentColor"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "widgetName": "Text1",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 1,
+                              "bottomRow": 5,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1.5,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Add Shipment",
+                              "key": "07z4ahogdu",
+                              "rightColumn": 25.5,
+                              "textAlign": "LEFT",
+                              "widgetId": "vr7emenhos",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "fontSize": "1.25rem"
+                            },
+                            {
+                              "resetFormOnClick": true,
+                              "boxShadow": "none",
+                              "widgetName": "FormButton1",
+                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "displayName": "FormButton",
+                              "iconSVG": "/static/media/icon.cca02633.svg",
+                              "topRow": 35,
+                              "bottomRow": 39,
+                              "type": "FORM_BUTTON_WIDGET",
+                              "hideCard": true,
+                              "animateLoading": true,
+                              "leftColumn": 46,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "buttonColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "text": "Submit",
+                              "key": "44dhlcxwbn",
+                              "rightColumn": 62,
+                              "isDefaultClickDisabled": true,
+                              "widgetId": "n70xwj7j0n",
+                              "isVisible": true,
+                              "recaptchaType": "V3",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "disabledWhenInvalid": true,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "buttonVariant": "PRIMARY"
+                            },
+                            {
+                              "resetFormOnClick": true,
+                              "boxShadow": "none",
+                              "widgetName": "FormButton2",
+                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "displayName": "FormButton",
+                              "iconSVG": "/static/media/icon.cca02633.svg",
+                              "topRow": 35,
+                              "bottomRow": 39,
+                              "type": "FORM_BUTTON_WIDGET",
+                              "hideCard": true,
+                              "animateLoading": true,
+                              "leftColumn": 30,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "buttonColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "text": "Reset",
+                              "key": "44dhlcxwbn",
+                              "rightColumn": 46,
+                              "isDefaultClickDisabled": true,
+                              "widgetId": "q7y5vs721b",
+                              "isVisible": true,
+                              "recaptchaType": "V3",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "disabledWhenInvalid": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "buttonVariant": "SECONDARY"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "txtAddShipmentOwner",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 6,
+                              "bottomRow": 10,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [],
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Owner",
+                              "key": "1jz7pjlox2",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 17,
+                              "textAlign": "LEFT",
+                              "widgetId": "4bw652y9tu",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "selectAddShipmentOwner",
+                              "isFilterable": false,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "",
+                              "topRow": 6,
+                              "bottomRow": 10,
+                              "parentRowSpace": 10,
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 17,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "options"
+                                },
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "options": "{{GetPartners.data.data.queryPartner}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "qsiwve12wf",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 64,
+                              "widgetId": "v3pucttkst",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "txtSelectOrder",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 11,
+                              "bottomRow": 15,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [],
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Order Number",
+                              "key": "1jz7pjlox2",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 17,
+                              "textAlign": "LEFT",
+                              "widgetId": "qehhatrgya",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "selectOrderNumber",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "",
+                              "topRow": 11,
+                              "bottomRow": 15,
+                              "parentRowSpace": 10,
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 14.375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 17,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "options"
+                                },
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "options": "{{GetSiteWarehouses.data.data.getEquipment.orders}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "kmqprp5o3g",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 58,
+                              "widgetId": "bbcbovgs7m",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "IconButton1",
+                              "onClick": "{{txtEnterOrder.isVisible=true}}",
+                              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
+                              "displayName": "Icon Button",
+                              "iconSVG": "/static/media/icon.1a0c634a.svg",
+                              "topRow": 11,
+                              "bottomRow": 15,
+                              "parentRowSpace": 10,
+                              "type": "ICON_BUTTON_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.5,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
+                              "leftColumn": 59,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "buttonColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "isDisabled": false,
+                              "key": "syqah8nubr",
+                              "rightColumn": 64,
+                              "iconName": "plus",
+                              "widgetId": "qisqnkb1ll",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "buttonVariant": "PRIMARY"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "txtConsignmentInput",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 19,
+                              "bottomRow": 23,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 14.375,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [],
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Consignment Number:",
+                              "key": "m88w9vhe99",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 23,
+                              "textAlign": "LEFT",
+                              "widgetId": "2txwvejgla",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#2E3D49",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "inpConsignmentNumber",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595.svg",
+                              "topRow": 19,
+                              "bottomRow": 23,
+                              "parentRowSpace": 10,
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET_V2",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 14.375,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 24,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "labelStyle": "",
+                              "inputType": "TEXT",
+                              "isDisabled": false,
+                              "key": "pou7wr6iio",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 63,
+                              "widgetId": "gotoas2itq",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "",
+                              "version": 2,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "iconAlign": "left",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "txtAddShipmentReference",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 23,
+                              "bottomRow": 27,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [],
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Shipment Reference:",
+                              "key": "1jz7pjlox2",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 23,
+                              "textAlign": "LEFT",
+                              "widgetId": "3fq1ltv2oh",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "txtAddShipmentDeliveryId",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 27,
+                              "bottomRow": 31,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [],
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Shipment Transport \nCompany Reference:",
+                              "key": "1jz7pjlox2",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 23,
+                              "textAlign": "LEFT",
+                              "widgetId": "xogn9dpnjs",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "inputAddShipmentReference",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595.svg",
+                              "topRow": 23,
+                              "bottomRow": 27,
+                              "parentRowSpace": 10,
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET_V2",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "resetOnSubmit": true,
+                              "leftColumn": 24,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "labelStyle": "",
+                              "inputType": "TEXT",
+                              "isDisabled": false,
+                              "key": "zwilwd35ex",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 63,
+                              "widgetId": "tuzau2hazu",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "",
+                              "version": 2,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "iconAlign": "left",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "inputAddShipmentDeliveryRef",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595.svg",
+                              "topRow": 27,
+                              "bottomRow": 31,
+                              "parentRowSpace": 10,
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET_V2",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "resetOnSubmit": true,
+                              "leftColumn": 24,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "labelStyle": "",
+                              "inputType": "TEXT",
+                              "isDisabled": false,
+                              "key": "zwilwd35ex",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 63,
+                              "widgetId": "oouhiqyym9",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "",
+                              "version": 2,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "iconAlign": "left",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "txtAddShipmentWarehouse",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 31,
+                              "bottomRow": 35,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [],
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Warehouse:",
+                              "key": "1jz7pjlox2",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 23,
+                              "textAlign": "LEFT",
+                              "widgetId": "qt2xrjcnoq",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "selectAddShipmentWarehouse",
+                              "isFilterable": false,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "",
+                              "topRow": 31,
+                              "bottomRow": 35,
+                              "parentRowSpace": 10,
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.8125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 24,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "options"
+                                },
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "options": "{{GetSiteWarehouses.data.data.getEquipment.children}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "qsiwve12wf",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 63,
+                              "widgetId": "mp21a6llyp",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            },
+                            {
+                              "widgetName": "txtEnterOrder",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 15,
+                              "bottomRow": 19,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 7.5,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "Enter Order",
+                              "key": "07z4ahogdu",
+                              "rightColumn": 17,
+                              "textAlign": "LEFT",
+                              "widgetId": "kxo6p9bf29",
+                              "isVisible": false,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "ny40dywrbv",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "fontSize": "1rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "inpOrderNumber",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595.svg",
+                              "topRow": 15,
+                              "bottomRow": 19,
+                              "parentRowSpace": 10,
+                              "labelWidth": 5,
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET_V2",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 7.5,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 24,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "labelPosition": "Left",
+                              "labelStyle": "",
+                              "inputType": "TEXT",
+                              "isDisabled": false,
+                              "key": "6jv0wflucr",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 62,
+                              "widgetId": "7cjryxwik2",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "",
+                              "version": 2,
+                              "parentId": "ny40dywrbv",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "iconAlign": "left",
+                              "defaultText": ""
+                            }
+                          ],
+                          "key": "s3za16ojvt",
+                          "rightColumn": 187.5,
+                          "detachFromLayout": true,
+                          "widgetId": "ny40dywrbv",
+                          "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "n4qo0rem65",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                         }
                       ],
-                      "leftColumn": 48,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "isDisabled"
-                        }
-                      ],
-                      "text": "Confirm",
-                      "isDisabled": "{{checkEnterOrder.isChecked&&checkSelectOrder.isChecked}}",
-                      "key": "peiahpe8cs",
-                      "rightColumn": 60,
-                      "isDefaultClickDisabled": true,
-                      "widgetId": "11rhc0t4xc",
-                      "buttonStyle": "PRIMARY_BUTTON",
+                      "key": "e1h97t3iu4",
+                      "backgroundColor": "#FFFFFF",
+                      "rightColumn": 64,
+                      "widgetId": "n4qo0rem65",
                       "isVisible": true,
-                      "recaptchaType": "V3",
-                      "version": 1,
                       "parentId": "7886ypgte8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "buttonVariant": "PRIMARY",
-                      "placement": "CENTER"
-                    },
-                    {
-                      "widgetName": "checkEnterOrder",
-                      "dynamicPropertyPathList": [],
-                      "displayName": "Checkbox",
-                      "iconSVG": "/static/media/icon.aaab032b.svg",
-                      "topRow": 8,
-                      "bottomRow": 12,
-                      "parentRowSpace": 10,
-                      "type": "CHECKBOX_WIDGET",
-                      "alignWidget": "LEFT",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 14.375,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onCheckChange"
-                        }
-                      ],
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [],
-                      "onCheckChange": "",
-                      "isDisabled": false,
-                      "key": "1gv5837m1t",
-                      "isRequired": false,
-                      "rightColumn": 27,
-                      "widgetId": "8qijs2frly",
-                      "isVisible": true,
-                      "label": "Enter Order Number:",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "defaultCheckedState": true
-                    },
-                    {
-                      "widgetName": "inpOrderNumber",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 8,
-                      "bottomRow": 12,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 14.375,
-                      "resetOnSubmit": true,
-                      "leftColumn": 27,
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "isDisabled": false,
-                      "key": "pou7wr6iio",
-                      "isRequired": false,
-                      "rightColumn": 60,
-                      "widgetId": "dhc3xc7pix",
-                      "isVisible": true,
-                      "label": "",
-                      "version": 2,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "iconAlign": "left",
-                      "defaultText": ""
-                    },
-                    {
-                      "widgetName": "selectOrderNumber",
-                      "isFilterable": true,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "",
-                      "topRow": 14,
-                      "bottomRow": 18,
-                      "parentRowSpace": 10,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "defaultOptionValue": "",
-                      "animateLoading": true,
-                      "parentColumnSpace": 14.375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 27,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "options"
-                        }
-                      ],
-                      "options": "{{GetSiteWarehouses.data.data.getEquipment.orders}}",
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "kmqprp5o3g",
-                      "isRequired": false,
-                      "rightColumn": 60,
-                      "widgetId": "bbcbovgs7m",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false
-                    },
-                    {
-                      "widgetName": "checkSelectOrder",
-                      "dynamicPropertyPathList": [],
-                      "displayName": "Checkbox",
-                      "iconSVG": "/static/media/icon.aaab032b.svg",
-                      "topRow": 14,
-                      "bottomRow": 18,
-                      "parentRowSpace": 10,
-                      "type": "CHECKBOX_WIDGET",
-                      "alignWidget": "LEFT",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 14.375,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onCheckChange"
-                        }
-                      ],
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [],
-                      "onCheckChange": "",
-                      "isDisabled": false,
-                      "key": "1gv5837m1t",
-                      "isRequired": false,
-                      "rightColumn": 27,
-                      "widgetId": "x4o4o45me7",
-                      "isVisible": true,
-                      "label": "Select Order:",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "defaultCheckedState": false
-                    },
-                    {
-                      "widgetName": "txtConsignmentInput",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 20,
-                      "bottomRow": 24,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 14.375,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Consignment Number:",
-                      "key": "m88w9vhe99",
-                      "rightColumn": 27,
-                      "textAlign": "LEFT",
-                      "widgetId": "2txwvejgla",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#2E3D49",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
-                      "widgetName": "inpConsignmentNumber",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 20,
-                      "bottomRow": 24,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 14.375,
-                      "resetOnSubmit": true,
-                      "leftColumn": 27,
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "isDisabled": false,
-                      "key": "pou7wr6iio",
-                      "isRequired": false,
-                      "rightColumn": 60,
-                      "widgetId": "gotoas2itq",
-                      "isVisible": true,
-                      "label": "",
-                      "version": 2,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "iconAlign": "left",
-                      "defaultText": ""
-                    },
-                    {
-                      "widgetName": "txtAddShipmentReference",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 24,
-                      "bottomRow": 28,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.8125,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Shipment Reference:",
-                      "key": "1jz7pjlox2",
-                      "rightColumn": 27,
-                      "textAlign": "LEFT",
-                      "widgetId": "3fq1ltv2oh",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
-                      "widgetName": "txtAddShipmentDeliveryId",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 28,
-                      "bottomRow": 32,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.8125,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "leftColumn": 2,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Shipment Transport \nCompany Reference:",
-                      "key": "1jz7pjlox2",
-                      "rightColumn": 27,
-                      "textAlign": "LEFT",
-                      "widgetId": "xogn9dpnjs",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
-                      "widgetName": "inputAddShipmentReference",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 24,
-                      "bottomRow": 28,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.8125,
-                      "resetOnSubmit": true,
-                      "leftColumn": 27,
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "isDisabled": false,
-                      "key": "zwilwd35ex",
-                      "isRequired": false,
-                      "rightColumn": 60,
-                      "widgetId": "tuzau2hazu",
-                      "isVisible": true,
-                      "label": "",
-                      "version": 2,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "iconAlign": "left",
-                      "defaultText": ""
-                    },
-                    {
-                      "widgetName": "inputAddShipmentDeliveryRef",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 28,
-                      "bottomRow": 32,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.8125,
-                      "resetOnSubmit": true,
-                      "leftColumn": 27,
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "isDisabled": false,
-                      "key": "zwilwd35ex",
-                      "isRequired": false,
-                      "rightColumn": 60,
-                      "widgetId": "oouhiqyym9",
-                      "isVisible": true,
-                      "label": "",
-                      "version": 2,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "iconAlign": "left",
-                      "defaultText": ""
-                    },
-                    {
-                      "widgetName": "selectAddShipmentWarehouse",
-                      "isFilterable": false,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "",
-                      "topRow": 32,
-                      "bottomRow": 36,
-                      "parentRowSpace": 10,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "defaultOptionValue": "",
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.8125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 27,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "options"
-                        }
-                      ],
-                      "options": "{{GetSiteWarehouses.data.data.getEquipment.children}}",
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "qsiwve12wf",
-                      "isRequired": false,
-                      "rightColumn": 60,
-                      "widgetId": "mp21a6llyp",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "7886ypgte8",
-                      "renderMode": "CANVAS",
-                      "isLoading": false
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                     }
                   ],
                   "isDisabled": false,
                   "key": "e73nzfsyw4",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 133.6640625,
                   "detachFromLayout": true,
                   "widgetId": "7886ypgte8",
@@ -2247,11 +2615,13 @@
                   "version": 1,
                   "parentId": "zggwwagsgl",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "ot5u0tccle",
-              "height": 518,
+              "height": 498,
+              "labelTextSize": "0.875rem",
               "rightColumn": 84,
               "detachFromLayout": true,
               "widgetId": "zggwwagsgl",
@@ -2261,9 +2631,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 512
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalEditShipment",
               "isCanvas": true,
               "dynamicPropertyPathList": [
@@ -2284,29 +2656,28 @@
               "leftColumn": 59,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas9",
-                  "rightColumn": 133.6640625,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "xp5fdr1mz8",
                   "topRow": 0,
                   "bottomRow": 580,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "kmf7k6ewy3",
                   "shouldScrollContents": false,
                   "minHeight": 582,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -2316,11 +2687,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Shipment Detail",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "upp96h2mag",
@@ -2331,9 +2704,11 @@
                       "parentId": "xp5fdr1mz8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnConfirmEditShipment",
                       "onClick": "{{closeModal('modalEditShipment')}}",
                       "buttonColor": "#03B365",
@@ -2354,6 +2729,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "7iknigia7c",
@@ -2364,10 +2740,12 @@
                       "parentId": "xp5fdr1mz8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentOrderNumber",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2380,6 +2758,7 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -2389,6 +2768,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Order Number: {{GetShipmentDetail.data.data.getShipment.order.customerOrderNumber}}",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 40,
                       "textAlign": "LEFT",
                       "widgetId": "ciircpdri6",
@@ -2399,9 +2779,11 @@
                       "parentId": "xp5fdr1mz8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentConsignmentNumb",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2414,6 +2796,7 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -2423,6 +2806,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Consignment Number: {{GetShipmentDetail.data.data.getShipment.consignmentNumber}}",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 40,
                       "textAlign": "LEFT",
                       "widgetId": "t2jyml8reh",
@@ -2433,13 +2817,19 @@
                       "parentId": "xp5fdr1mz8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
-                      "boxShadow": "NONE",
+                      "boxShadow": "none",
                       "widgetName": "ctnShipmentItems",
                       "borderColor": "transparent",
                       "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
                       "displayName": "Container",
                       "iconSVG": "/static/media/icon.1977dca3.svg",
                       "topRow": 14,
@@ -2452,29 +2842,27 @@
                       "leftColumn": 1,
                       "children": [
                         {
+                          "boxShadow": "none",
                           "widgetName": "Canvas12",
-                          "rightColumn": 246,
-                          "detachFromLayout": true,
                           "displayName": "Canvas",
-                          "widgetId": "spjns0vbx4",
-                          "containerStyle": "none",
                           "topRow": 0,
                           "bottomRow": 390,
                           "parentRowSpace": 1,
-                          "isVisible": true,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
-                          "version": 1,
                           "hideCard": true,
-                          "parentId": "b8twyux62u",
                           "minHeight": 400,
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "children": [
                             {
+                              "boxShadow": "none",
                               "widgetName": "txtShipmentItemTitle",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
                               "topRow": 0,
@@ -2486,11 +2874,13 @@
                               "parentColumnSpace": 9.296875,
                               "dynamicTriggerPathList": [],
                               "overflow": "NONE",
+                              "fontFamily": "System Default",
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "truncateButtonColor": "#FFC13D",
                               "text": "Shipment Items",
                               "key": "m88w9vhe99",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 16,
                               "textAlign": "LEFT",
                               "widgetId": "4ommjzf3zf",
@@ -2501,9 +2891,11 @@
                               "parentId": "spjns0vbx4",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "fontSize": "HEADING2"
+                              "borderRadius": "0px",
+                              "fontSize": "1.125rem"
                             },
                             {
+                              "boxShadow": "none",
                               "widgetName": "btnAddShipmentItem",
                               "onClick": "{{AddShipmentItem.run(() => MutationCompletions.addShipmentItem(), () => {})}}",
                               "buttonColor": "#03B365",
@@ -2526,6 +2918,7 @@
                               "text": "",
                               "isDisabled": false,
                               "key": "peiahpe8cs",
+                              "labelTextSize": "0.875rem",
                               "rightColumn": 63,
                               "isDefaultClickDisabled": true,
                               "iconName": "add",
@@ -2536,38 +2929,19 @@
                               "parentId": "spjns0vbx4",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "borderRadius": "0px",
                               "buttonVariant": "PRIMARY",
                               "iconAlign": "left",
                               "placement": "CENTER"
                             },
                             {
-                              "widgetName": "tblShipmentItems",
-                              "defaultPageSize": 0,
-                              "columnOrder": [
-                                "id",
-                                "material",
-                                "bin",
-                                "quantity",
-                                "trackingId"
-                              ],
+                              "boxShadow": "none",
                               "isVisibleDownload": false,
-                              "dynamicPropertyPathList": [],
-                              "displayName": "Table",
                               "iconSVG": "/static/media/icon.db8a9cbd.svg",
                               "topRow": 4,
-                              "bottomRow": 32,
                               "isSortable": true,
-                              "parentRowSpace": 10,
                               "type": "TABLE_WIDGET",
-                              "defaultSelectedRow": "0",
-                              "hideCard": false,
                               "animateLoading": true,
-                              "parentColumnSpace": 9.296875,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onRowSelected"
-                                }
-                              ],
                               "dynamicBindingPathList": [
                                 {
                                   "key": "primaryColumns.material.computedValue"
@@ -2586,118 +2960,38 @@
                                 },
                                 {
                                   "key": "primaryColumns.trackingId.computedValue"
+                                },
+                                {
+                                  "key": "accentColor"
                                 }
                               ],
                               "leftColumn": 0,
-                              "primaryColumns": {
-                                "material": {
-                                  "index": 3,
-                                  "width": 150,
-                                  "id": "material",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "material",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.material))}}"
-                                },
-                                "id": {
-                                  "index": 0,
-                                  "width": 150,
-                                  "id": "id",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": false,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "id",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
-                                },
-                                "bin": {
-                                  "index": 3,
-                                  "width": 150,
-                                  "id": "bin",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "bin",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.bin))}}"
-                                },
-                                "quantity": {
-                                  "index": 3,
-                                  "width": 150,
-                                  "id": "quantity",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "quantity",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}"
-                                },
-                                "trackingId": {
-                                  "index": 4,
-                                  "width": 150,
-                                  "id": "trackingId",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "trackingId",
-                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.trackingId))}}"
-                                }
-                              },
                               "delimiter": ",",
-                              "onRowSelected": "{{GetShipmentWarehouseDetail.GetDetails()}}",
-                              "key": "sq4fy02icf",
-                              "derivedColumns": {},
-                              "rightColumn": 63,
-                              "textSize": "PARAGRAPH",
-                              "widgetId": "sn9y5o56u2",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": false,
-                              "tableData": "{{DefaultValues.formatShipmentItemsTable()}}",
                               "isVisible": true,
-                              "label": "Data",
-                              "searchKey": "",
                               "enableClientSideSearch": true,
                               "version": 3,
                               "totalRecordsCount": 0,
-                              "parentId": "spjns0vbx4",
-                              "renderMode": "CANVAS",
                               "isLoading": false,
-                              "horizontalAlignment": "LEFT",
-                              "isVisibleSearch": false,
-                              "isVisiblePagination": true,
-                              "verticalAlignment": "CENTER",
+                              "childStylesheet": {
+                                "button": {
+                                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "menuButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                },
+                                "iconButton": {
+                                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                                  "boxShadow": "none"
+                                }
+                              },
+                              "borderRadius": "0px",
                               "columnSizeMap": {
                                 "task": 245,
                                 "step": 62,
@@ -2707,14 +3001,160 @@
                                 "binLocation": 161,
                                 "id": 77,
                                 "quantity": 84
-                              }
+                              },
+                              "widgetName": "tblShipmentItems",
+                              "defaultPageSize": 0,
+                              "columnOrder": [
+                                "id",
+                                "material",
+                                "bin",
+                                "quantity",
+                                "trackingId"
+                              ],
+                              "dynamicPropertyPathList": [],
+                              "displayName": "Table",
+                              "bottomRow": 32,
+                              "parentRowSpace": 10,
+                              "defaultSelectedRow": "0",
+                              "hideCard": false,
+                              "parentColumnSpace": 9.296875,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onRowSelected"
+                                }
+                              ],
+                              "primaryColumns": {
+                                "material": {
+                                  "index": 3,
+                                  "width": 150,
+                                  "id": "material",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "material",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.material))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
+                                },
+                                "id": {
+                                  "index": 0,
+                                  "width": 150,
+                                  "id": "id",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": false,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "id",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
+                                },
+                                "bin": {
+                                  "index": 3,
+                                  "width": 150,
+                                  "id": "bin",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "bin",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.bin))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
+                                },
+                                "quantity": {
+                                  "index": 3,
+                                  "width": 150,
+                                  "id": "quantity",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "quantity",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.quantity))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
+                                },
+                                "trackingId": {
+                                  "index": 4,
+                                  "width": 150,
+                                  "id": "trackingId",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textSize": "0.875rem",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "trackingId",
+                                  "computedValue": "{{tblShipmentItems.sanitizedTableData.map((currentRow) => ( currentRow.trackingId))}}",
+                                  "borderRadius": "0px",
+                                  "boxShadow": "none"
+                                }
+                              },
+                              "onRowSelected": "{{GetShipmentWarehouseDetail.GetDetails()}}",
+                              "key": "sq4fy02icf",
+                              "derivedColumns": {},
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 63,
+                              "textSize": "0.875rem",
+                              "widgetId": "sn9y5o56u2",
+                              "tableData": "{{DefaultValues.formatShipmentItemsTable()}}",
+                              "label": "Data",
+                              "searchKey": "",
+                              "parentId": "spjns0vbx4",
+                              "renderMode": "CANVAS",
+                              "horizontalAlignment": "LEFT",
+                              "isVisibleSearch": false,
+                              "isVisiblePagination": true,
+                              "verticalAlignment": "CENTER"
                             }
                           ],
-                          "key": "e73nzfsyw4"
+                          "key": "e73nzfsyw4",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 246,
+                          "detachFromLayout": true,
+                          "widgetId": "spjns0vbx4",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "b8twyux62u",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
                         }
                       ],
                       "borderWidth": "0",
                       "key": "cqzihubw41",
+                      "labelTextSize": "0.875rem",
                       "backgroundColor": "#FFFFFF",
                       "rightColumn": 61,
                       "widgetId": "b8twyux62u",
@@ -2724,15 +3164,26 @@
                       "parentId": "xp5fdr1mz8",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0"
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
-                  "key": "e73nzfsyw4"
+                  "key": "e73nzfsyw4",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 133.6640625,
+                  "detachFromLayout": true,
+                  "widgetId": "xp5fdr1mz8",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "kmf7k6ewy3",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "ot5u0tccle",
               "height": 582,
+              "labelTextSize": "0.875rem",
               "rightColumn": 83,
               "detachFromLayout": true,
               "widgetId": "kmf7k6ewy3",
@@ -2742,9 +3193,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 782
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalCreateDelivery",
               "isCanvas": true,
               "displayName": "Modal",
@@ -2760,29 +3213,28 @@
               "leftColumn": 59,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas10",
-                  "rightColumn": 133.6640625,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "3dryc1pbwj",
                   "topRow": 0,
                   "bottomRow": 290,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "1yz26pk45m",
                   "shouldScrollContents": false,
                   "minHeight": 296,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtCreateDeliveryTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -2792,11 +3244,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Create Delivery",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "7ytjp529a6",
@@ -2807,9 +3261,11 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnCloseCreateDelivery",
                       "onClick": "{{closeModal('modalCreateDelivery')}}",
                       "buttonColor": "#03B365",
@@ -2824,6 +3280,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 49,
                       "isDefaultClickDisabled": true,
                       "widgetId": "8bp2i63in9",
@@ -2834,10 +3291,12 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnConfirmCreateDelivery",
                       "onClick": "{{CreateDelivery.run(() => MutationCompletions.createDelivery(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -2858,6 +3317,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 61,
                       "isDefaultClickDisabled": true,
                       "widgetId": "ao7j0ejab9",
@@ -2868,10 +3328,12 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "datePickCreateDelivery",
                       "minDate": "1920-12-31T18:30:00.000Z",
                       "dateFormat": "LL",
@@ -2895,14 +3357,19 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "defaultDate"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "isDisabled": false,
                       "key": "5kmcwu1xlr",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "defaultDate": "{{moment()}}",
                       "rightColumn": 55,
                       "widgetId": "i0e8qj2edf",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "datePickerType": "DATE_PICKER",
                       "label": "",
@@ -2911,11 +3378,13 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "timePrecision": "minute",
+                      "borderRadius": "0px",
                       "firstDayOfWeek": 0,
                       "closeOnSelection": true,
                       "maxDate": "2121-12-31T18:29:00.000Z"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtCreateDeliveryInputDate",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2928,11 +3397,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Date:",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 23,
                       "textAlign": "LEFT",
                       "widgetId": "84qq7s41hm",
@@ -2943,9 +3414,11 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtCreateDeliveryTransport",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -2958,11 +3431,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Transport Company:",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 23,
                       "textAlign": "LEFT",
                       "widgetId": "0gtxoiree9",
@@ -2973,9 +3448,11 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "selectCreateDeliveryTransport",
                       "isFilterable": true,
                       "displayName": "Select",
@@ -2992,21 +3469,29 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 23,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "options": "[\n  {\n    \"label\": \"AUSPost\",\n    \"value\": \"AUSPOST\"\n  },\n  {\n    \"label\": \"Manual\",\n    \"value\": \"MANUAL\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 55,
                       "widgetId": "6i48xigzn4",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtCreateDeliveryPartner",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -3019,11 +3504,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Partner:",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 23,
                       "textAlign": "LEFT",
                       "widgetId": "abltos0lyq",
@@ -3034,9 +3521,11 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "selectCreateDeliveryPartner",
                       "isFilterable": true,
                       "displayName": "Select",
@@ -3056,22 +3545,29 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{GetCustomers.data.data.queryPartner}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 55,
                       "widgetId": "v4mj58qoxb",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtCreateDeliveryReference",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -3084,11 +3580,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Shipping Reference",
                       "key": "1jz7pjlox2",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 23,
                       "textAlign": "LEFT",
                       "widgetId": "389uljyyt9",
@@ -3099,9 +3597,11 @@
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "inputCreateDeliveryReference",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -3119,31 +3619,48 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "defaultText"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "zwilwd35ex",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 55,
                       "widgetId": "mv0gzo7fws",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "version": 2,
                       "parentId": "3dryc1pbwj",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": "{{\"\"}}"
                     }
                   ],
                   "isDisabled": false,
-                  "key": "e73nzfsyw4"
+                  "key": "e73nzfsyw4",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 133.6640625,
+                  "detachFromLayout": true,
+                  "widgetId": "3dryc1pbwj",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "1yz26pk45m",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "ot5u0tccle",
               "height": 296,
+              "labelTextSize": "0.875rem",
               "rightColumn": 83,
               "detachFromLayout": true,
               "widgetId": "1yz26pk45m",
@@ -3153,9 +3670,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 456
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalEditShipmentItem",
               "isCanvas": true,
               "displayName": "Modal",
@@ -3171,28 +3690,22 @@
               "leftColumn": 20,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas11",
-                  "rightColumn": 475.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "3wx0964q4e",
                   "topRow": 0,
                   "bottomRow": 330,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "rvxirk3l9x",
                   "shouldScrollContents": false,
                   "minHeight": 336,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentItemTracking",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -3205,11 +3718,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Tracking Number:",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 18,
                       "textAlign": "LEFT",
                       "widgetId": "u2l8n4peee",
@@ -3220,10 +3735,17 @@
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentItemTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -3233,11 +3755,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Edit Shipment Item",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 47,
                       "textAlign": "LEFT",
                       "widgetId": "bnnw3jr8rd",
@@ -3248,9 +3772,11 @@
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnCloseEditShipmentItem",
                       "onClick": "{{showModal('modalEditShipment')}}",
                       "buttonColor": "#03B365",
@@ -3271,6 +3797,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 48,
                       "isDefaultClickDisabled": true,
                       "widgetId": "kqlciwqg6n",
@@ -3281,10 +3808,12 @@
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnConfirmEditShipmentItem",
                       "onClick": "{{UpdateShipmentItem.run(() => MutationCompletions.updateShipmentItem(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -3305,6 +3834,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "peiahpe8cs",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 60,
                       "isDefaultClickDisabled": true,
                       "widgetId": "y3m0477unk",
@@ -3315,10 +3845,12 @@
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "selectShipmentItemMaterial",
                       "isFilterable": true,
                       "displayName": "Select",
@@ -3341,22 +3873,29 @@
                         },
                         {
                           "key": "defaultOptionValue"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{GetWarehouseMaterials.data.data.queryMaterialDefinition}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 61,
                       "widgetId": "m6z5g307cq",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentItemMaterial",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -3369,11 +3908,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Material:",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 18,
                       "textAlign": "LEFT",
                       "widgetId": "o6pz2wv18r",
@@ -3384,9 +3925,11 @@
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentItemBin",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -3399,11 +3942,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Bin:",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 18,
                       "textAlign": "LEFT",
                       "widgetId": "kjkvgit3be",
@@ -3414,9 +3959,11 @@
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "selectShipmentItemBin",
                       "isFilterable": true,
                       "displayName": "Select",
@@ -3439,22 +3986,29 @@
                         },
                         {
                           "key": "defaultOptionValue"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "kmqprp5o3g",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 61,
                       "widgetId": "6xyctftwvp",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentItemQuantity",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -3467,11 +4021,13 @@
                       "parentColumnSpace": 6.9375,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Quantity:",
                       "key": "m88w9vhe99",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 18,
                       "textAlign": "LEFT",
                       "widgetId": "vaawltneeh",
@@ -3482,9 +4038,11 @@
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "PARAGRAPH"
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "inputShipmentItemQuantity",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -3502,25 +4060,32 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "defaultText"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "labelStyle": "",
                       "inputType": "NUMBER",
                       "isDisabled": false,
                       "key": "pou7wr6iio",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 61,
                       "widgetId": "iliqnfaipx",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "version": 2,
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": "{{DefaultValues.quantityValue()}}"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "inpEditShipmentItemTracking",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -3534,29 +4099,48 @@
                       "parentColumnSpace": 6.9375,
                       "resetOnSubmit": true,
                       "leftColumn": 18,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
                       "key": "iqimv80b42",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 61,
                       "widgetId": "9o1g7owco7",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "version": 2,
                       "parentId": "3wx0964q4e",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     }
                   ],
                   "isDisabled": false,
-                  "key": "e73nzfsyw4"
+                  "key": "e73nzfsyw4",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 475.5,
+                  "detachFromLayout": true,
+                  "widgetId": "3wx0964q4e",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "rvxirk3l9x",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "ot5u0tccle",
               "height": 336,
+              "labelTextSize": "0.875rem",
               "rightColumn": 44,
               "detachFromLayout": true,
               "widgetId": "rvxirk3l9x",
@@ -3566,44 +4150,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 456
             },
             {
-              "widgetName": "Button1",
-              "onClick": "{{GetUserSites.run(() => GetCustomers.run(), () => {})}}",
-              "buttonColor": "#03B365",
-              "displayName": "Button",
-              "iconSVG": "/static/media/icon.cca02633.svg",
-              "topRow": 0,
-              "bottomRow": 4,
-              "parentRowSpace": 10,
-              "type": "BUTTON_WIDGET",
-              "hideCard": false,
-              "animateLoading": true,
-              "parentColumnSpace": 20.0625,
-              "dynamicTriggerPathList": [
-                {
-                  "key": "onClick"
-                }
-              ],
-              "leftColumn": 28,
-              "dynamicBindingPathList": [],
-              "text": "Load sites",
-              "isDisabled": false,
-              "key": "5ko5ri2svy",
-              "rightColumn": 34,
-              "isDefaultClickDisabled": true,
-              "widgetId": "notmr32jf9",
-              "isVisible": true,
-              "recaptchaType": "V3",
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "buttonVariant": "PRIMARY",
-              "placement": "CENTER"
-            },
-            {
+              "boxShadow": "none",
               "widgetName": "modalConfirmReceiveDelivery",
               "isCanvas": true,
               "displayName": "Modal",
@@ -3619,6 +4170,7 @@
               "leftColumn": 21,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas13",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -3635,7 +4187,13 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtConfirmReceiveTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -3645,11 +4203,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Confirm Receive Delivery?",
                       "key": "4beqb48zw9",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
                       "textAlign": "LEFT",
                       "widgetId": "y9kvj415qq",
@@ -3660,9 +4220,11 @@
                       "parentId": "qy0a0xx434",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnCloseReceiveDeliveryModal",
                       "onClick": "{{closeModal('modalConfirmReceiveDelivery')}}",
                       "buttonColor": "#03B365",
@@ -3677,6 +4239,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "y16x6oit9a",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 36,
                       "isDefaultClickDisabled": true,
                       "widgetId": "7hwa8vvrc2",
@@ -3687,10 +4250,12 @@
                       "parentId": "qy0a0xx434",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnReceiveDelivery",
                       "onClick": "{{ReceiveDelivery.run(() => MutationCompletions.receiveDelivery(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -3711,6 +4276,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "y16x6oit9a",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
                       "widgetId": "h6vtttqywk",
@@ -3721,12 +4287,14 @@
                       "parentId": "qy0a0xx434",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     }
                   ],
                   "isDisabled": false,
                   "key": "kbjgr1zm6w",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 481.5,
                   "detachFromLayout": true,
                   "widgetId": "qy0a0xx434",
@@ -3734,11 +4302,13 @@
                   "version": 1,
                   "parentId": "gz9nxx791m",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "jbvtz1tzi9",
               "height": 118,
+              "labelTextSize": "0.875rem",
               "rightColumn": 45,
               "detachFromLayout": true,
               "widgetId": "gz9nxx791m",
@@ -3748,18 +4318,19 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 356
             }
           ]
         },
         "layoutOnLoadActions": [],
         "widgetNames": [
-          "Button1",
           "Canvas1",
           "Canvas10",
           "Canvas11",
           "Canvas12",
           "Canvas13",
+          "Canvas14",
           "Canvas2",
           "Canvas3",
           "Canvas4",
@@ -3769,22 +4340,23 @@
           "Canvas8",
           "Canvas9",
           "Container2",
+          "Form1",
+          "FormButton1",
+          "FormButton2",
+          "IconButton1",
           "MainContainer",
+          "Text1",
           "btnAddShipment",
           "btnAddShipmentItem",
-          "btnCloseAddShipment",
           "btnCloseCreateDelivery",
           "btnCloseEditShipmentItem",
           "btnCloseReceiveDeliveryModal",
-          "btnConfirmAddShipment",
           "btnConfirmCreateDelivery",
           "btnConfirmEditShipment",
           "btnConfirmEditShipmentItem",
           "btnCreateDelivery",
           "btnOpenReceiveDeliveryConfirm",
           "btnReceiveDelivery",
-          "checkEnterOrder",
-          "checkSelectOrder",
           "ctnInboundDeliveries",
           "ctnListShipments",
           "ctnSelectedDelivery",
@@ -3817,7 +4389,6 @@
           "txtAddShipmentDeliveryId",
           "txtAddShipmentOwner",
           "txtAddShipmentReference",
-          "txtAddShipmentTitle",
           "txtAddShipmentWarehouse",
           "txtConfirmReceiveTitle",
           "txtConsignmentInput",
@@ -3834,6 +4405,7 @@
           "txtEditShipmentItemTracking",
           "txtEditShipmentOrderNumber",
           "txtEditShipmentTitle",
+          "txtEnterOrder",
           "txtInboundDeliveriesTitle",
           "txtListDeliveriesPartner",
           "txtListDeliveriesTransport",
@@ -3842,6 +4414,7 @@
           "txtListShipmentReference",
           "txtListShipmentTransportId",
           "txtListShipmentWarehouse",
+          "txtSelectOrder",
           "txtSelectedDeliveryDate",
           "txtSelectedDeliveryReference",
           "txtSelectedDeliveryShippedFrom",
