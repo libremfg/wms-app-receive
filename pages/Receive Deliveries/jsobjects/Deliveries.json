@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Deliveries",
+    "pageId": "Receive Deliveries",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tadd: () => {\n\t\treturn CreateDelivery.run()\n\t\t\t.then(()=>{\n\t\t\t\tif (CreateDelivery.data.errors != null) {\n\t\t\t\t\t\t\tshowAlert(CreateDelivery.data.errors[0].message)\n\t\t\t\t\t\t\treturn\n\t\t\t\t} else {\t\t\t\t\n\t\t\t\t\tcloseModal(\"modalCreateDelivery\")\n\t\t\t\t\tGetSiteDeliveries.run()\n\t\t\t\t}\n\t\t\t})\n\t}\n}",
+    "variables": []
+  },
+  "id": "Receive Deliveries_Deliveries",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_62919b93b4c51656bfeaa3b8"
+}

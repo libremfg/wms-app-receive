@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tcheckOrder: () => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\tCreateShipmentNewOrder.run()\n\t\t\tMutationCompletions.createShipmentExistingOrder()\n\t\t} else {\n\t\t\tCreateShipmentExistingOrder.run()\n\t\t\tMutationCompletions.createShipmentNewOrder()\n\t\t}\n\t}\n}",
+    "body": "export default {\n\tcheckOrder: () => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\treturn CreateShipmentNewOrder.run()\n\t\t\t.then(()=>{\n\t\t\t\tif (CreateShipmentNewOrder.data.errors != null) {\n\t\t\t\t\tshowAlert(CreateShipmentNewOrder.data.errors[0].message)\n\t\t\t\t} else {\n\t\t\t\t\tGetDeliveryDetail.run()\n\t\t\t\t\tcloseModal(\"modalAddShipment\")\n\t\t\t\t}\t\t\t\t\n\t\t\t})\n\t\t} else {\n\t\t\treturn CreateShipmentExistingOrder.run()\n\t\t\t.then(()=>{\n\t\t\t\tif (CreateShipmentExistingOrder.data.errors != null) {\n\t\t\t\t\tshowAlert(CreateShipmentExistingOrder.data.errors[0].message)\n\t\t\t\t} else {\n\t\t\t\t\tGetDeliveryDetail.run()\n\t\t\t\t\tcloseModal(\"modalAddShipment\")\n\t\t\t\t}\t\t\t\t\n\t\t\t})\n\t\t}\n\t}\n}",
     "variables": []
   },
   "id": "Receive Deliveries_AddShipment",

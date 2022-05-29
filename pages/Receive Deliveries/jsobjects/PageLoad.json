@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "PageLoad",
+    "pageId": "Receive Deliveries",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tonPageLoad: async () => {\n\t\t//use async-await or promises\n\t\tawait showAlert(\"Page Loaded\")\n\t}\n}",
+    "variables": []
+  },
+  "id": "Receive Deliveries_PageLoad",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_62932aafb4c51656bfeadf17"
+}

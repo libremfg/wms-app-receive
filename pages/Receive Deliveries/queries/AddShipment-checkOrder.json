@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\tCreateShipmentNewOrder.run()\n\t\t\tMutationCompletions.createShipmentExistingOrder()\n\t\t} else {\n\t\t\tCreateShipmentExistingOrder.run()\n\t\t\tMutationCompletions.createShipmentNewOrder()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\treturn CreateShipmentNewOrder.run()\n\t\t\t.then(()=>{\n\t\t\t\tif (CreateShipmentNewOrder.data.errors != null) {\n\t\t\t\t\tshowAlert(CreateShipmentNewOrder.data.errors[0].message)\n\t\t\t\t} else {\n\t\t\t\t\tGetDeliveryDetail.run()\n\t\t\t\t\tcloseModal(\"modalAddShipment\")\n\t\t\t\t}\t\t\t\t\n\t\t\t})\n\t\t} else {\n\t\t\treturn CreateShipmentExistingOrder.run()\n\t\t\t.then(()=>{\n\t\t\t\tif (CreateShipmentExistingOrder.data.errors != null) {\n\t\t\t\t\tshowAlert(CreateShipmentExistingOrder.data.errors[0].message)\n\t\t\t\t} else {\n\t\t\t\t\tGetDeliveryDetail.run()\n\t\t\t\t\tcloseModal(\"modalAddShipment\")\n\t\t\t\t}\t\t\t\t\n\t\t\t})\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\tCreateShipmentNewOrder.run()\n\t\t\tMutationCompletions.createShipmentExistingOrder()\n\t\t} else {\n\t\t\tCreateShipmentExistingOrder.run()\n\t\t\tMutationCompletions.createShipmentNewOrder()\n\t\t}\n\t}"
+      "() => {\n\t\tif (checkEnterOrder.isChecked) {\n\t\t\treturn CreateShipmentNewOrder.run()\n\t\t\t.then(()=>{\n\t\t\t\tif (CreateShipmentNewOrder.data.errors != null) {\n\t\t\t\t\tshowAlert(CreateShipmentNewOrder.data.errors[0].message)\n\t\t\t\t} else {\n\t\t\t\t\tGetDeliveryDetail.run()\n\t\t\t\t\tcloseModal(\"modalAddShipment\")\n\t\t\t\t}\t\t\t\t\n\t\t\t})\n\t\t} else {\n\t\t\treturn CreateShipmentExistingOrder.run()\n\t\t\t.then(()=>{\n\t\t\t\tif (CreateShipmentExistingOrder.data.errors != null) {\n\t\t\t\t\tshowAlert(CreateShipmentExistingOrder.data.errors[0].message)\n\t\t\t\t} else {\n\t\t\t\t\tGetDeliveryDetail.run()\n\t\t\t\t\tcloseModal(\"modalAddShipment\")\n\t\t\t\t}\t\t\t\t\n\t\t\t})\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ReceiveDelivery",
+    "name": "GetPartnersTransport",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -24,7 +24,7 @@
         }
       ],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: tblDeliveries.selectedRow.id},\n\t\t\t\tset: {\n\t\t\t\t\tstatus:\"RECEIVED\",dateTimeReceived:moment()\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateDelivery($input:UpdateDeliveryInput!) {\n  updateDelivery(input:$input){\n    numUids\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: null,\n    query: `\nquery {\n  queryPartner (filter:{isTransport:true}){\n    value:id\n    label:name\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -45,14 +45,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: tblDeliveries.selectedRow.id},\n\t\t\t\tset: {\n\t\t\t\t\tstatus:\"RECEIVED\",dateTimeReceived:moment()\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateDelivery($input:UpdateDeliveryInput!) {\n  updateDelivery(input:$input){\n    numUids\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: null,\n    query: `\nquery {\n  queryPartner (filter:{isTransport:true}){\n    value:id\n    label:name\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_ReceiveDelivery",
+  "id": "Receive Deliveries_GetPartnersTransport",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_62391a174d9aea1b062af314"
+  "gitSyncId": "6196c1950dfef900f247faaf_62919a91b4c51656bfeaa36f"
 }

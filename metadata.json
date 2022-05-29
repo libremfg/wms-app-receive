@@ -138,19 +138,27 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Receive Deliveries_GetCustomerOrders": {
+    "Receive Deliveries_Deliveries.add": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
-    },
-    "Receive Deliveries_GetCustomers": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
     },
     "Receive Deliveries_GetDeliveryDetail": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Receive Deliveries_GetPartnerOrders": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Deliveries_GetPartners": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_GetPartnersTransport": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_GetSegments": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -213,6 +221,10 @@
     "Receive Deliveries_MutationCompletions.updateShipmentItem": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
+    },
+    "Receive Deliveries_PageLoad.onPageLoad": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
     },
     "Receive Deliveries_QueryCompletions.OnWarehouseSelect": {
       "unpublishedUserSetOnLoad": false,
