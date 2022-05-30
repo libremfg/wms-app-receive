@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tcustomerId:selectCustomer.selectedOptionValue,\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery queryShipments($customerId:ID!, $warehouseId:ID!){\n  queryShipment(id:$id){\n    id\n    warehouse{id,name}\n    customerReference\n\t\torder {\n\t\t\tshipFromPartner {\n\t\t\t\tid\n\t\t\t}\n\t\t}\n    consignmentNumber\n    from {\n      name\n    }\n    type\n    items{\n      id\n      status\n      material{\n        code \n        name\n        description\n\t\t\t\tserialMask\n        inventoryHandlingPolicy @cascade(fields:[\"rules\"]){\n          rules{\n            warehouse(filter:{id:[$warehouseId]}){\n              name\n            }\n          }\n          trackByCarrier\n          trackBySerialNumber\n          verifySerialNumberOnReceipt\n        }\n      }\n      plannedQuantity\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tcustomerId:selectCustomer.selectedOptionValue,\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery queryShipments($customerId:ID!, $warehouseId:ID!){\n  getPartner(id:$customerId){\n    shipments @cascade(fields:\"warehouse\"){\n\t\t\tid\n\t\t\tconsignmentNumber\n\t\t\tcustomerReference\n\t\t\twarehouse(filter:{id:[$warehouseId]}){\n\t\t\t\tid\n\t\t\t}\n\t\t\titemsAggregate{count}\n\t\t}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tcustomerId:selectCustomer.selectedOptionValue,\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery queryShipments($customerId:ID!, $warehouseId:ID!){\n  queryShipment(id:$id){\n    id\n    warehouse{id,name}\n    customerReference\n\t\torder {\n\t\t\tshipFromPartner {\n\t\t\t\tid\n\t\t\t}\n\t\t}\n    consignmentNumber\n    from {\n      name\n    }\n    type\n    items{\n      id\n      status\n      material{\n        code \n        name\n        description\n\t\t\t\tserialMask\n        inventoryHandlingPolicy @cascade(fields:[\"rules\"]){\n          rules{\n            warehouse(filter:{id:[$warehouseId]}){\n              name\n            }\n          }\n          trackByCarrier\n          trackBySerialNumber\n          verifySerialNumberOnReceipt\n        }\n      }\n      plannedQuantity\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tcustomerId:selectCustomer.selectedOptionValue,\n\t\t\twarehouseId:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery queryShipments($customerId:ID!, $warehouseId:ID!){\n  getPartner(id:$customerId){\n    shipments @cascade(fields:\"warehouse\"){\n\t\t\tid\n\t\t\tconsignmentNumber\n\t\t\tcustomerReference\n\t\t\twarehouse(filter:{id:[$warehouseId]}){\n\t\t\t\tid\n\t\t\t}\n\t\t\titemsAggregate{count}\n\t\t}\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
