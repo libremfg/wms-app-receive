@@ -1098,7 +1098,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "FormButton1",
-                              "onClick": "{{AddShipment.checkOrder()}}",
+                              "onClick": "{{Shipments.checkOrder()}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.cca02633.svg",
@@ -2164,7 +2164,7 @@
                                 "task": 245,
                                 "step": 62,
                                 "status": 75,
-                                "material": 211,
+                                "material": 203,
                                 "containerType": 165,
                                 "binLocation": 161,
                                 "id": 77,
@@ -2179,7 +2179,11 @@
                                 "quantity",
                                 "trackingId"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onRowSelected"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 32,
                               "parentRowSpace": 10,
@@ -2288,7 +2292,7 @@
                                   "boxShadow": "none"
                                 }
                               },
-                              "onRowSelected": "{{GetShipmentWarehouseDetail.GetDetails()}}",
+                              "onRowSelected": "",
                               "key": "sq4fy02icf",
                               "derivedColumns": {},
                               "labelTextSize": "0.875rem",
@@ -2991,8 +2995,9 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnConfirmEditShipmentItem",
-                      "onClick": "{{UpdateShipmentItem.run(() => MutationCompletions.updateShipmentItem(), () => {})}}",
+                      "onClick": "{{Shipments.addShipmentItem()}}",
                       "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 25,
@@ -3027,85 +3032,6 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "selectShipmentItemMaterial",
-                      "isFilterable": true,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "",
-                      "topRow": 6,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "defaultOptionValue": "{{DefaultValues.materialValue()}}",
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 18,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "options"
-                        },
-                        {
-                          "key": "defaultOptionValue"
-                        },
-                        {
-                          "key": "accentColor"
-                        }
-                      ],
-                      "options": "{{GetWarehouseMaterials.data.data.queryMaterialDefinition}}",
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "kmqprp5o3g",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "rightColumn": 61,
-                      "widgetId": "m6z5g307cq",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "3wx0964q4e",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "txtEditShipmentItemMaterial",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 6,
-                      "bottomRow": 10,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Material:",
-                      "key": "m88w9vhe99",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 18,
-                      "textAlign": "LEFT",
-                      "widgetId": "o6pz2wv18r",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "3wx0964q4e",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
                       "widgetName": "txtEditShipmentItemBin",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -3137,128 +3063,6 @@
                       "isLoading": false,
                       "borderRadius": "0px",
                       "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "selectShipmentItemBin",
-                      "isFilterable": true,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba.svg",
-                      "labelText": "",
-                      "topRow": 10,
-                      "bottomRow": 14,
-                      "parentRowSpace": 10,
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "defaultOptionValue": "{{DefaultValues.binValue()}}",
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 18,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "options"
-                        },
-                        {
-                          "key": "defaultOptionValue"
-                        },
-                        {
-                          "key": "accentColor"
-                        }
-                      ],
-                      "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "kmqprp5o3g",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "rightColumn": 61,
-                      "widgetId": "6xyctftwvp",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "3wx0964q4e",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "txtEditShipmentItemQuantity",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 14,
-                      "bottomRow": 18,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "overflow": "NONE",
-                      "fontFamily": "System Default",
-                      "leftColumn": 1,
-                      "dynamicBindingPathList": [],
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Quantity:",
-                      "key": "m88w9vhe99",
-                      "labelTextSize": "0.875rem",
-                      "rightColumn": 18,
-                      "textAlign": "LEFT",
-                      "widgetId": "vaawltneeh",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "3wx0964q4e",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "fontSize": "0.875rem"
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "inputShipmentItemQuantity",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 14,
-                      "bottomRow": 18,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
-                      "leftColumn": 18,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "defaultText"
-                        },
-                        {
-                          "key": "accentColor"
-                        }
-                      ],
-                      "labelStyle": "",
-                      "inputType": "NUMBER",
-                      "isDisabled": false,
-                      "key": "pou7wr6iio",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "rightColumn": 61,
-                      "widgetId": "iliqnfaipx",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "label": "",
-                      "version": 2,
-                      "parentId": "3wx0964q4e",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0px",
-                      "iconAlign": "left",
-                      "defaultText": "{{DefaultValues.quantityValue()}}"
                     },
                     {
                       "boxShadow": "none",
@@ -3298,6 +3102,54 @@
                       "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "selectBin",
+                      "isFilterable": true,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba.svg",
+                      "labelText": "",
+                      "topRow": 10,
+                      "bottomRow": 14,
+                      "parentRowSpace": 10,
+                      "labelWidth": 5,
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "",
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 18,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
+                        }
+                      ],
+                      "labelPosition": "Left",
+                      "options": "{{GetWarehouseBins.data.data.getEquipment.children}}",
+                      "placeholderText": "Select option",
+                      "isDisabled": false,
+                      "key": "xe41viqbz5",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": true,
+                      "rightColumn": 61,
+                      "widgetId": "2cyxmreoiz",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "3wx0964q4e",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                     }
                   ],
                   "isDisabled": false,
@@ -3550,6 +3402,11 @@
               "boxShadow": "none",
               "widgetName": "selectWarehouse",
               "isFilterable": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
               "labelText": "Warehouse",
@@ -3597,7 +3454,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "onOptionChange": "{{GetSiteDeliveries.run()}}"
+              "onOptionChange": "{{GetSiteDeliveries.run();\nGetWarehouseBins.run();\nGetWarehouseMaterials.run()\n}}"
             }
           ]
         },
@@ -3643,18 +3500,16 @@
           "inputAddShipmentFromName",
           "inputAddShipmentReference",
           "inputCreateDeliveryReference",
-          "inputShipmentItemQuantity",
           "modalAddShipment",
           "modalConfirmReceiveDelivery",
           "modalCreateDelivery",
           "modalEditShipment",
           "modalEditShipmentItem",
           "selectAddShipmentSegment",
+          "selectBin",
           "selectCreateDeliveryTransport",
           "selectOrderNumber",
           "selectPartner",
-          "selectShipmentItemBin",
-          "selectShipmentItemMaterial",
           "selectSite",
           "selectWarehouse",
           "tblDeliveries",
@@ -3669,8 +3524,6 @@
           "txtCreateDeliveryTransport",
           "txtEditShipmentConsignmentNumb",
           "txtEditShipmentItemBin",
-          "txtEditShipmentItemMaterial",
-          "txtEditShipmentItemQuantity",
           "txtEditShipmentItemTitle",
           "txtEditShipmentItemTracking",
           "txtEditShipmentOrderNumber",

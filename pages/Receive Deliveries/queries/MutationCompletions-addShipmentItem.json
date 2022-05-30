@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (AddShipmentItem.data.errors != null) {\n\t\t\tshowAlert(AddShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (CreateShipmentItem.data.errors != null) {\n\t\t\tshowAlert(CreateShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t}\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (AddShipmentItem.data.errors != null) {\n\t\t\tshowAlert(AddShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t}\n\t}"
+      "() => {\n\t\tif (CreateShipmentItem.data.errors != null) {\n\t\t\tshowAlert(CreateShipmentItem.data.errors[0].message)\n\t\t} else {\n\t\t\tGetShipmentDetail.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

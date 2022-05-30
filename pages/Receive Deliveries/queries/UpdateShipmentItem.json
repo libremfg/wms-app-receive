@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "headers": [],
       "encodeParamsToggle": true,
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: tblShipmentItems.selectedRow.id},\n\t\t\t\tset: {\n\t\t\t\t\tmaterial:{id: selectShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\tbin:{id: selectShipmentItemBin.selectedOptionValue},\n\t\t\t\t\tplannedQuantity: parseInt(inputShipmentItemQuantity.text)\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateShipmentItem($input:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input){\n    shipmentItem{\n      id\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: tblShipmentItems.selectedRow.id},\n\t\t\t\tset: {\n\t\t\t\t\tmaterial:{id: selectShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\tbin:{id: selectBin.selectedOptionValue},\n\t\t\t\t\tplannedQuantity: parseInt(inputShipmentItemQuantity.text)\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateShipmentItem($input:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input){\n    shipmentItem{\n      id\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST"
     },
     "executeOnLoad": false,
@@ -31,7 +31,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: tblShipmentItems.selectedRow.id},\n\t\t\t\tset: {\n\t\t\t\t\tmaterial:{id: selectShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\tbin:{id: selectShipmentItemBin.selectedOptionValue},\n\t\t\t\t\tplannedQuantity: parseInt(inputShipmentItemQuantity.text)\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateShipmentItem($input:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input){\n    shipmentItem{\n      id\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tinput: {\n\t\t\t\tfilter: {id: tblShipmentItems.selectedRow.id},\n\t\t\t\tset: {\n\t\t\t\t\tmaterial:{id: selectShipmentItemMaterial.selectedOptionValue},\n\t\t\t\t\tbin:{id: selectBin.selectedOptionValue},\n\t\t\t\t\tplannedQuantity: parseInt(inputShipmentItemQuantity.text)\n\t\t\t\t}\n\t\t\t}\n\t\t},\n    query: `\nmutation UpdateShipmentItem($input:UpdateShipmentItemInput!){\n  updateShipmentItem(input:$input){\n    shipmentItem{\n      id\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

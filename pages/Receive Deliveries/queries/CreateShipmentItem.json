@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetWarehouseBins",
+    "name": "CreateShipmentItem",
     "datasource": {
       "name": "Libre",
       "pluginId": "restapi-plugin",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetWarehouseBins($id:ID!) {\n  getEquipment(id:$id){\n    children (filter:{equipmentLevel:{eq:StorageZone}}) {\n      value:id\n      label:name\n    }\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput: [{\n\t\t\t\tbin:{id:selectBin.selectedOptionValue},\n\t\t\t\tshipment:{id:tblShipments.triggeredRow.id},\n\t\t\t\tstatus:\"CREATED\",\n\t\t\t\ttrackingDetailsArticleId:inpEditShipmentItemTracking.text\n\t\t\t}]\n\t\t},\n    query: `\nmutation AddShipmentItem($input:[AddShipmentItemInput!]!) {\n  addShipmentItem(input:$input) {\n    shipmentItem {\n      id\n    }\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "formData": {
         "apiContentType": "application/json"
@@ -42,14 +42,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectWarehouse.selectedOptionValue\n\t\t},\n    query: `\nquery GetWarehouseBins($id:ID!) {\n  getEquipment(id:$id){\n    children (filter:{equipmentLevel:{eq:StorageZone}}) {\n      value:id\n      label:name\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tinput: [{\n\t\t\t\tbin:{id:selectBin.selectedOptionValue},\n\t\t\t\tshipment:{id:tblShipments.triggeredRow.id},\n\t\t\t\tstatus:\"CREATED\",\n\t\t\t\ttrackingDetailsArticleId:inpEditShipmentItemTracking.text\n\t\t\t}]\n\t\t},\n    query: `\nmutation AddShipmentItem($input:[AddShipmentItemInput!]!) {\n  addShipmentItem(input:$input) {\n    shipmentItem {\n      id\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_GetWarehouseBins",
+  "id": "Receive Deliveries_CreateShipmentItem",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_6229931ef782567d61f16863"
+  "gitSyncId": "6196c1950dfef900f247faaf_62298724f782567d61f1676a"
 }

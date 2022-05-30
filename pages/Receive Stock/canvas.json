@@ -184,6 +184,43 @@
                   "children": [
                     {
                       "boxShadow": "none",
+                      "widgetName": "txtOrderCopy",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 19.5,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 25,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "text": "{{moment(tblJobOrderList.selectedRow.createdDateTime).format(\"Do MMM YYYY\")}}",
+                      "key": "6k6xvapc4l",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 37,
+                      "backgroundColor": "#F6F7F8",
+                      "textAlign": "RIGHT",
+                      "widgetId": "sm6zxl0h5i",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "textColor": "#2E3D49",
+                      "version": 1,
+                      "parentId": "6bb6drfk34",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    },
+                    {
+                      "boxShadow": "none",
                       "widgetName": "btnCompleteShipment",
                       "onClick": "{{ReceivingJob.complete()}}",
                       "buttonColor": "#FFC13D",
@@ -320,10 +357,10 @@
                           "key": "text"
                         }
                       ],
-                      "text": "{{tblJobOrderList.selectedRow.name}}",
+                      "text": "{{tblJobOrderList.selectedRow.operationsRequestCode}}",
                       "key": "6k6xvapc4l",
                       "labelTextSize": "0.875rem",
-                      "rightColumn": 29,
+                      "rightColumn": 18,
                       "backgroundColor": "#F6F7F8",
                       "textAlign": "RIGHT",
                       "widgetId": "rixv7dy1sf",
@@ -336,6 +373,46 @@
                       "isLoading": false,
                       "borderRadius": "0px",
                       "fontSize": "0.875rem"
+                    },
+                    {
+                      "widgetName": "Text16",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 17.65625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Creataed",
+                      "key": "fhnmmshvrk",
+                      "rightColumn": 25,
+                      "textAlign": "LEFT",
+                      "widgetId": "an7cqxs2q1",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "6bb6drfk34",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "fontSize": "1rem"
                     }
                   ],
                   "key": "a7umq6vyne",
@@ -2670,7 +2747,7 @@
                       "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
-                      "text": "Select Inbound Shipment to receive",
+                      "text": "Select Job",
                       "key": "xt7aarm6qq",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 41,
@@ -2805,10 +2882,11 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "id",
-                        "name",
-                        "dispatchStatus",
-                        "segmentRequirement",
-                        "jobResponses"
+                        "operationsRequestCode",
+                        "segmentRequirementCode",
+                        "customerId",
+                        "createdDateTime",
+                        "dispatchStatus"
                       ],
                       "isVisibleDownload": false,
                       "dynamicPropertyPathList": [
@@ -2834,22 +2912,25 @@
                       ],
                       "dynamicBindingPathList": [
                         {
-                          "key": "tableData"
-                        },
-                        {
                           "key": "accentColor"
                         },
                         {
-                          "key": "primaryColumns.name.computedValue"
+                          "key": "tableData"
                         },
                         {
-                          "key": "primaryColumns.segmentRequirement.computedValue"
+                          "key": "primaryColumns.operationsRequestCode.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.segmentRequirementCode.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.customerId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.createdDateTime.computedValue"
                         },
                         {
                           "key": "primaryColumns.dispatchStatus.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.jobResponses.computedValue"
                         },
                         {
                           "key": "primaryColumns.id.computedValue"
@@ -2857,30 +2938,14 @@
                       ],
                       "leftColumn": 1,
                       "primaryColumns": {
-                        "name": {
-                          "index": 0,
-                          "width": 150,
-                          "id": "name",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "name",
-                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
-                        },
-                        "segmentRequirement": {
+                        "operationsRequestCode": {
                           "index": 1,
                           "width": 150,
-                          "id": "segmentRequirement",
+                          "id": "operationsRequestCode",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
@@ -2888,16 +2953,77 @@
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "segmentRequirement",
-                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.segmentRequirement))}}"
+                          "label": "operationsRequestCode",
+                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.operationsRequestCode))}}",
+                          "cellBackground": ""
+                        },
+                        "segmentRequirementCode": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "segmentRequirementCode",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "segmentRequirementCode",
+                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.segmentRequirementCode))}}",
+                          "cellBackground": ""
+                        },
+                        "customerId": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "customerId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "customerId",
+                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.customerId))}}",
+                          "cellBackground": ""
+                        },
+                        "createdDateTime": {
+                          "index": 4,
+                          "width": 150,
+                          "id": "createdDateTime",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "date",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "createdDateTime",
+                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.createdDateTime))}}",
+                          "cellBackground": "",
+                          "iconName": "",
+                          "outputFormat": "Do MMM YYYY"
                         },
                         "dispatchStatus": {
-                          "index": 1,
+                          "index": 5,
                           "width": 150,
                           "id": "dispatchStatus",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
+                          "textColor": "",
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
@@ -2906,24 +3032,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "dispatchStatus",
-                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.dispatchStatus))}}"
-                        },
-                        "jobResponses": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "jobResponses",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "jobResponses",
-                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.jobResponses))}}"
+                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.dispatchStatus))}}",
+                          "cellBackground": ""
                         },
                         "id": {
                           "index": 0,
@@ -2936,7 +3046,7 @@
                           "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -2955,7 +3065,7 @@
                       "widgetId": "kxs9117khd",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisibleFilters": false,
-                      "tableData": "{{GetJobOrdersToReceive.data.data.getEquipment.jobOrders}}",
+                      "tableData": "{{ReceivingJob.flattenJobs()}}",
                       "isVisible": true,
                       "label": "Data",
                       "searchKey": "",
@@ -4670,6 +4780,7 @@
           "Text14",
           "Text15",
           "Text15Copy",
+          "Text16",
           "Text3",
           "Text4",
           "Text4Copy",
@@ -4740,6 +4851,7 @@
           "txtItemLocationSerial",
           "txtItemLocationStatus",
           "txtOrder",
+          "txtOrderCopy",
           "txtSerialBin",
           "txtSerialCarrierStatus",
           "txtSerialTitle",

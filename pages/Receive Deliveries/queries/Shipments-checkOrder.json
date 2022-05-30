@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "checkOrder",
-    "fullyQualifiedName": "AddShipment.checkOrder",
+    "fullyQualifiedName": "Shipments.checkOrder",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Receive Deliveries",
-    "collectionId": "Receive Deliveries_AddShipment",
+    "collectionId": "Receive Deliveries_Shipments",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Deliveries_AddShipment.checkOrder",
+  "id": "Receive Deliveries_Shipments.checkOrder",
   "deleted": false,
   "gitSyncId": "6196c1950dfef900f247faaf_62298408f782567d61f16744"
 }
