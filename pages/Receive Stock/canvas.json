@@ -3534,7 +3534,7 @@
                       "isLoading": false,
                       "labelAlignment": "left",
                       "borderRadius": "0px",
-                      "onOptionChange": ""
+                      "onOptionChange": "{{HandleSelects.materialRequirementChange()}}"
                     },
                     {
                       "widgetName": "Text15",
