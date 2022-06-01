@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:TableASNStaging.tableData,\n\t\t\tsite:selectSite.selectedOptionValue,\n\t\t\tpartner:selectCustomer.selectedOptionValue,\n\t\t\topDef:selectOperationsDefinition.selectedOptionValue\n\t\t},\n    query: `\nmutation NotConfirmASN($input:[ConfirmASNInput!]!,$site:String!,$partner:ExtPartnerRef!,$opDef:ExtOperationsDefinitionRef!){\n  confirmASN(input:$input,siteID:$site,PartnerRef:$partner,OperationsDefinitionRef:$opDef) {\n    Requests {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tinput:TableASNStaging.tableData,\n\t\t\tsite:selectSite.selectedOptionValue,\n\t\t\tpartner:{id:selectCustomer.selectedOptionValue},\n\t\t\topDef:{id:selectOperationsDefinition.selectedOptionValue}\n\t\t},\n    query: `\nmutation NotConfirmASN($input:[ConfirmASNInput!]!,$site:String!,$partner:ExtPartnerRef!,$opDef:ExtOperationsDefinitionRef!){\n  confirmASN(input:$input,siteID:$site,PartnerRef:$partner,OperationsDefinitionRef:$opDef) {\n    Requests {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -46,7 +46,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tinput:TableASNStaging.tableData,\n\t\t\tsite:selectSite.selectedOptionValue,\n\t\t\tpartner:selectCustomer.selectedOptionValue,\n\t\t\topDef:selectOperationsDefinition.selectedOptionValue\n\t\t},\n    query: `\nmutation NotConfirmASN($input:[ConfirmASNInput!]!,$site:String!,$partner:ExtPartnerRef!,$opDef:ExtOperationsDefinitionRef!){\n  confirmASN(input:$input,siteID:$site,PartnerRef:$partner,OperationsDefinitionRef:$opDef) {\n    Requests {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tinput:TableASNStaging.tableData,\n\t\t\tsite:selectSite.selectedOptionValue,\n\t\t\tpartner:{id:selectCustomer.selectedOptionValue},\n\t\t\topDef:{id:selectOperationsDefinition.selectedOptionValue}\n\t\t},\n    query: `\nmutation NotConfirmASN($input:[ConfirmASNInput!]!,$site:String!,$partner:ExtPartnerRef!,$opDef:ExtOperationsDefinitionRef!){\n  confirmASN(input:$input,siteID:$site,PartnerRef:$partner,OperationsDefinitionRef:$opDef) {\n    Requests {\n\t\t\tid\n\t\t}\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

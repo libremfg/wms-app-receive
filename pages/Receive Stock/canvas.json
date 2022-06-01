@@ -2961,7 +2961,8 @@
                         "name": 321,
                         "createdDateTime": 259,
                         "dispatchStatus": 534.5,
-                        "jobResponseId": 182.5
+                        "jobResponseId": 182.5,
+                        "operationsRequestCode": 223
                       },
                       "widgetName": "tblJobOrderList",
                       "defaultPageSize": 0,
@@ -4961,7 +4962,7 @@
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 642,
+                  "minHeight": 684,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [
@@ -5375,7 +5376,7 @@
                 }
               ],
               "key": "1wyqz8vhv9",
-              "height": 642,
+              "height": 684,
               "rightColumn": 0,
               "detachFromLayout": true,
               "widgetId": "k2muarkqc4",

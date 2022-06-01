@@ -19,13 +19,14 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 57,
+          "version": 58,
           "minHeight": 890,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
+              "boxShadow": "none",
               "widgetName": "lblSite",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.e6c93592.svg",
@@ -37,10 +38,12 @@
               "parentColumnSpace": 19.8125,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 2,
               "dynamicBindingPathList": [],
               "text": "Site",
               "key": "6k6xvapc4l",
+              "labelTextSize": "0.875rem",
               "rightColumn": 8,
               "textAlign": "LEFT",
               "widgetId": "hx90jc5bdx",
@@ -51,9 +54,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "selectSite",
               "isFilterable": false,
               "displayName": "Select",
@@ -76,27 +81,38 @@
               "dynamicBindingPathList": [
                 {
                   "key": "options"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "options": "{{JS_SiteList.getUserSiteList().map((row)=> {return {label:row.name, value:row.id}})}}",
               "isDisabled": false,
               "key": "0y01k4tj6l",
+              "labelTextSize": "0.875rem",
               "isRequired": true,
               "rightColumn": 28,
               "widgetId": "x4mfkn4ft2",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "label": "",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "onOptionChange": "{{GetInboundShipmentsAtWarehouse.run(() => FormatTableData.formatData(), () => {})}}"
             },
             {
-              "boxShadow": "NONE",
+              "boxShadow": "none",
               "widgetName": "ContainerInboundShipments",
               "borderColor": "transparent",
               "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 8,
@@ -108,28 +124,21 @@
               "leftColumn": 2,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas1",
-                  "rightColumn": 475.5,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "my50kbgcqm",
-                  "containerStyle": "none",
                   "topRow": 0,
                   "bottomRow": 710,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "5gmlli6xsy",
                   "minHeight": 400,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "TableInboundShipments",
                       "defaultPageSize": 0,
                       "columnOrder": [
@@ -142,9 +151,7 @@
                         "max",
                         "status",
                         "plannedQuantity",
-                        "ownerId",
                         "customColumn1",
-                        "owner",
                         "customColumn3"
                       ],
                       "isVisibleDownload": false,
@@ -221,10 +228,7 @@
                           "key": "primaryColumns.customColumn3.buttonLabel"
                         },
                         {
-                          "key": "primaryColumns.owner.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.ownerId.computedValue"
+                          "key": "accentColor"
                         }
                       ],
                       "leftColumn": 1,
@@ -246,7 +250,9 @@
                           "buttonLabelColor": "#FFFFFF",
                           "buttonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Selected Value'))}}",
                           "menuButtonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
-                          "onClick": "{{showModal('modalAssignPlanned')}}"
+                          "onClick": "{{showModal('modalAssignPlanned')}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "plannedQuantity": {
                           "index": 8,
@@ -255,7 +261,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -263,7 +269,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Planned Qty",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.plannedQuantity))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.plannedQuantity))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "orderNumber": {
                           "index": 1,
@@ -272,7 +280,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -280,7 +288,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Order Number",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.orderNumber))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.orderNumber))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "materialCode": {
                           "index": 2,
@@ -289,7 +299,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -297,7 +307,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Material",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.materialCode))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "inboundQuantity": {
                           "index": 3,
@@ -306,7 +318,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -314,7 +326,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Inbound Qty",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.inboundQuantity))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.inboundQuantity))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "warehouse": {
                           "index": 4,
@@ -323,7 +337,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -331,7 +345,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Warehouse",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.warehouse))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.warehouse))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "min": {
                           "index": 6,
@@ -340,7 +356,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -348,7 +364,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Min",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.min))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.min))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "max": {
                           "index": 7,
@@ -357,7 +375,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -365,7 +383,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Max",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.max))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.max))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "status": {
                           "index": 8,
@@ -374,7 +394,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -382,7 +402,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "Status",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.status))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "sohQty": {
                           "index": 8,
@@ -391,7 +413,7 @@
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
-                          "textSize": "PARAGRAPH",
+                          "textSize": "0.875rem",
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
@@ -399,7 +421,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "SOH Qty",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.sohQty))}}"
+                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.sohQty))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "customColumn3": {
                           "index": 11,
@@ -420,41 +444,9 @@
                           "menuColor": "#03B365",
                           "labelColor": "#FFFFFF",
                           "buttonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( '+'))}}",
-                          "onClick": "{{showModal('modalAssignOwner')}}"
-                        },
-                        "owner": {
-                          "index": 9,
-                          "width": 150,
-                          "id": "owner",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "PARAGRAPH",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Stock Owner",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.owner))}}"
-                        },
-                        "ownerId": {
-                          "index": 10,
-                          "width": 150,
-                          "id": "ownerId",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "PARAGRAPH",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": false,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "ownerId",
-                          "computedValue": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( currentRow.ownerId))}}"
+                          "onClick": "{{showModal('modalAssignOwner')}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         }
                       },
                       "delimiter": ",",
@@ -476,7 +468,9 @@
                           "buttonStyle": "rgb(3, 179, 101)",
                           "buttonLabelColor": "#FFFFFF",
                           "buttonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Selected Value'))}}",
-                          "menuButtonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}"
+                          "menuButtonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         },
                         "customColumn3": {
                           "index": 11,
@@ -496,12 +490,16 @@
                           "buttonColor": "#03B365",
                           "menuColor": "#03B365",
                           "labelColor": "#FFFFFF",
-                          "buttonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( '+'))}}"
+                          "buttonLabel": "{{TableInboundShipments.sanitizedTableData.map((currentRow) => ( '+'))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
                         }
                       },
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
-                      "textSize": "PARAGRAPH",
+                      "textSize": "0.875rem",
                       "widgetId": "puy8pstm0z",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisibleFilters": true,
                       "tableData": "{{appsmith.store.ASNFormatted}}",
                       "isVisible": true,
@@ -514,6 +512,24 @@
                       "isLoading": false,
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
                       "isVisiblePagination": true,
                       "verticalAlignment": "CENTER",
                       "columnSizeMap": {
@@ -544,6 +560,7 @@
                       }
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "BtnReceiveShipment",
                       "onClick": "{{LoadShipments.run(() => MutationCompletion.loadShipments(), () => {})}}",
                       "buttonColor": "#03B365",
@@ -574,6 +591,7 @@
                       "text": "Load ASN",
                       "isDisabled": "{{DisableLoadASN.disableLoadASN()}}",
                       "key": "3lf1x4vz4g",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 63,
                       "isDefaultClickDisabled": true,
                       "widgetId": "wdbc24qnrq",
@@ -583,14 +601,27 @@
                       "parentId": "my50kbgcqm",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY"
                     }
                   ],
-                  "key": "95ojpyooir"
+                  "key": "95ojpyooir",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 475.5,
+                  "detachFromLayout": true,
+                  "widgetId": "my50kbgcqm",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "5gmlli6xsy",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "borderWidth": "0",
               "key": "enym6gfagx",
+              "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
               "rightColumn": 59,
               "widgetId": "5gmlli6xsy",
@@ -600,9 +631,10 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0"
+              "borderRadius": "0px"
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalAssignPlanned",
               "isCanvas": true,
               "displayName": "Modal",
@@ -617,53 +649,54 @@
               "leftColumn": 0,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas2",
-                  "rightColumn": 0,
-                  "detachFromLayout": true,
                   "displayName": "Canvas",
-                  "widgetId": "gp0l6nmkp9",
                   "topRow": 0,
                   "bottomRow": 130,
                   "parentRowSpace": 1,
-                  "isVisible": true,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
-                  "version": 1,
                   "hideCard": true,
-                  "parentId": "3psd7vutm7",
                   "shouldScrollContents": false,
                   "minHeight": 132,
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "Icon1",
-                      "rightColumn": 61,
                       "onClick": "{{closeModal('modalAssignPlanned')}}",
-                      "iconName": "cross",
                       "buttonColor": "#2E3D49",
                       "displayName": "Icon",
                       "iconSVG": "/static/media/icon.31d6cfe0.svg",
-                      "widgetId": "o5n2ys1doa",
                       "topRow": 1,
                       "bottomRow": 5,
-                      "isVisible": true,
                       "type": "ICON_BUTTON_WIDGET",
-                      "version": 1,
                       "hideCard": true,
+                      "leftColumn": 50,
+                      "iconSize": 24,
+                      "key": "9u2u1eetpu",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 61,
+                      "iconName": "cross",
+                      "widgetId": "o5n2ys1doa",
+                      "isVisible": true,
+                      "version": 1,
                       "parentId": "gp0l6nmkp9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "leftColumn": 50,
-                      "borderRadius": "SHARP",
-                      "buttonVariant": "TERTIARY",
-                      "iconSize": 24,
-                      "key": "9u2u1eetpu"
+                      "borderRadius": "0px",
+                      "buttonVariant": "TERTIARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "Text1",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -672,10 +705,12 @@
                       "hideCard": false,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "text": "Plan stock",
                       "key": "rskuxd4ahl",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 49,
                       "textAlign": "LEFT",
                       "widgetId": "idgqjm73nw",
@@ -686,9 +721,11 @@
                       "parentId": "gp0l6nmkp9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnConfirmAssignPlannedInput",
                       "onClick": "{{AssignTable.assignPlannedQuantity()}}",
                       "buttonColor": "#03B365",
@@ -708,6 +745,7 @@
                       "text": "Go",
                       "isDisabled": false,
                       "key": "gb9a1qtqdv",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
                       "widgetId": "jt9tyxws7i",
@@ -718,9 +756,11 @@
                       "parentId": "gp0l6nmkp9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "inputAssignPlanned",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
@@ -737,6 +777,9 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "validation"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "labelStyle": "",
@@ -744,9 +787,11 @@
                       "isDisabled": false,
                       "key": "j62a7a0jod",
                       "validation": "{{_.toInteger(inputAssignPlanned.text)>=0}}",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 45,
                       "widgetId": "h7l9p55tpt",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "label": "",
                       "allowCurrencyChange": false,
@@ -754,16 +799,28 @@
                       "parentId": "gp0l6nmkp9",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "iconAlign": "left",
                       "defaultText": ""
                     }
                   ],
                   "isDisabled": false,
-                  "key": "o0hb5lxl6a"
+                  "key": "o0hb5lxl6a",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "gp0l6nmkp9",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "3psd7vutm7",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "qvh4bkl6zs",
               "height": 132,
+              "labelTextSize": "0.875rem",
               "rightColumn": 0,
               "detachFromLayout": true,
               "widgetId": "3psd7vutm7",
@@ -773,9 +830,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 208
             },
             {
+              "boxShadow": "none",
               "widgetName": "modalAssignOwner",
               "isCanvas": true,
               "displayName": "Modal",
@@ -791,6 +850,7 @@
               "leftColumn": 16,
               "children": [
                 {
+                  "boxShadow": "none",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
@@ -807,7 +867,13 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "boxShadow": "none",
                       "widgetName": "txtAssignPartnerTitle",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 1,
@@ -817,11 +883,13 @@
                       "animateLoading": true,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
+                      "fontFamily": "System Default",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [],
                       "truncateButtonColor": "#FFC13D",
                       "text": "Assign Owner",
                       "key": "veq4hr6ua0",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "tb22eubp1o",
@@ -832,9 +900,11 @@
                       "parentId": "ptbsgy1i4s",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "fontSize": "HEADING1"
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnCloseAssignOwnerModal",
                       "onClick": "{{closeModal('modalAssignOwner')}}",
                       "buttonColor": "#03B365",
@@ -849,6 +919,7 @@
                       "text": "Close",
                       "isDisabled": false,
                       "key": "r5dv77vt1h",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 38,
                       "isDefaultClickDisabled": true,
                       "widgetId": "xxntwcv1ws",
@@ -859,10 +930,12 @@
                       "parentId": "ptbsgy1i4s",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "btnAssignOwner",
                       "onClick": "{{AssignTable.assignOwner()}}",
                       "buttonColor": "#03B365",
@@ -883,6 +956,7 @@
                       "text": "Confirm",
                       "isDisabled": false,
                       "key": "r5dv77vt1h",
+                      "labelTextSize": "0.875rem",
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
                       "widgetId": "4202779ncd",
@@ -893,10 +967,12 @@
                       "parentId": "ptbsgy1i4s",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "borderRadius": "0px",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
+                      "boxShadow": "none",
                       "widgetName": "selectPartner",
                       "isFilterable": true,
                       "displayName": "Select",
@@ -916,24 +992,31 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "accentColor"
                         }
                       ],
                       "options": "{{GetPartners.data.data.queryPartner}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "7dlndouqdt",
+                      "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "rightColumn": 62,
                       "widgetId": "74v98wvsut",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
                       "version": 1,
                       "parentId": "ptbsgy1i4s",
                       "renderMode": "CANVAS",
-                      "isLoading": false
+                      "isLoading": false,
+                      "borderRadius": "0px"
                     }
                   ],
                   "isDisabled": false,
                   "key": "iuzs51o27t",
+                  "labelTextSize": "0.875rem",
                   "rightColumn": 375.9140625,
                   "detachFromLayout": true,
                   "widgetId": "ptbsgy1i4s",
@@ -941,11 +1024,13 @@
                   "version": 1,
                   "parentId": "r1ym30eo3z",
                   "renderMode": "CANVAS",
-                  "isLoading": false
+                  "isLoading": false,
+                  "borderRadius": "0px"
                 }
               ],
               "key": "og6krpmhfj",
               "height": 188,
+              "labelTextSize": "0.875rem",
               "rightColumn": 40,
               "detachFromLayout": true,
               "widgetId": "r1ym30eo3z",
@@ -955,6 +1040,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "width": 328
             }
           ]
