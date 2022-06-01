@@ -2809,7 +2809,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnConfirmShipment",
-                      "onClick": "{{closeModal('modalSelectJobOrder')}}",
+                      "onClick": "{{ReceivingJob.start()}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
@@ -2920,6 +2920,9 @@
                         },
                         {
                           "key": "primaryColumns.id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.jobResponseId.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -2956,7 +2959,9 @@
                         "order": 191,
                         "consignmentNumber": 121,
                         "name": 321,
-                        "createdDateTime": 257
+                        "createdDateTime": 259,
+                        "dispatchStatus": 534.5,
+                        "jobResponseId": 182.5
                       },
                       "widgetName": "tblJobOrderList",
                       "defaultPageSize": 0,
@@ -2966,7 +2971,8 @@
                         "segmentRequirementCode",
                         "customerId",
                         "createdDateTime",
-                        "dispatchStatus"
+                        "dispatchStatus",
+                        "jobResponseId"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -3100,6 +3106,25 @@
                           "isDerived": false,
                           "label": "id",
                           "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                          "cellBackground": ""
+                        },
+                        "jobResponseId": {
+                          "index": 6,
+                          "width": 150,
+                          "id": "jobResponseId",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "jobResponseId",
+                          "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.jobResponseId))}}",
                           "cellBackground": ""
                         }
                       },

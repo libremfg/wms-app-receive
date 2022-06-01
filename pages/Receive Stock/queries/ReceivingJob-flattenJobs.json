@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n    // The object which contains the\n    // final result\n    let result = [];\n \n    // loop through the object \"ob\"\n    GetJobOrdersToReceive.data.data.getEquipment.operationsRequests.forEach((oReq)=>{\n\t\t\toReq.segmentRequirements.forEach((segReq)=>{\n\t\t\t\tsegReq.jobOrders.forEach((jobOrder)=>{\n\t\t\t\t\tlet item = {\n\t\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\t\toperationsRequestCode:oReq.code,\n\t\t\t\t\t\tsegmentRequirementCode: segReq.code,\n\t\t\t\t\t\tcustomerId: oReq.customer.id,\n\t\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\t\tdispatchStatus: jobOrder.dispatchStatus\n\t\t\t\t\t}\n\t\t\t\t\tresult.push(item)\n\t\t\t\t})\t\t\n\t\t\t})\n\t\t}) \n    \n    return result;\n\t}",
+      "body": "() => {\n    let result = [];\n    GetJobOrdersToReceive.data.data.getEquipment.operationsRequests.forEach((oReq)=>{\n\t\t\toReq.segmentRequirements.forEach((segReq)=>{\n\t\t\t\tsegReq.jobOrders.forEach((jobOrder)=>{\n\t\t\t\t\tlet item = {\n\t\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\t\toperationsRequestCode:oReq.code,\n\t\t\t\t\t\tsegmentRequirementCode: segReq.code,\n\t\t\t\t\t\tcustomerId: oReq.customer.id,\n\t\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\t\tdispatchStatus: jobOrder.dispatchStatus,\n\t\t\t\t\t\tjobResponseId: _.isEmpty(jobOrder.jobResponses)? \"\" : jobOrder.jobResponses[0].id\n\t\t\t\t\t}\n\t\t\t\t\tresult.push(item)\n\t\t\t\t})\t\t\n\t\t\t})\n\t\t}) \n    return result;\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n    // The object which contains the\n    // final result\n    let result = [];\n \n    // loop through the object \"ob\"\n    GetJobOrdersToReceive.data.data.getEquipment.operationsRequests.forEach((oReq)=>{\n\t\t\toReq.segmentRequirements.forEach((segReq)=>{\n\t\t\t\tsegReq.jobOrders.forEach((jobOrder)=>{\n\t\t\t\t\tlet item = {\n\t\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\t\toperationsRequestCode:oReq.code,\n\t\t\t\t\t\tsegmentRequirementCode: segReq.code,\n\t\t\t\t\t\tcustomerId: oReq.customer.id,\n\t\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\t\tdispatchStatus: jobOrder.dispatchStatus\n\t\t\t\t\t}\n\t\t\t\t\tresult.push(item)\n\t\t\t\t})\t\t\n\t\t\t})\n\t\t}) \n    \n    return result;\n\t}"
+      "() => {\n    let result = [];\n    GetJobOrdersToReceive.data.data.getEquipment.operationsRequests.forEach((oReq)=>{\n\t\t\toReq.segmentRequirements.forEach((segReq)=>{\n\t\t\t\tsegReq.jobOrders.forEach((jobOrder)=>{\n\t\t\t\t\tlet item = {\n\t\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\t\toperationsRequestCode:oReq.code,\n\t\t\t\t\t\tsegmentRequirementCode: segReq.code,\n\t\t\t\t\t\tcustomerId: oReq.customer.id,\n\t\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\t\tdispatchStatus: jobOrder.dispatchStatus,\n\t\t\t\t\t\tjobResponseId: _.isEmpty(jobOrder.jobResponses)? \"\" : jobOrder.jobResponses[0].id\n\t\t\t\t\t}\n\t\t\t\t\tresult.push(item)\n\t\t\t\t})\t\t\n\t\t\t})\n\t\t}) \n    return result;\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 910,
+          "bottomRow": 1250,
           "containerStyle": "none",
           "snapRows": 83,
           "parentRowSpace": 1,
@@ -25,6 +25,54 @@
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "selectCustomer",
+              "isFilterable": false,
+              "dynamicPropertyPathList": [],
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "GREEN",
+              "selectionType": "SINGLE_SELECT",
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 23,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "options": "{{GetCustomers.data.data.queryPartner}}",
+              "placeholderText": "",
+              "isDisabled": false,
+              "key": "5na0jzry8c",
+              "labelTextSize": "0.875rem",
+              "isRequired": true,
+              "rightColumn": 37,
+              "widgetId": "kds94g0o9z",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "label": "",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "onOptionChange": ""
+            },
             {
               "tabId": "",
               "boxShadow": "none",
@@ -297,7 +345,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "BtnConfirmASN",
-                      "onClick": "{{ConfirmASNMutation.run(() => MutationCompletions.confirmASNMutation(), () => showAlert())}}",
+                      "onClick": "{{ConfirmASNMutation.run(() => MutationCompletions.confirmASNMutation(), () => showAlert(ConfirmASNMutation.data.errors))}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
@@ -397,7 +445,7 @@
               "key": "092rnrd8q1",
               "labelTextSize": "0.875rem",
               "backgroundColor": "#FFFFFF",
-              "rightColumn": 55,
+              "rightColumn": 61,
               "widgetId": "l9vncvruyu",
               "containerStyle": "card",
               "isVisible": true,
@@ -426,7 +474,7 @@
               "text": "Site",
               "key": "6k6xvapc4l",
               "labelTextSize": "0.875rem",
-              "rightColumn": 7,
+              "rightColumn": 5,
               "textAlign": "LEFT",
               "widgetId": "du5fkz1s5u",
               "isVisible": true,
@@ -459,7 +507,7 @@
                   "key": "onOptionChange"
                 }
               ],
-              "leftColumn": 7,
+              "leftColumn": 5,
               "dynamicBindingPathList": [
                 {
                   "key": "options"
@@ -473,7 +521,7 @@
               "key": "0y01k4tj6l",
               "labelTextSize": "0.875rem",
               "isRequired": true,
-              "rightColumn": 27,
+              "rightColumn": 18,
               "widgetId": "8787t0sb9x",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
@@ -607,10 +655,160 @@
               "isLoading": false,
               "borderRadius": "0px",
               "width": 268
+            },
+            {
+              "widgetName": "txtCustomerTitle",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 18,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Customer",
+              "key": "wdveigxjff",
+              "rightColumn": 23,
+              "textAlign": "LEFT",
+              "widgetId": "v9yc7d4939",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "fontSize": "1rem"
+            },
+            {
+              "widgetName": "txtOperationsDefinitionTitle",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 37,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Operations Def",
+              "key": "wdveigxjff",
+              "rightColumn": 44,
+              "textAlign": "LEFT",
+              "widgetId": "jsy55e2d1e",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "fontSize": "1rem"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "selectOperationsDefinition",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "",
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "",
+              "animateLoading": true,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 44,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "options"
+                }
+              ],
+              "labelPosition": "Left",
+              "options": "{{GetOperationsDefinitions.data.data.queryOperationsDefinition}}",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "e9b4sgpb8l",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "rightColumn": 61,
+              "widgetId": "72dim90q5d",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
             }
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Upload ASN_GetCustomers",
+              "name": "GetCustomers",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    query: `\nquery{\n  queryPartner(filter:{isCustomer:true}){\n    value:id\n    label:companyCode\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Upload ASN_GetOperationsDefinitions",
+              "name": "GetOperationsDefinitions",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    query: `\nquery {\n  queryOperationsDefinition(filter:{operationsType:{eq:Inventory}}){\n    value:id\n    label:name\n    operationsType\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Upload ASN_GetUserSites",
@@ -636,7 +834,11 @@
           "TableASNStaging",
           "TxtUploadSuccess",
           "lblSite",
-          "selectSite"
+          "selectCustomer",
+          "selectOperationsDefinition",
+          "selectSite",
+          "txtCustomerTitle",
+          "txtOperationsDefinitionTitle"
         ],
         "validOnPageLoadActions": true,
         "id": "Upload ASN",

@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetSiteWarehouses",
+    "name": "GetOperationsDefinitions",
     "datasource": {
       "name": "Users",
       "pluginId": "restapi-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Receive Stock",
+    "pageId": "Upload ASN",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{equipmentLevel:{eq:Warehouse},not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    query: `\nquery {\n  queryOperationsDefinition(filter:{operationsType:{eq:Inventory}}){\n    value:id\n    label:name\n    operationsType\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -37,7 +37,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -47,14 +47,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid:selectSite.selectedOptionValue\n\t\t},\n    query: `\nquery($id:ID!){\n\tgetEquipment(id:$id){\n\t\tid\n\t\tname\n\t\tchildren(filter:{equipmentLevel:{eq:Warehouse},not:{isActive:false}}){\n\t\t\tvalue:id\n\t\t\tlabel:name\n\t\t}\n\t}\n}\n    `\n})"
+      "JSON.stringify({\n    query: `\nquery {\n  queryOperationsDefinition(filter:{operationsType:{eq:Inventory}}){\n    value:id\n    label:name\n    operationsType\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_GetSiteWarehouses",
+  "id": "Upload ASN_GetOperationsDefinitions",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c4342ee89bc475f3cce119"
+  "gitSyncId": "6196c1950dfef900f247faaf_6296c90eb4c51656bfebcd4e"
 }
