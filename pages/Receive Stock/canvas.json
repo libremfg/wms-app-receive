@@ -61,7 +61,7 @@
                 }
               ],
               "options": "{{GetCustomers.data.data.queryPartner}}",
-              "placeholderText": "Warehouse",
+              "placeholderText": "",
               "isDisabled": false,
               "key": "5na0jzry8c",
               "labelTextSize": "0.875rem",
@@ -901,12 +901,16 @@
                                 },
                                 {
                                   "key": "accentColor"
+                                },
+                                {
+                                  "key": "validation"
                                 }
                               ],
                               "labelStyle": "",
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "hbhk893y2u",
+                              "validation": "{{Validation.inSerialList()}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "rightColumn": 64,

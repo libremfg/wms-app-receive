@@ -498,6 +498,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Stock_Validation.inSerialList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Review Inbound Shipments_AssignTable.assignOwner": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false

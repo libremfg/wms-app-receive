@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Validation",
+    "pageId": "Receive Stock",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tinSerialList: () => {\n\t\tif (inpBarcode.text == \"\"){\n\t\t\treturn false\n\t\t}\n\t\tif (GetJobOrderMaterialReqs.data.data.getJobOrder.segmentRequirement == null){\n\t\t\treturn false\n\t\t}\n\t\tif (GetJobOrderMaterialReqs.data.data.getJobOrder.segmentRequirement.materialRequirements == null){\n\t\t\treturn false\n\t\t}\n\t\tvar serialList = []\n\t\tfor (let i = 0; i < GetJobOrderMaterialReqs.data.data.getJobOrder.segmentRequirement.materialRequirements.length; i ++) {\n\t\t\tlet line = GetJobOrderMaterialReqs.data.data.getJobOrder.segmentRequirement.materialRequirements[i]\n\t\t\tif (line.materialSubLots != null) {\n\t\t\t\tfor (let j = 0; j < line.materialSubLots.length; j++) {\n\t\t\t\t\tserialList.push(line.materialSubLots.code)\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn _.includes(serialList, inpBarcode.text)\n\t},\n\t\n}",
+    "variables": []
+  },
+  "id": "Receive Stock_Validation",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_62970ce7b4c51656bfebdbdb"
+}
