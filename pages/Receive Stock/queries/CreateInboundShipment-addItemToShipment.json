@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tAddShipmentItemNewShip.run()\n\t\t.then(()=> {\n\t\t\tGetShipmentWithItems.run()\n\t\t})\n\t\t.then(()=> {\n\t\t\tshowAlert(\"Item Added Successfully\")\n\t\t})\n\t\t.catch((e)=> {\n\t\t\tshowAlert(e.message)\n\t\t})\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,

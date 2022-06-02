@@ -26,7 +26,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})\n}}",
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tid: tblShipments.selectedRow.id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{shipment:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})\n}}",
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tid: tblJobOrderList.selectedRow.jobResponses[0].id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{jobResponse:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tid: tblShipments.selectedRow.id\n\t\t},\n    query: `\nquery GetInventoryTransactions($id:ID!){\n  getInventoryTransactionsRaw(filter:{shipment:{id:$id},filterReversed:true}){\n    material{code}\n    materialSubLot{code}\n    quantity\n    transactionId\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

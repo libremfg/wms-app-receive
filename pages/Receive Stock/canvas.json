@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 890,
           "parentColumnSpace": 1,
           "dynamicTriggerPathList": [],
@@ -897,9 +897,6 @@
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
-                                  "key": "regex"
-                                },
-                                {
                                   "key": "accentColor"
                                 },
                                 {
@@ -923,7 +920,7 @@
                               "parentId": "9s19a9qiq7",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "regex": "{{GetShipmentItemDetail.data.data.getShipmentItem.material.serialMask}}",
+                              "regex": "",
                               "borderRadius": "0px",
                               "iconAlign": "left",
                               "defaultText": ""
