@@ -16,7 +16,7 @@
     "pageId": "Review Inbound Shipments",
     "collectionId": "Review Inbound Shipments_AssignTable",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\t\n\t\tif (selectPartner.selectedOptionValue == null) {\n\t\t\treturn\n\t\t}\n\t\tvar ret = appsmith.store.ASNFormatted\n\t\tret[TableInboundShipments.selectedRowIndex].owner = selectPartner.selectedOptionLabel\n\t\tret[TableInboundShipments.selectedRowIndex].ownerId = selectPartner.selectedOptionValue\n\t\tstoreValue('ASNFormatted', ret)\n\t\tcloseModal(\"modalAssignOwner\")\n\t\treturn ret\n\t}",

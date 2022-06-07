@@ -16,7 +16,7 @@
     "pageId": "Review In Cart Operations Requ",
     "collectionId": "Review In Cart Operations Requ_JSObject1",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\t//write code here\n\t}",

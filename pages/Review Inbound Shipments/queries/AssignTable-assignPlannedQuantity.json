@@ -16,7 +16,7 @@
     "pageId": "Review Inbound Shipments",
     "collectionId": "Review Inbound Shipments_AssignTable",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\t\n\t\tif (inputAssignPlanned.isValid == false) {\n\t\t\treturn\n\t\t}\n\t\tvar ret = appsmith.store.ASNFormatted\n\t\tret[TableInboundShipments.selectedRowIndex].plannedQuantity = _.toInteger(inputAssignPlanned.text)\n\t\tstoreValue('ASNFormatted', ret)\n\t\tcloseModal(\"modalAssignPlanned\")\n\t\treturn ret\n\t}",

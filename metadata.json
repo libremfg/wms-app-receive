@@ -615,14 +615,6 @@
     "Upload ASN_UploadASNFilePicker.pickFileAndRefresh": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
-    },
-    "null_JS_SiteList.getUserSiteList": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "null_getWarehouseByName": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
     }
   },
   "publishedLayoutmongoEscapedWidgets": {},
