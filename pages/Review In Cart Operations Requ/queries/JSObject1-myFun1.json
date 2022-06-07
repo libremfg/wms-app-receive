@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "submitSerial",
-    "fullyQualifiedName": "HandleSelects.submitSerial",
+    "name": "myFun1",
+    "fullyQualifiedName": "JSObject1.myFun1",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,17 +13,18 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Receive Stock",
-    "collectionId": "Receive Stock_HandleSelects",
+    "pageId": "Review In Cart Operations Requ",
+    "collectionId": "Review In Cart Operations Requ_JSObject1",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => { \n\t\tif (!btnAddSerial.isDisabled){\n\t\t\tReceiveSerialised.run()\n\t\t\tMutationCompletions.receiveSerialised()\n\t\t}\n\t}",
+      "body": "() => {\n\t\t//write code here\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -33,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => { \n\t\tif (!btnAddSerial.isDisabled){\n\t\t\tReceiveSerialised.run()\n\t\t\tMutationCompletions.receiveSerialised()\n\t\t}\n\t}"
+      "() => {\n\t\t//write code here\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_HandleSelects.submitSerial",
+  "id": "Review In Cart Operations Requ_JSObject1.myFun1",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_6226b6ecb49d5451b1cd09c5"
+  "gitSyncId": "6196c1950dfef900f247faaf_629e9d80aeaa1802518ac53e"
 }

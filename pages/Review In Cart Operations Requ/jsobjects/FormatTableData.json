@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "FormatTableData",
+    "pageId": "Review In Cart Operations Requ",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tformatQueryRequests:async () => {\n\t\t//write code here\n\t\tlet ret = [];\n\t\tif(QueryOperationsRequest.data.data.queryOperationsRequest.length > 0){\n\t\t\tfor( let i = 0; i < QueryOperationsRequest.data.data.queryOperationsRequest.length; i++){\n\t\t\t\tfor (let j = 0; j < QueryOperationsRequest.data.data.queryOperationsRequest[i].segmentRequirements.length; j++){\n\t\t\t\t\tfor (let k = 0; k < QueryOperationsRequest.data.data.queryOperationsRequest[i].segmentRequirements[j].materialRequirements.length;k++){\n\t\t\t\t\t\tstoreValue(\"materialCode\",QueryOperationsRequest.data.data.queryOperationsRequest[i].segmentRequirements[j].materialRequirements[k].material.code);\n\t\t\t\t\t\tstoreValue(\"partnerCode\",QueryOperationsRequest.data.data.queryOperationsRequest[i].customer.name);\n\t\t\t\t\t\tQueryPartners.run();\n\t\t\t\t\t\t\tlet line = {\n\t\t\t\t\t\t\t\t\t\t\"customerName\": QueryOperationsRequest.data.data.queryOperationsRequest[i].customer.name,\n\t\t\t\t\t\t\t\t\t\t\"orderNumber\": QueryOperationsRequest.data.data.queryOperationsRequest[i].code,\n\t\t\t\t\t\t\t\t\t\t\"materialCode\" : QueryOperationsRequest.data.data.queryOperationsRequest[i].segmentRequirements[j].materialRequirements[k].material.code,\n\t\t\t\t\t\t\t\t\t\t\"segmentCode\": QueryOperationsRequest.data.data.queryOperationsRequest[i].segmentRequirements[j].code,\n\t\t\t\t\t\t\t\t\t\t\"quantity\": QueryOperationsRequest.data.data.queryOperationsRequest[i].segmentRequirements[j].materialRequirements[k].quantity\n\t\t\t\t\t\t\t\t\t};\n\t\t\t\t\t\t\tret.push(line);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\treturn ret;\n\t},\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "Review In Cart Operations Requ_FormatTableData",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_62986b3d4d56be2131dc38bd"
+}

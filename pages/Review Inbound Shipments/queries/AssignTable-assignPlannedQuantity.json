@@ -16,7 +16,7 @@
     "pageId": "Review Inbound Shipments",
     "collectionId": "Review Inbound Shipments_AssignTable",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n\t\t\n\t\tif (inputAssignPlanned.isValid == false) {\n\t\t\treturn\n\t\t}\n\t\tvar ret = appsmith.store.ASNFormatted\n\t\tret[TableInboundShipments.selectedRowIndex].plannedQuantity = _.toInteger(inputAssignPlanned.text)\n\t\tstoreValue('ASNFormatted', ret)\n\t\tcloseModal(\"modalAssignPlanned\")\n\t\treturn ret\n\t}",
@@ -24,7 +24,6 @@
       "isAsync": false
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -43,5 +42,5 @@
   },
   "id": "Review Inbound Shipments_AssignTable.assignPlannedQuantity",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c43434e89bc475f3ccf8f3"
+  "gitSyncId": "6196c1950dfef900f247faaf_6298398e4d56be2131dc2920"
 }

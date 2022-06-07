@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 1260,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -2508,24 +2508,24 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "PutAway_getStockOnHandForCarrier",
-              "name": "getStockOnHandForCarrier",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables:  {\n  \"input\": {\n    \"carrier\": {\n      \"code\": appsmith.store.queryMoveCarrierCode\n    },\n    \"groupBy\": {\n      \"material\": true,\n      \"carrier\": true,\n      \"status\": true,\n      \"storageLocation\": true\n    }\n  }\n},\n    query: `\nquery ($input:StockOnHandFilter){\n  getStockOnHand(filter:$input){\n    material{\n      code\n    }\n    carrier{\n      id\n\t\t\tcode\n    }\n    status{\n      code\n    }\n    storageLocation{\n      name\n    }\n    quantity\n  }\n}\n    `\n})"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "PutAway_queryUserSites",
               "name": "queryUserSites",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
                 "JSON.stringify({\n    variables:  {\n\t\"input\": appsmith.user.email\n},\n    query: `\nquery($input:String){\n  getUser(username:$input){\n\t\t\tid\n    hasRole{\n      responsibilities(filter:{equipmentLevel:{eq:Site}}){\n        value: id\n        label: name\n        equipmentLevel\n      }\n    }\n  }\n}\n    `\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "PutAway_getStockOnHandForCarrier",
+              "name": "getStockOnHandForCarrier",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n    variables:  {\n  \"input\": {\n    \"carrier\": {\n      \"code\": appsmith.store.queryMoveCarrierCode\n    },\n    \"groupBy\": {\n      \"material\": true,\n      \"carrier\": true,\n      \"status\": true,\n      \"storageLocation\": true\n    }\n  }\n},\n    query: `\nquery ($input:StockOnHandFilter){\n  getStockOnHand(filter:$input){\n    material{\n      code\n    }\n    carrier{\n      id\n\t\t\tcode\n    }\n    status{\n      code\n    }\n    storageLocation{\n      name\n    }\n    quantity\n  }\n}\n    `\n})"
               ],
               "timeoutInMillisecond": 10000
             }

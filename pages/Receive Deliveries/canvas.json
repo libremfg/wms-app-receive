@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 1260,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -1622,6 +1622,7 @@
                                   "key": "borderRadius"
                                 }
                               ],
+                              "labelPosition": "Left",
                               "isDisabled": false,
                               "key": "zwn2j2cswp",
                               "isRequired": false,

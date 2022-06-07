@@ -3,6 +3,7 @@
   "serverSchemaVersion": 4,
   "pageOrder": [
     "Upload ASN",
+    "Review In Cart Operations Requ",
     "Review Inbound Shipments",
     "Receive Stock",
     "Receive Deliveries",
@@ -10,6 +11,7 @@
   ],
   "publishedPageOrder": [
     "Upload ASN",
+    "Review In Cart Operations Requ",
     "Review Inbound Shipments",
     "Receive Stock",
     "Receive Deliveries",
@@ -499,6 +501,30 @@
       "publishedUserSetOnLoad": false
     },
     "Receive Stock_Validation.inSerialList": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_FormatTableData.formatQueryRequests": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_GetUserSites": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_JSObject1.myFun1": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_JSObject1.myFun2": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_QueryOperationsRequest": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_QueryPartners": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
