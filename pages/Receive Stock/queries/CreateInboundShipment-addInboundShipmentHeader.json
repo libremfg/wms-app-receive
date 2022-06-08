@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\tAddInboundShipment.run()\n\t\t\t.then(()=> {\n\t\t\tGetWarehouseShipmentsInbound.run()\n\t\t\t\t.then(()=> {\n\t\t\t\tstoreValue(\"selectedShipment\",AddInboundShipment.data.data.addShipment.shipment[0])\t\t\n\t\t\t\tstoreValue(\"addInShipTabsDefault\",\"Shipment_Items\")\n\t\t\t})\n\t\t})\n\t\t\t.catch((e)=> {\n\t\t\tshowAlert(e.message)\n\t\t})\t\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "clientSideExecution": true,

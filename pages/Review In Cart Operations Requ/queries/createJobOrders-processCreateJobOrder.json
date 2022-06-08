@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "jobChange",
-    "fullyQualifiedName": "HandleSelects.jobChange",
+    "name": "processCreateJobOrder",
+    "fullyQualifiedName": "createJobOrders.processCreateJobOrder",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,18 +13,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Receive Stock",
-    "collectionId": "Receive Stock_HandleSelects",
+    "pageId": "Review In Cart Operations Requ",
+    "collectionId": "Review In Cart Operations Requ_createJobOrders",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tGetJobOrderMaterialReqs.run()\n\t}",
+      "body": "async()=>{\n\t\tAddJobOrder.run(()=>{\n\t\t\tUpdateOperationsRequest.run(()=>{\n\t\t\t\tFormatTableData.formatQueryRequests()\n\t\t\t})\n\t\t})\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tGetJobOrderMaterialReqs.run()\n\t}"
+      "async()=>{\n\t\tAddJobOrder.run(()=>{\n\t\t\tUpdateOperationsRequest.run(()=>{\n\t\t\t\tFormatTableData.formatQueryRequests()\n\t\t\t})\n\t\t})\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Receive Stock_HandleSelects.jobChange",
+  "id": "Review In Cart Operations Requ_createJobOrders.processCreateJobOrder",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_61c43430e89bc475f3ccead1"
+  "gitSyncId": "6196c1950dfef900f247faaf_62a032f8e56c5566a628cad0"
 }

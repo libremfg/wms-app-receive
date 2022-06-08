@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => { \n\t\tif (!btnAddSerial.isDisabled){\n\t\t\tReceiveSerialised.run()\n\t\t\tMutationCompletions.receiveSerialised()\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

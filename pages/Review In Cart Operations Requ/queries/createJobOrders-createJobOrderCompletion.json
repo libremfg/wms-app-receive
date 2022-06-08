@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun1",
-    "fullyQualifiedName": "JSObject1.myFun1",
+    "name": "createJobOrderCompletion",
+    "fullyQualifiedName": "createJobOrders.createJobOrderCompletion",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,16 @@
       "userPermissions": []
     },
     "pageId": "Review In Cart Operations Requ",
-    "collectionId": "Review In Cart Operations Requ_JSObject1",
+    "collectionId": "Review In Cart Operations Requ_createJobOrders",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\t//write code here\n\t}",
+      "body": "async()=>{\n\t\t\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\t//write code here\n\t}"
+      "async()=>{\n\t\t\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review In Cart Operations Requ_JSObject1.myFun1",
+  "id": "Review In Cart Operations Requ_createJobOrders.createJobOrderCompletion",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_629e9d80aeaa1802518ac53e"
+  "gitSyncId": "6196c1950dfef900f247faaf_62a02fb3e56c5566a628ca15"
 }

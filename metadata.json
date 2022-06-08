@@ -504,6 +504,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Review In Cart Operations Requ_AddJobOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Review In Cart Operations Requ_FormatTableData.formatQueryRequests": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -512,19 +516,35 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Review In Cart Operations Requ_JSObject1.myFun1": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Review In Cart Operations Requ_JSObject1.myFun2": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Review In Cart Operations Requ_QueryOperationsRequest": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Review In Cart Operations Requ_QueryPartners": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_UpdateOperationsRequest": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_createJobOrders.createAddJobOrderInput": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_createJobOrders.createJobOrderCompletion": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_createJobOrders.planQuantity": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_createJobOrders.processCreateJobOrder": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Review In Cart Operations Requ_createJobOrders.updateOperationsRequestInput": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

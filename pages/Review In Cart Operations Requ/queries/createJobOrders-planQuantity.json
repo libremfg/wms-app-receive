@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun2",
-    "fullyQualifiedName": "JSObject1.myFun2",
+    "name": "planQuantity",
+    "fullyQualifiedName": "createJobOrders.planQuantity",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,14 +14,14 @@
       "userPermissions": []
     },
     "pageId": "Review In Cart Operations Requ",
-    "collectionId": "Review In Cart Operations Requ_JSObject1",
+    "collectionId": "Review In Cart Operations Requ_createJobOrders",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+      "body": "() => {\n\t\t//write code here\n\t\tlet ret = appsmith.store.InCartData\n\t\tret[ASNTable.selectedRowIndex].plannedQuantity = _.toInteger(InputPlanQuantity.text)\n\t\tstoreValue(\"InCartData\",ret)\n\t\tcloseModal(\"ModalPlanStock\")\n\t\treturn ret\n\t}",
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "clientSideExecution": true,
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n\t\t//use async-await or promises\n\t}"
+      "() => {\n\t\t//write code here\n\t\tlet ret = appsmith.store.InCartData\n\t\tret[ASNTable.selectedRowIndex].plannedQuantity = _.toInteger(InputPlanQuantity.text)\n\t\tstoreValue(\"InCartData\",ret)\n\t\tcloseModal(\"ModalPlanStock\")\n\t\treturn ret\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Review In Cart Operations Requ_JSObject1.myFun2",
+  "id": "Review In Cart Operations Requ_createJobOrders.planQuantity",
   "deleted": false,
-  "gitSyncId": "6196c1950dfef900f247faaf_629e9d80aeaa1802518ac53f"
+  "gitSyncId": "6196c1950dfef900f247faaf_629e9d80aeaa1802518ac53e"
 }

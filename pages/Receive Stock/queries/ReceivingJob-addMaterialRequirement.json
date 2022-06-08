@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\t// we need a material and a quantity\n\t\tif ( _.isNull(selectMaterialToAdd.selectedOptionValue) || _.isNull(inpMaterialQuantityToAdd.text)){\n\t\t\tshowAlert(\"One of the required inputs is missing.We need a Material and a quantity \")\n\t\t\treturn\n\t\t}\telse {\n\t\t\treturn AddMaterialRequirement.run().then(()=>{\n\t\t\t\tif (AddMaterialRequirement.data.errors != null) {\n\t\t\t\t\tshowAlert(AddSegmentRequirement.data.errors.message)\n\t\t\t\t\treturn\n\t\t\t\t} else {\n\t\t\t\t\treturn GetJobOrderMaterialReqs.run().then(()=>{\n\t\t\t\t\t\tcloseModal(\"modalAddMaterial\")\n\t\t\t\t\t\tshowAlert(\"completed successfully\")\n\t\t\t\t\t})\n\t\t\t\t}\t\t\t\n\t\t\t})\n\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

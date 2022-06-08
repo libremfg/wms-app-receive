@@ -24,12 +24,8 @@
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [
-        {
-          "key": "PartnerID"
-        }
-      ],
-      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tmaterial: appsmith.store.materialCode,\n\t\t\tpartner:\"ZELLER\"\n\t\t},\n    query: `\nquery($partner:String!,$material:String!){\n  queryPartner(filter:{name:{eq:$partner}})@cascade{\n    name\n    inventoryHandlingRules{\n      warehouse{\n        name\n        parent{\n          name\n        }\n      }\n      inventoryHandlingPolicy{\n        material(filter:{code:{eq:$material}}){\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})\n}}",
+      "queryParameters": [],
+      "body": "{{\nJSON.stringify({\n    variables: {\n\t\t\tmaterial: appsmith.store.materialCode,\n\t\t\tpartner:appsmith.store.partnerCode,\n\t\t\tsite: selectSite.selectedOptionLabel\n\t\t},\n    query: `\nquery($partner:String!,$material:String!,$site:String!){\n  queryPartner(filter:{name:{eq:$partner}}){\n    name\n    inventoryHandlingRules{\n      warehouse@cascade{\n        name\n        parent(filter:{name:{eq:$site}}){\n          name\n        }\n      }\n      inventoryHoldingPolicy@cascade{\n        material(filter:{code:{eq:$material}}){\n          code\n        }\n\t\t\t\t\tinventoryMax\n\t\t\t\t\tinventoryMin\n      }\n      inventoryHandlingPolicy{\n        id\n        material(filter:{code:{eq:$material}}){\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})\n}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
@@ -51,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n    variables: {\n\t\t\tmaterial: appsmith.store.materialCode,\n\t\t\tpartner:\"ZELLER\"\n\t\t},\n    query: `\nquery($partner:String!,$material:String!){\n  queryPartner(filter:{name:{eq:$partner}})@cascade{\n    name\n    inventoryHandlingRules{\n      warehouse{\n        name\n        parent{\n          name\n        }\n      }\n      inventoryHandlingPolicy{\n        material(filter:{code:{eq:$material}}){\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})"
+      "JSON.stringify({\n    variables: {\n\t\t\tmaterial: appsmith.store.materialCode,\n\t\t\tpartner:appsmith.store.partnerCode,\n\t\t\tsite: selectSite.selectedOptionLabel\n\t\t},\n    query: `\nquery($partner:String!,$material:String!,$site:String!){\n  queryPartner(filter:{name:{eq:$partner}}){\n    name\n    inventoryHandlingRules{\n      warehouse@cascade{\n        name\n        parent(filter:{name:{eq:$site}}){\n          name\n        }\n      }\n      inventoryHoldingPolicy@cascade{\n        material(filter:{code:{eq:$material}}){\n          code\n        }\n\t\t\t\t\tinventoryMax\n\t\t\t\t\tinventoryMin\n      }\n      inventoryHandlingPolicy{\n        id\n        material(filter:{code:{eq:$material}}){\n          code\n        }\n      }\n    }\n  }\n}\n    `\n})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

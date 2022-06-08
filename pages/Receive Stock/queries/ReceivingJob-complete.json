@@ -21,7 +21,7 @@
       "encodeParamsToggle": true,
       "body": "() => {\n\t\t// validate the required fields. We need a JobOrder.id and a JobResponse.id\n\t\tif ( _.isNull(tblJobOrderList.selectedRow.id) ){\n\t\t\tshowAlert(\"One of the required inputs is missing.We need a JobOrder.id and a JobResponse.id \")\n\t\t\treturn\n\t\t}\telse {\n\t\t\treturn CompleteJobOrder.run().then(()=>{\n\t\t\t\tif (CompleteJobOrder.data.errors != null) {\n\t\t\t\t\tshowAlert(AddSegmentRequirement.data.errors.message)\n\t\t\t\t\treturn\n\t\t\t\t} else {\n\t\t\t\t\treturn GetJobOrdersToReceive.run().then(()=>{\n\t\t\t\t\t\tresetWidget(\"tblJobOrderList\")\n\t\t\t\t\t\tshowAlert(\"completed successfully\")\n\t\t\t\t\t})\n\t\t\t\t}\t\t\t\n\t\t\t})\n\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

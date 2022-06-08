@@ -5389,55 +5389,6 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "width": 880
-            },
-            {
-              "boxShadow": "none",
-              "widgetName": "Select1",
-              "isFilterable": true,
-              "displayName": "Select",
-              "iconSVG": "/static/media/icon.bd99caba.svg",
-              "labelText": "Label",
-              "topRow": 4,
-              "bottomRow": 8,
-              "parentRowSpace": 10,
-              "labelWidth": 5,
-              "type": "SELECT_WIDGET",
-              "serverSideFiltering": false,
-              "hideCard": false,
-              "defaultOptionValue": "GREEN",
-              "animateLoading": true,
-              "parentColumnSpace": 18.109375,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 1,
-              "dynamicBindingPathList": [
-                {
-                  "key": "accentColor"
-                },
-                {
-                  "key": "borderRadius"
-                },
-                {
-                  "key": "options"
-                }
-              ],
-              "labelPosition": "Left",
-              "options": "{{GetUserSites.data.data}}",
-              "placeholderText": "Select option",
-              "isDisabled": false,
-              "key": "0ca8gxtvof",
-              "labelTextSize": "0.875rem",
-              "isRequired": false,
-              "isDeprecated": false,
-              "rightColumn": 21,
-              "widgetId": "ngz0994046",
-              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "isVisible": true,
-              "version": 1,
-              "parentId": "0",
-              "labelAlignment": "left",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
             }
           ]
         },
@@ -5482,7 +5433,6 @@
           "IconButton5",
           "MainContainer",
           "ModalAddReceivingJob",
-          "Select1",
           "Text1",
           "Text13",
           "Text14",

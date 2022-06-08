@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "createJobOrders",
+    "pageId": "Review In Cart Operations Requ",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tplanQuantity: () => {\n\t\t//write code here\n\t\tlet ret = appsmith.store.InCartData\n\t\tret[ASNTable.selectedRowIndex].plannedQuantity = _.toInteger(InputPlanQuantity.text)\n\t\tstoreValue(\"InCartData\",ret)\n\t\tcloseModal(\"ModalPlanStock\")\n\t\treturn ret\n\t},\n\tupdateOperationsRequestInput:() => {\n\tlet tableData = appsmith.store.InCartData;\n\tlet idList = []\n\tfor (let i = 0; i < tableData.length; i++){\n\t\t\tlet line = tableData[i]\n\t\t\tidList.push(line.requestId)\n\t}\n\tlet ret = {\n\t\t\t\tfilter:{\n\t\t\t\t\tid:idList\n\t\t\t\t},\n\t\t\t\tset:{\n\t\t\t\t\trequestState:{\n\t\t\t\t\t\tid:\"0x5fa15\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\treturn ret\n},\n\tcreateAddJobOrderInput:()=>{\n\t\tlet tableData = appsmith.store.InCartData;\n\t\tlet ret = []\n\t\tfor (let i = 0; i < tableData.length; i++){\n\t\t\tlet line = tableData[i]\n\t\t\tlet temp = {\n\t\t\t\tname:line.segmentRequirementName+\"/\"+line.EquipmentName,\n\t\t\t\tequipment:{\n\t\t\t\t\tname:line.EquipmentName,\n\t\t\t\t},\n\t\t\t\tmaterialRequirements:{\n\t\t\t\t\tmaterial:{\n\t\t\t\t\t\tcode:line.materialCode\n\t\t\t\t\t},\n\t\t\t\t\tquantity:line.plannedQuantity\n\t\t\t},\n\t\t\t\tsegmentRequirement:{\n\t\t\t\t\tcode:line.segmentRequirementName+\"/\"+line.EquipmentName+\"segmentRequirement\",\n\t\t\t\t\toperationsRequest:{\n\t\t\t\t\t\tid:line.requestId\n\t\t\t\t\t},\n\t\t\t\t\tsegment:{\n\t\t\t\t\t\tid:line.segmentID\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\tisActive:true\n\t\t\t}\n\t\t\tret.push(temp)\n\t\t}\n\t\treturn ret\n\t},\n\tcreateJobOrderCompletion: async()=>{\n\t\t\n\t},\n\tprocessCreateJobOrder: async()=>{\n\t\tAddJobOrder.run(()=>{\n\t\t\tUpdateOperationsRequest.run(()=>{\n\t\t\t\tFormatTableData.formatQueryRequests()\n\t\t\t})\n\t\t})\n\t}\n}",
+    "variables": []
+  },
+  "id": "Review In Cart Operations Requ_createJobOrders",
+  "deleted": false,
+  "gitSyncId": "6196c1950dfef900f247faaf_629e9d80aeaa1802518ac542"
+}

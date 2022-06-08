@@ -25,7 +25,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\n    JSON.stringify({\n      variables: {\n        Equipment: selectSite.selectedOptionLabel,\n        State: \"In Cart\",\n      },\n      query: `\n    query($Equipment:String!,$State:String!){\n      queryOperationsRequest@cascade{\n        code\n\t\t\t\t\t\tcustomer{\n\t\t\t\t\t\t\tname\n\t\t\t\t\t\t}\n        equipment(filter:{name:{eq:$Equipment}}){\n          name\n        }\n        requestState(filter:{name:{eq:$State}}){\n          name\n        }\n        segmentRequirements{\n          code\n          materialRequirements{\n            material{\n              code\n            }\n            quantity\n          }\n        }\n      }\n    }\n        `})\n  }}\n",
+      "body": "{{\n    JSON.stringify({\n      variables: {\n        Equipment: selectSite.selectedOptionLabel,\n        State: \"In Cart\",\n      },\n      query: `\n    query($Equipment:String!,$State:String!){\n      queryOperationsRequest@cascade{\n\t\t\t\t\t\tid\n        code\n\t\t\t\t\t\tcustomer{\n\t\t\t\t\t\t\tname\n\t\t\t\t\t\t}\n        equipment(filter:{name:{eq:$Equipment}}){\n          name\n        }\n        requestState(filter:{name:{eq:$State}}){\n          name\n        }\n        segmentRequirements{\n          code\n\t\t\t\t\t\t\t segment{\n\t\t\t\t\t\t\t\t\tid\n\t\t\t\t\t\t\t\t\tname\n\t\t\t\t\t\t\t}\n          materialRequirements{\n            material{\n              code\n            }\n            quantity\n          }\n        }\n      }\n    }\n        `})\n  }}\n",
       "bodyFormData": [],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
@@ -47,7 +47,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSON.stringify({\n      variables: {\n        Equipment: selectSite.selectedOptionLabel,\n        State: \"In Cart\",\n      },\n      query: `\n    query($Equipment:String!,$State:String!){\n      queryOperationsRequest@cascade{\n        code\n\t\t\t\t\t\tcustomer{\n\t\t\t\t\t\t\tname\n\t\t\t\t\t\t}\n        equipment(filter:{name:{eq:$Equipment}}){\n          name\n        }\n        requestState(filter:{name:{eq:$State}}){\n          name\n        }\n        segmentRequirements{\n          code\n          materialRequirements{\n            material{\n              code\n            }\n            quantity\n          }\n        }\n      }\n    }\n        `})"
+      "JSON.stringify({\n      variables: {\n        Equipment: selectSite.selectedOptionLabel,\n        State: \"In Cart\",\n      },\n      query: `\n    query($Equipment:String!,$State:String!){\n      queryOperationsRequest@cascade{\n\t\t\t\t\t\tid\n        code\n\t\t\t\t\t\tcustomer{\n\t\t\t\t\t\t\tname\n\t\t\t\t\t\t}\n        equipment(filter:{name:{eq:$Equipment}}){\n          name\n        }\n        requestState(filter:{name:{eq:$State}}){\n          name\n        }\n        segmentRequirements{\n          code\n\t\t\t\t\t\t\t segment{\n\t\t\t\t\t\t\t\t\tid\n\t\t\t\t\t\t\t\t\tname\n\t\t\t\t\t\t\t}\n          materialRequirements{\n            material{\n              code\n            }\n            quantity\n          }\n        }\n      }\n    }\n        `})"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
