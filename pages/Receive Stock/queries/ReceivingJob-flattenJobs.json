@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n    let result = [];\n    GetJobOrdersToReceive.data.data.getEquipment.operationsRequests.forEach((oReq)=>{\n\t\t\toReq.segmentRequirements.forEach((segReq)=>{\n\t\t\t\tsegReq.jobOrders.forEach((jobOrder)=>{\n\t\t\t\t\tlet item = {\n\t\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\t\toperationsRequestCode:oReq.code,\n\t\t\t\t\t\tsegmentRequirementCode: segReq.code,\n\t\t\t\t\t\tcustomerId: oReq.customer.id,\n\t\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\t\tdispatchStatus: jobOrder.dispatchStatus,\n\t\t\t\t\t\tjobResponseId: _.isEmpty(jobOrder.jobResponses)? \"\" : jobOrder.jobResponses[0].id\n\t\t\t\t\t}\n\t\t\t\t\tresult.push(item)\n\t\t\t\t})\t\t\n\t\t\t})\n\t\t}) \n    return result;\n\t}",
+      "body": "() => {\n    let result = [];\n    if(GetJobOrdersToReceiveNew.data.data.queryJobOrder.length > 0){\n\t\t\tfor (let i = 0; i < GetJobOrdersToReceiveNew.data.data.queryJobOrder.length; i++){\n\t\t\t\tlet jobOrder = GetJobOrdersToReceiveNew.data.data.queryJobOrder[i]\n\t\t\t\tlet line = {\n\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\toperationsRequestCode: jobOrder.segmentRequirement.operationsRequest.code,\n\t\t\t\t\tsegmentRequirementCode: jobOrder.segmentRequirement.code,\n\t\t\t\t\tcustomerId:jobOrder.segmentRequirement.operationsRequest.customer.id,\n\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\tdispatchStatus:jobOrder.dispatchStatus,\n\t\t\t\t\tjobResponseId: _.isEmpty(jobOrder.jobResponses)? \"\" : jobOrder.jobResponses[0].id\n\t\t\t\t}\n\t\t\t\tresult.push(line)\n\t\t\t}\n\t\t}\n    return result;\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n    let result = [];\n    GetJobOrdersToReceive.data.data.getEquipment.operationsRequests.forEach((oReq)=>{\n\t\t\toReq.segmentRequirements.forEach((segReq)=>{\n\t\t\t\tsegReq.jobOrders.forEach((jobOrder)=>{\n\t\t\t\t\tlet item = {\n\t\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\t\toperationsRequestCode:oReq.code,\n\t\t\t\t\t\tsegmentRequirementCode: segReq.code,\n\t\t\t\t\t\tcustomerId: oReq.customer.id,\n\t\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\t\tdispatchStatus: jobOrder.dispatchStatus,\n\t\t\t\t\t\tjobResponseId: _.isEmpty(jobOrder.jobResponses)? \"\" : jobOrder.jobResponses[0].id\n\t\t\t\t\t}\n\t\t\t\t\tresult.push(item)\n\t\t\t\t})\t\t\n\t\t\t})\n\t\t}) \n    return result;\n\t}"
+      "() => {\n    let result = [];\n    if(GetJobOrdersToReceiveNew.data.data.queryJobOrder.length > 0){\n\t\t\tfor (let i = 0; i < GetJobOrdersToReceiveNew.data.data.queryJobOrder.length; i++){\n\t\t\t\tlet jobOrder = GetJobOrdersToReceiveNew.data.data.queryJobOrder[i]\n\t\t\t\tlet line = {\n\t\t\t\t\tid: jobOrder.id,\n\t\t\t\t\toperationsRequestCode: jobOrder.segmentRequirement.operationsRequest.code,\n\t\t\t\t\tsegmentRequirementCode: jobOrder.segmentRequirement.code,\n\t\t\t\t\tcustomerId:jobOrder.segmentRequirement.operationsRequest.customer.id,\n\t\t\t\t\tcreatedDateTime: jobOrder.createdDateTime,\n\t\t\t\t\tdispatchStatus:jobOrder.dispatchStatus,\n\t\t\t\t\tjobResponseId: _.isEmpty(jobOrder.jobResponses)? \"\" : jobOrder.jobResponses[0].id\n\t\t\t\t}\n\t\t\t\tresult.push(line)\n\t\t\t}\n\t\t}\n    return result;\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

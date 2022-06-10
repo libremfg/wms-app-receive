@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "(customerId) => {\n\t\tif(!_.isEmpty(customerId)){\n\t\t\tGetJobOrdersToReceive.run()\n\t\t\tGetSegmentsReceiveStock.run()\n\t\t\tGetCustomerOrders.run()\n\t\t}\n\t}",
+      "body": "(customerId) => {\n\t\tif(!_.isEmpty(customerId)){\n\t\t\tGetJobOrdersToReceiveNew.run()\n\t\t\tGetSegmentsReceiveStock.run()\n\t\t\tGetCustomerOrders.run()\n\t\t}\n\t}",
       "jsArguments": [
         {
           "name": "customerId"
@@ -37,7 +37,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(customerId) => {\n\t\tif(!_.isEmpty(customerId)){\n\t\t\tGetJobOrdersToReceive.run()\n\t\t\tGetSegmentsReceiveStock.run()\n\t\t\tGetCustomerOrders.run()\n\t\t}\n\t}"
+      "(customerId) => {\n\t\tif(!_.isEmpty(customerId)){\n\t\t\tGetJobOrdersToReceiveNew.run()\n\t\t\tGetSegmentsReceiveStock.run()\n\t\t\tGetCustomerOrders.run()\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

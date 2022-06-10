@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\t//write code here\n\t\tlet ret = appsmith.store.InCartData\n\t\tret[ASNTable.selectedRowIndex].plannedQuantity = _.toInteger(InputPlanQuantity.text)\n\t\tstoreValue(\"InCartData\",ret)\n\t\tcloseModal(\"ModalPlanStock\")\n\t\treturn ret\n\t}",
+      "body": "() => {\n\t\t//write code here\n\t\tlet ret = appsmith.store.InCartData\n\t\tlet quantity = ret[ASNTable.selectedRowIndex].quantity\n\t\tlet difference = ret[ASNTable.selectedRowIndex].plannedQuantity - _.toInteger(InputPlanQuantity.text)\n\t\tlet materialCode = ret[ASNTable.selectedRowIndex].materialCode\n\t\tlet orderNumber = ret[ASNTable.selectedRowIndex].segmentRequirementName\n\t\tlet currentlyPlanned = 0\n\t\tfor (let i = 0; i < ret.length; i++){\n\t\t\tif (ret[i].materialCode == materialCode && ret[i].segmentRequirementName == orderNumber){\n\t\t\t\tcurrentlyPlanned = currentlyPlanned - ret[i].plannedQuantity\n\t\t\t}\n\t\t}\n\t\tlet quantityNow = quantity + currentlyPlanned + difference\n\t\tfor (let i = 0; i < ret.length; i++){\n\t\t\tif (ret[i].materialCode == materialCode && ret[i].segmentRequirementName == orderNumber){\n\t\t\t\tret[i].AvailableStock = quantityNow\n\t\t\t}\n\t\t}\n\t\tret[ASNTable.selectedRowIndex].plannedQuantity = _.toInteger(InputPlanQuantity.text)\n\t\tstoreValue(\"InCartData\",ret)\n\t\tcloseModal(\"ModalPlanStock\")\n\t\treturn ret\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\t//write code here\n\t\tlet ret = appsmith.store.InCartData\n\t\tret[ASNTable.selectedRowIndex].plannedQuantity = _.toInteger(InputPlanQuantity.text)\n\t\tstoreValue(\"InCartData\",ret)\n\t\tcloseModal(\"ModalPlanStock\")\n\t\treturn ret\n\t}"
+      "() => {\n\t\t//write code here\n\t\tlet ret = appsmith.store.InCartData\n\t\tlet quantity = ret[ASNTable.selectedRowIndex].quantity\n\t\tlet difference = ret[ASNTable.selectedRowIndex].plannedQuantity - _.toInteger(InputPlanQuantity.text)\n\t\tlet materialCode = ret[ASNTable.selectedRowIndex].materialCode\n\t\tlet orderNumber = ret[ASNTable.selectedRowIndex].segmentRequirementName\n\t\tlet currentlyPlanned = 0\n\t\tfor (let i = 0; i < ret.length; i++){\n\t\t\tif (ret[i].materialCode == materialCode && ret[i].segmentRequirementName == orderNumber){\n\t\t\t\tcurrentlyPlanned = currentlyPlanned - ret[i].plannedQuantity\n\t\t\t}\n\t\t}\n\t\tlet quantityNow = quantity + currentlyPlanned + difference\n\t\tfor (let i = 0; i < ret.length; i++){\n\t\t\tif (ret[i].materialCode == materialCode && ret[i].segmentRequirementName == orderNumber){\n\t\t\t\tret[i].AvailableStock = quantityNow\n\t\t\t}\n\t\t}\n\t\tret[ASNTable.selectedRowIndex].plannedQuantity = _.toInteger(InputPlanQuantity.text)\n\t\tstoreValue(\"InCartData\",ret)\n\t\tcloseModal(\"ModalPlanStock\")\n\t\treturn ret\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

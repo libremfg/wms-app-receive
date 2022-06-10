@@ -1653,9 +1653,13 @@
                               "serverSideFiltering": false,
                               "hideCard": false,
                               "defaultOptionValue": "",
-                              "animateLoading": true,
+                              "animateLoading": false,
                               "parentColumnSpace": 7.5,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
@@ -1684,7 +1688,8 @@
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "onOptionChange": "{{GetPartnerOrders.run()}}"
                             },
                             {
                               "boxShadow": "none",

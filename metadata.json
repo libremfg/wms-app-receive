@@ -324,6 +324,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Receive Stock_GetJobOrdersToReceiveNew": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Receive Stock_GetMaterials": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true

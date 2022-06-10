@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1010,
+          "bottomRow": 1090,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -565,12 +565,12 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 46.4,
+                              "leftColumn": 46,
                               "dynamicBindingPathList": [],
                               "text": "Submit",
                               "key": "orfb913i2s",
                               "labelTextSize": "0.875rem",
-                              "rightColumn": 62.4,
+                              "rightColumn": 62,
                               "isDefaultClickDisabled": true,
                               "widgetId": "avwo2znnka",
                               "isVisible": true,
@@ -2024,7 +2024,7 @@
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
               "topRow": 24,
-              "bottomRow": 99,
+              "bottomRow": 107,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -2810,7 +2810,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "btnConfirmShipment",
-                      "onClick": "{{ReceivingJob.start()}}",
+                      "onClick": "{{closeModal('modalSelectJobOrder')}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
@@ -2924,6 +2924,36 @@
                         },
                         {
                           "key": "primaryColumns.jobResponseId.computedValue"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.buttonColor"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.buttonColor"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.borderRadius"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.borderRadius"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.boxShadow"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.buttonLabel"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.isCellVisible"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.isCellVisible"
                         }
                       ],
                       "leftColumn": 1,
@@ -2960,8 +2990,8 @@
                         "order": 191,
                         "consignmentNumber": 121,
                         "name": 321,
-                        "createdDateTime": 259,
-                        "dispatchStatus": 534.5,
+                        "createdDateTime": 152,
+                        "dispatchStatus": 165.5,
                         "jobResponseId": 182.5,
                         "operationsRequestCode": 223
                       },
@@ -2974,16 +3004,23 @@
                         "customerId",
                         "createdDateTime",
                         "dispatchStatus",
-                        "jobResponseId"
+                        "jobResponseId",
+                        "customColumn1"
                       ],
                       "dynamicPropertyPathList": [
                         {
                           "key": "onRowSelected"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.isDisabled"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.isCellVisible"
                         }
                       ],
                       "compactMode": "SHORT",
                       "displayName": "Table",
-                      "bottomRow": 55,
+                      "bottomRow": 54,
                       "parentRowSpace": 10,
                       "defaultSelectedRow": "-1",
                       "hideCard": false,
@@ -2991,6 +3028,9 @@
                       "dynamicTriggerPathList": [
                         {
                           "key": "onRowSelected"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
                         }
                       ],
                       "primaryColumns": {
@@ -3128,11 +3168,56 @@
                           "label": "jobResponseId",
                           "computedValue": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.jobResponseId))}}",
                           "cellBackground": ""
+                        },
+                        "customColumn1": {
+                          "index": 7,
+                          "width": 150,
+                          "id": "customColumn1",
+                          "columnType": "button",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": "",
+                          "isCellVisible": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.dispatchStatus == \"CREATED\"?true:false))}}",
+                          "isDerived": true,
+                          "label": "Action",
+                          "computedValue": "",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+                          "borderRadius": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                          "iconName": "",
+                          "buttonLabel": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( 'Start Job Order'))}}",
+                          "onClick": "{{ReceivingJob.start()}}"
                         }
                       },
                       "onRowSelected": "{{HandleSelects.jobChange(tblJobOrderList.selectedRow)}}",
                       "key": "kw6ljit3ih",
-                      "derivedColumns": {},
+                      "derivedColumns": {
+                        "customColumn1": {
+                          "index": 7,
+                          "width": 150,
+                          "id": "customColumn1",
+                          "columnType": "button",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": "",
+                          "isCellVisible": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( currentRow.dispatchStatus == \"CREATED\"?true:false))}}",
+                          "isDerived": true,
+                          "label": "Action",
+                          "computedValue": "",
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "labelColor": "#FFFFFF",
+                          "buttonColor": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+                          "borderRadius": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                          "boxShadow": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                          "iconName": "",
+                          "buttonLabel": "{{tblJobOrderList.sanitizedTableData.map((currentRow) => ( 'Start Job Order'))}}",
+                          "onClick": "{{ReceivingJob.start()}}"
+                        }
+                      },
                       "labelTextSize": "0.875rem",
                       "rightColumn": 63,
                       "textSize": "0.875rem",
@@ -5136,7 +5221,11 @@
                         "dateTimeCreatedUTC"
                       ],
                       "isVisibleDownload": true,
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onRowSelected"
+                        }
+                      ],
                       "displayName": "Table",
                       "iconSVG": "/static/media/icon.db8a9cbd.svg",
                       "topRow": 7,
@@ -5313,7 +5402,7 @@
                         }
                       },
                       "delimiter": ",",
-                      "onRowSelected": "{{closeModal('modalSelectShipment')}}",
+                      "onRowSelected": "{{closeModal('modalSelectShipment');GetShipmentTransactions.run()}}",
                       "key": "nsni8ng7xk",
                       "derivedColumns": {},
                       "rightColumn": 63,
@@ -5389,6 +5478,47 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "width": 880
+            },
+            {
+              "widgetName": "Text18",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 4,
+              "bottomRow": 8,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 43.75,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 46,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Fix select job query",
+              "key": "3frev89yt2",
+              "isDeprecated": false,
+              "rightColumn": 62,
+              "textAlign": "LEFT",
+              "widgetId": "o7xvce2ozd",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#ffc13d",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "fontSize": "1rem"
             }
           ]
         },
@@ -5443,6 +5573,7 @@
           "Text15CopyCopyCopy",
           "Text16",
           "Text17",
+          "Text18",
           "Text3",
           "Text4",
           "Text4Copy",

@@ -108,9 +108,11 @@
               "widgetName": "ASNTable",
               "defaultPageSize": 0,
               "columnOrder": [
+                "requestId",
                 "customerName",
                 "orderNumber",
                 "materialCode",
+                "segmentRequirementName",
                 "segmentCode",
                 "segmentID",
                 "quantity",
@@ -119,8 +121,6 @@
                 "inventoryMax",
                 "inventoryMin",
                 "EquipmentName",
-                "segmentRequirementName",
-                "requestId",
                 "customColumn1"
               ],
               "isVisibleDownload": true,
@@ -572,7 +572,8 @@
               "columnSizeMap": {
                 "task": 245,
                 "step": 62,
-                "status": 75
+                "status": 75,
+                "segmentRequirementName": 192
               }
             },
             {
@@ -821,7 +822,7 @@
                       "inputType": "NUMBER",
                       "isDisabled": false,
                       "key": "mkkegl9gzm",
-                      "validation": "{{_.toInteger(InputPlanQuantity.text)>=0&&_.toInteger(InputPlanQuantity.text)<=ASNTable.selectedRow.AvailableStock}}",
+                      "validation": "{{_.toInteger(InputPlanQuantity.text)>=0&&_.toInteger(InputPlanQuantity.text)<=ASNTable.selectedRow.AvailableStock+ASNTable.selectedRow.plannedQuantity}}",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
@@ -873,8 +874,13 @@
             {
               "boxShadow": "none",
               "widgetName": "CreateOrderButton",
-              "onClick": "{{createJobOrders.processCreateJobOrder()}}",
+              "onClick": "{{createJobOrders.processCreateJobOrder();FormatTableData.formatQueryRequests()}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca02633.svg",
               "topRow": 61,
